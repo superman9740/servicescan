@@ -1,5 +1,5 @@
 //
-//  FirstViewController.h
+//  ScanViewController.h
 //  servicescan
 //
 //  Created by sdickson on 1/14/14.
@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface FirstViewController : UIViewController
+@interface ScanViewController : UIViewController
 
 @end

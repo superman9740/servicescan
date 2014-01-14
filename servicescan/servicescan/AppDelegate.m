@@ -7,12 +7,43 @@
 //
 
 #import "AppDelegate.h"
+#import "UIImage+iPhone5.h"
+#import "Utils.h"
+
 
 @implementation AppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    // Override point for customization after application launch.
+    
+      [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleBlackOpaque animated:NO];
+    
+    UIImage *navBarImage = [UIImage tallImageNamed:@"menubar.png"];
+    
+    
+    
+    if(![Utils isVersion6AndBelow]){
+        navBarImage = [UIImage tallImageNamed:@"menubar-7.png"];
+        
+        [[UINavigationBar appearance] setTitleTextAttributes:
+         @{UITextAttributeTextColor: [UIColor colorWithRed:255.0/255.0 green:255.0/255.0 blue:255.0/255.0 alpha:1.0],
+           UITextAttributeTextShadowColor: [UIColor colorWithRed:0.0 green:0.0 blue:0.0 alpha:0.8],
+           UITextAttributeTextShadowOffset: [NSValue valueWithUIOffset:UIOffsetMake(0, -1)]}];
+    }
+    
+    
+    [[UINavigationBar appearance] setBackgroundImage:navBarImage forBarMetrics:UIBarMetricsDefault];
+    
+    
+    UIImage* tabBarBackground = [UIImage tallImageNamed:@"tabbar.png"];
+    [[UITabBar appearance] setBackgroundImage:tabBarBackground];
+    
+    [[UITabBar appearance] setShadowImage:[UIImage imageNamed:@"transparentShadow.png"]];
+    
+    [[UITabBar appearance] setSelectionIndicatorImage:[UIImage tallImageNamed:@"tabbar-active.png"]];
+    
+
+    
     return YES;
 }
 							
