@@ -55,6 +55,15 @@
 		DE33C0C31885EE34005F528A /* menubar@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DE33C0BB1885EE34005F528A /* menubar@2x.png */; };
 		DE33C0C71885EE61005F528A /* Utils.m in Sources */ = {isa = PBXBuildFile; fileRef = DE33C0C61885EE61005F528A /* Utils.m */; };
 		DE33C0C91885EF4A005F528A /* menubar-7.png in Resources */ = {isa = PBXBuildFile; fileRef = DE33C0C81885EF4A005F528A /* menubar-7.png */; };
+		DE5448751888600A007B14BD /* CustomCameraRectangle.m in Sources */ = {isa = PBXBuildFile; fileRef = DE5448741888600A007B14BD /* CustomCameraRectangle.m */; };
+		DE809ACB18886504009A5672 /* list-arrow.png in Resources */ = {isa = PBXBuildFile; fileRef = DE809AC818886504009A5672 /* list-arrow.png */; };
+		DE809ACC18886504009A5672 /* list-arrow@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DE809AC918886504009A5672 /* list-arrow@2x.png */; };
+		DE809ACD18886504009A5672 /* list-frame.png in Resources */ = {isa = PBXBuildFile; fileRef = DE809ACA18886504009A5672 /* list-frame.png */; };
+		DE809AD1188866CF009A5672 /* TabBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DE809AD0188866CF009A5672 /* TabBarViewController.m */; };
+		DE809AD5188867D1009A5672 /* UserTypeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DE809AD4188867D1009A5672 /* UserTypeViewController.m */; };
+		DE809AD8188878BF009A5672 /* button-red.png in Resources */ = {isa = PBXBuildFile; fileRef = DE809AD6188878BF009A5672 /* button-red.png */; };
+		DE809AD9188878BF009A5672 /* button-red@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DE809AD7188878BF009A5672 /* button-red@2x.png */; };
+		DE809ADD188879E3009A5672 /* AppController.m in Sources */ = {isa = PBXBuildFile; fileRef = DE809ADC188879E3009A5672 /* AppController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -127,6 +136,19 @@
 		DE33C0C51885EE61005F528A /* Utils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Utils.h; sourceTree = "<group>"; };
 		DE33C0C61885EE61005F528A /* Utils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Utils.m; sourceTree = "<group>"; };
 		DE33C0C81885EF4A005F528A /* menubar-7.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "menubar-7.png"; sourceTree = "<group>"; };
+		DE5448731888600A007B14BD /* CustomCameraRectangle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomCameraRectangle.h; sourceTree = "<group>"; };
+		DE5448741888600A007B14BD /* CustomCameraRectangle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomCameraRectangle.m; sourceTree = "<group>"; };
+		DE809AC818886504009A5672 /* list-arrow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "list-arrow.png"; sourceTree = "<group>"; };
+		DE809AC918886504009A5672 /* list-arrow@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "list-arrow@2x.png"; sourceTree = "<group>"; };
+		DE809ACA18886504009A5672 /* list-frame.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "list-frame.png"; sourceTree = "<group>"; };
+		DE809ACF188866CF009A5672 /* TabBarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TabBarViewController.h; sourceTree = "<group>"; };
+		DE809AD0188866CF009A5672 /* TabBarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TabBarViewController.m; sourceTree = "<group>"; };
+		DE809AD3188867D1009A5672 /* UserTypeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserTypeViewController.h; sourceTree = "<group>"; };
+		DE809AD4188867D1009A5672 /* UserTypeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserTypeViewController.m; sourceTree = "<group>"; };
+		DE809AD6188878BF009A5672 /* button-red.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "button-red.png"; sourceTree = "<group>"; };
+		DE809AD7188878BF009A5672 /* button-red@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "button-red@2x.png"; sourceTree = "<group>"; };
+		DE809ADB188879E3009A5672 /* AppController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppController.h; sourceTree = "<group>"; };
+		DE809ADC188879E3009A5672 /* AppController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -167,6 +189,8 @@
 		3C38879F18876E4600EEFDD7 /* CustomCamera */ = {
 			isa = PBXGroup;
 			children = (
+				DE5448731888600A007B14BD /* CustomCameraRectangle.h */,
+				DE5448741888600A007B14BD /* CustomCameraRectangle.m */,
 				3C95E58718876FC100C608C6 /* CustomCameraViewController.h */,
 				3C95E58818876FC100C608C6 /* CustomCameraViewController.m */,
 			);
@@ -206,6 +230,9 @@
 		DE33C05F1885D7A1005F528A /* servicescan */ = {
 			isa = PBXGroup;
 			children = (
+				DE809ADA188879AD009A5672 /* AppController */,
+				DE809AD2188867BB009A5672 /* UserType */,
+				DE809ACE188866B0009A5672 /* TabBar */,
 				3C38879F18876E4600EEFDD7 /* CustomCamera */,
 				3C38879E18876D3F00EEFDD7 /* History */,
 				DE33C0C41885EE57005F528A /* Utils */,
@@ -254,6 +281,11 @@
 		DE33C0941885E5CC005F528A /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				DE809AD6188878BF009A5672 /* button-red.png */,
+				DE809AD7188878BF009A5672 /* button-red@2x.png */,
+				DE809AC818886504009A5672 /* list-arrow.png */,
+				DE809AC918886504009A5672 /* list-arrow@2x.png */,
+				DE809ACA18886504009A5672 /* list-frame.png */,
 				3C95E59E1887745D00C608C6 /* list-item-bg.png */,
 				3C95E59F1887745D00C608C6 /* list-item-bg@2x.png */,
 				3C95E58D1887705700C608C6 /* flash.png */,
@@ -312,6 +344,33 @@
 				DE33C0C61885EE61005F528A /* Utils.m */,
 			);
 			name = Utils;
+			sourceTree = "<group>";
+		};
+		DE809ACE188866B0009A5672 /* TabBar */ = {
+			isa = PBXGroup;
+			children = (
+				DE809ACF188866CF009A5672 /* TabBarViewController.h */,
+				DE809AD0188866CF009A5672 /* TabBarViewController.m */,
+			);
+			name = TabBar;
+			sourceTree = "<group>";
+		};
+		DE809AD2188867BB009A5672 /* UserType */ = {
+			isa = PBXGroup;
+			children = (
+				DE809AD3188867D1009A5672 /* UserTypeViewController.h */,
+				DE809AD4188867D1009A5672 /* UserTypeViewController.m */,
+			);
+			name = UserType;
+			sourceTree = "<group>";
+		};
+		DE809ADA188879AD009A5672 /* AppController */ = {
+			isa = PBXGroup;
+			children = (
+				DE809ADB188879E3009A5672 /* AppController.h */,
+				DE809ADC188879E3009A5672 /* AppController.m */,
+			);
+			name = AppController;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -398,6 +457,7 @@
 				3C95E5971887705700C608C6 /* play@2x.png in Resources */,
 				DE33C0781885D7A1005F528A /* Images.xcassets in Resources */,
 				3C38879D18876CB800EEFDD7 /* text-left.png in Resources */,
+				DE809AD8188878BF009A5672 /* button-red.png in Resources */,
 				DE33C0C01885EE34005F528A /* menubar-right.png in Resources */,
 				DE33C0BF1885EE34005F528A /* menubar-left@2x.png in Resources */,
 				DE33C0AC1885ED27005F528A /* tabbar-active.png in Resources */,
@@ -414,16 +474,20 @@
 				DE33C0BD1885EE34005F528A /* menubar-button@2x.png in Resources */,
 				3C95E5961887705700C608C6 /* done.png in Resources */,
 				DE33C0C21885EE34005F528A /* menubar.png in Resources */,
+				DE809ACB18886504009A5672 /* list-arrow.png in Resources */,
 				3C95E5991887705700C608C6 /* plus.png in Resources */,
 				DE33C0641885D7A1005F528A /* InfoPlist.strings in Resources */,
 				DE33C0AD1885ED27005F528A /* tabbar-active@2x.png in Resources */,
+				DE809AD9188878BF009A5672 /* button-red@2x.png in Resources */,
 				3C95E5981887705700C608C6 /* circle.png in Resources */,
 				DE33C0BE1885EE34005F528A /* menubar-left.png in Resources */,
+				DE809ACD18886504009A5672 /* list-frame.png in Resources */,
 				3C95E5A01887745D00C608C6 /* list-item-bg.png in Resources */,
 				DE33C0C31885EE34005F528A /* menubar@2x.png in Resources */,
 				3C95E5941887705700C608C6 /* flash.png in Resources */,
 				DE33C0AE1885ED27005F528A /* tabbar.png in Resources */,
 				DE33C0961885E5D6005F528A /* SS_APP_ICON_120_120@2x.png in Resources */,
+				DE809ACC18886504009A5672 /* list-arrow@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -444,13 +508,17 @@
 			files = (
 				3C95E59D188773E000C608C6 /* MasterCell.m in Sources */,
 				DE33C0761885D7A1005F528A /* HistoryViewController.m in Sources */,
+				DE809ADD188879E3009A5672 /* AppController.m in Sources */,
 				DE33C0B31885ED71005F528A /* UIImage+iPhone5.m in Sources */,
 				DE33C06A1885D7A1005F528A /* AppDelegate.m in Sources */,
 				DE33C0C71885EE61005F528A /* Utils.m in Sources */,
 				DE33C0731885D7A1005F528A /* ScanViewController.m in Sources */,
 				3C95E58918876FC100C608C6 /* CustomCameraViewController.m in Sources */,
+				DE809AD1188866CF009A5672 /* TabBarViewController.m in Sources */,
+				DE5448751888600A007B14BD /* CustomCameraRectangle.m in Sources */,
 				DE33C0661885D7A1005F528A /* main.m in Sources */,
 				3C95E58C18876FF700C608C6 /* Highlighter.m in Sources */,
+				DE809AD5188867D1009A5672 /* UserTypeViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

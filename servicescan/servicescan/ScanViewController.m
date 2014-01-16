@@ -9,6 +9,7 @@
 #import "ScanViewController.h"
 #import "UIImage+iPhone5.h"
 #import "Utils.h"
+#import "AppController.h"
 
 
 @interface ScanViewController ()
@@ -27,6 +28,14 @@
 {
     [self.view setBackgroundColor:[UIColor colorWithPatternImage:[UIImage imageNamed:@"bg.png"]]];
     
+    int userType = [[AppController sharedInstance] userType];
+    if(userType == -1)
+    {
+   
+        [self performSegueWithIdentifier:@"showUserType" sender:self];
+
+    }
+    
    
     
     
@@ -39,7 +48,9 @@
     
     cameraViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"camera"];
     cameraViewController.delegate = self;
-    [self presentViewController:cameraViewController animated:YES completion:nil];
+    [self.view addSubview:cameraViewController.view];
+    
+    
     
     
     

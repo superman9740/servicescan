@@ -9,6 +9,10 @@
 #import <UIKit/UIKit.h>
 #import "CustomCameraViewController.h"
 
+@class AppController;
+
+
+
 @interface ScanViewController : UIViewController
 {
 

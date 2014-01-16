@@ -9,12 +9,15 @@
 #import "AppDelegate.h"
 #import "UIImage+iPhone5.h"
 #import "Utils.h"
+#import "AppController.h"
 
 
 @implementation AppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+
+    [AppController sharedInstance];
     
       [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleBlackOpaque animated:NO];
     
@@ -43,6 +46,7 @@
     [[UITabBar appearance] setSelectionIndicatorImage:[UIImage tallImageNamed:@"tabbar-active.png"]];
     
 
+    
     
     return YES;
 }

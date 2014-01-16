@@ -10,6 +10,7 @@
 #import <AVFoundation/AVFoundation.h>
 #import <QuartzCore/QuartzCore.h>
 #import "Highlighter.h"
+#import "CustomCameraRectangle.h"
 
 @import CoreImage;
 @import CoreMedia;
@@ -25,7 +26,7 @@
 
 @end;
 
-@interface CustomCameraViewController : UIViewController<AVCaptureVideoDataOutputSampleBufferDelegate,UIImagePickerControllerDelegate, UINavigationControllerDelegate>
+@interface CustomCameraViewController : UIViewController<AVCaptureVideoDataOutputSampleBufferDelegate,UIImagePickerControllerDelegate, UINavigationControllerDelegate, AVCaptureMetadataOutputObjectsDelegate>
 {
     NSMutableArray* images;
     UIImagePickerController* pickerController;
@@ -34,6 +35,7 @@
     BOOL usingFrontCamera;
     UIImage* image;
     
+    CustomCameraRectangle* rectangleView;
     
 }
 @property (nonatomic, strong) id delegate;
@@ -50,7 +52,11 @@
 @property (strong, nonatomic) AVCaptureSession* session;
 @property (strong, nonatomic) AVCaptureVideoPreviewLayer* previewLayer;
 
+//QR
+@property (strong, nonatomic) AVCaptureMetadataOutput* output;
+
 @property (strong, nonatomic) IBOutlet UIImageView* triangleButton;
+
 
 
 -(IBAction)takePhoto:(id)sender;

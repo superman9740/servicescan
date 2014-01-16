@@ -24,48 +24,17 @@ static inline double radians (double degrees) {return degrees * M_PI/180;}
     
     _previewLayer.frame = _cameraView.frame;
     [self setupCaptureSession:[self backCamera]];
-  
-    UITapGestureRecognizer* tapGestureRecog = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(updateScrollBarPosition:)];
-    [_triangleButton addGestureRecognizer:tapGestureRecog];
+    rectangleView = [[CustomCameraRectangle alloc] initWithFrame:CGRectMake(20, 20, 200, 200)];
+    rectangleView.center = CGPointMake(self.view.bounds.size.width / 2, self.view.bounds.size.height / 2 - 20);
     
-    [self.view bringSubviewToFront:_topView];
-  
+    
+    [self.view addSubview:rectangleView];
+    
+    
 
     
-    int offset = 0;
-
-for (int i = 5; i > 0; i--)
-{
-    
-    
-    CGRect frame;
-    int val = offset * i;
-    if(val == 0)
-    {
-    
-        frame.origin.x = 16;
-        
-    }
-    else
-    {
    
-        frame.origin.x = offset * i + 20;
-        
-    }
-    
-    offset = 60;
-    
-    frame.origin.y = 0;
-    frame.size.height = 40;
-    frame.size.width = 40;
-    
-    Highlighter* subview = [[Highlighter alloc] initWithFrame:frame];
-    subview.backgroundColor = [UIColor blackColor];
-    subview.alpha = .10;
-    
-    [self.thumbnailView addSubview:subview];
-    
-}
+ 
     
 }
 
@@ -92,140 +61,59 @@ for (int i = 5; i > 0; i--)
     [_session setSessionPreset:AVCaptureSessionPresetHigh];
     [_session addInput:cameraInput];
     
-    [_session startRunning];
-    
-    
     
     _previewLayer = [AVCaptureVideoPreviewLayer layerWithSession:_session];
     _previewLayer.frame = _cameraView.frame;
     _previewLayer.videoGravity = AVLayerVideoGravityResizeAspectFill;
     [_previewLayer.connection setVideoOrientation:AVCaptureVideoOrientationPortrait];
-    
+    //[_cameraView.layer insertSublayer:_previewLayer atIndex:0];
     [_cameraView.layer addSublayer:_previewLayer];
     
-    [self setStillImageOutput:[[AVCaptureStillImageOutput alloc] init]];
     
-    NSDictionary *outputSettings = [NSDictionary dictionaryWithObjectsAndKeys:[NSNumber numberWithUnsignedInt:kCVPixelFormatType_32BGRA], (id)kCVPixelBufferPixelFormatTypeKey, nil];
+  //  [self setStillImageOutput:[[AVCaptureStillImageOutput alloc] init]];
     
-    [[self stillImageOutput] setOutputSettings:outputSettings];
+    self.output = [[AVCaptureMetadataOutput alloc] init];
+    [self.session addOutput:self.output];
+    dispatch_queue_t dispatchQueue;
+    dispatchQueue = dispatch_queue_create("myQueue", NULL);
+    [self.output setMetadataObjectsDelegate:self queue:dispatchQueue];
+    [self.output setMetadataObjectTypes:[NSArray arrayWithObject:AVMetadataObjectTypeQRCode]];
+    [self.view bringSubviewToFront:_topView];
+    [self.view bringSubviewToFront:_bottomView];
     
-    
-    [_session addOutput:[self stillImageOutput]];
-    
-    
+    [_session startRunning];
     
     
 }
 
-
--(IBAction)takePhoto:(id)sender
+- (void)captureOutput:(AVCaptureOutput *)captureOutput didOutputMetadataObjects:(NSArray *)metadataObjects
+       fromConnection:(AVCaptureConnection *)connection
 {
-    if([[UIDevice currentDevice] orientation] != UIInterfaceOrientationPortrait)
-        return;
-    
-    
-    AVCaptureConnection *videoConnection = nil;
-    for (AVCaptureConnection *connection in [[self stillImageOutput] connections]) {
-        for (AVCaptureInputPort *port in [connection inputPorts]) {
-            if ([[port mediaType] isEqual:AVMediaTypeVideo]) {
-                videoConnection = connection;
-                break;
+    for(AVMetadataObject *current in metadataObjects) {
+        if([current isKindOfClass:[AVMetadataMachineReadableCodeObject class]]) {
+                NSString *scannedValue = [((AVMetadataMachineReadableCodeObject *) current) stringValue];
+            dispatch_async(dispatch_get_main_queue(), ^{
+            
+                [self.session stopRunning];
+                
+                NSString* alertText = [NSString stringWithFormat:@"QR code - %@", scannedValue];
+                UIAlertView* alertView = [[UIAlertView alloc] initWithTitle:@"Scan" message:alertText delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil];
+                [alertView show];
+                
+               // [_previewLayer removeFromSuperlayer];
+                
+                
+            });
+            
+            
+            
+            
+            
             }
         }
-        if (videoConnection) {
-            break;
-        }
     }
-    
-    NSLog(@"about to request a capture from: %@", [self stillImageOutput]);
-    [[self stillImageOutput] captureStillImageAsynchronouslyFromConnection:videoConnection
-                                                         completionHandler:^(CMSampleBufferRef imageSampleBuffer, NSError *error) {
-                                                             CFDictionaryRef exifAttachments = CMGetAttachment(imageSampleBuffer, kCGImagePropertyExifDictionary, NULL);
-                                                             if (exifAttachments)
-                                                             {
-                                                                 NSLog(@"attachements: %@", exifAttachments);
-                                                             } else
-                                                             {
-                                                                 NSLog(@"no attachments");
-                                                             }
-                                                             
-                                                             
-                                                             image=[self imageFromSampleBuffer:imageSampleBuffer];
-                                                             
-                                                             error  = NULL;
-                                                             
-                                                             dispatch_async(dispatch_get_main_queue(), ^{
-                                                                 
-                                                                 UIAlertView* alertView = [[UIAlertView alloc] initWithTitle:@"Scan" message:@"The QR Code has been captured successfully." delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil];
-                                                                 [alertView show];
-                                                                 
-                                                                 
-                                                             });
-                                                             
-                                                             
-                                                             
-                                                         }];
-    
-    
-    
-    
-}
 
 
-- (UIImage *) imageFromSampleBuffer:(CMSampleBufferRef) sampleBuffer
-{
-    // Get a CMSampleBuffer's Core Video image buffer for the media data
-    CVImageBufferRef imageBuffer = CMSampleBufferGetImageBuffer(sampleBuffer);
-    // Lock the base address of the pixel buffer
-    CVPixelBufferLockBaseAddress(imageBuffer, 0);
-    
-    // Get the number of bytes per row for the pixel buffer
-    void *baseAddress = CVPixelBufferGetBaseAddress(imageBuffer);
-    
-    // Get the number of bytes per row for the pixel buffer
-    size_t bytesPerRow = CVPixelBufferGetBytesPerRow(imageBuffer);
-    // Get the pixel buffer width and height
-    size_t width = CVPixelBufferGetWidth(imageBuffer);
-    size_t height = CVPixelBufferGetHeight(imageBuffer);
-    
-    // Create a device-dependent RGB color space
-    CGColorSpaceRef colorSpace = CGColorSpaceCreateDeviceRGB();
-    // Create a bitmap graphics context with the sample buffer data
-    CGContextRef context = CGBitmapContextCreate(baseAddress, width, height, 8,
-                                                 bytesPerRow, colorSpace, kCGBitmapByteOrder32Little | kCGImageAlphaPremultipliedFirst);
-    CGImageRef quartzImage = CGBitmapContextCreateImage(context);
-    
-    CGColorSpaceRelease(colorSpace);
-    
-    UIImage *image = [UIImage imageWithCGImage:quartzImage];
-    //return image;
-    
-    CFRelease(context);
-    
-    
-        CGSize size = CGSizeMake(3000,3000);
-        
-        // Create the bitmap context
-        UIGraphicsBeginImageContext(size);
-        
-        CGContextRef bitmap = UIGraphicsGetCurrentContext();
-        
-        // Move the origin to the middle of the image so we will rotate and scale around the center.
-        CGContextTranslateCTM(bitmap, size.width/2, size.height/2);
-        
-        CGContextRotateCTM(bitmap, radians(90));
-        CGContextScaleCTM(bitmap, 1.0f, -1.0f);
-        CGContextDrawImage(bitmap, CGRectMake(-size.width / 2, -size.height / 2, size.width, size.height), [image CGImage]);
-        
-        UIImage *rotatedImage = UIGraphicsGetImageFromCurrentImageContext();
-        
-        UIGraphicsEndImageContext();
-     
-    
-        return rotatedImage;
-    
-    
-}
 -(IBAction)switchCameras:(id)sender
 {
     [_session stopRunning];
@@ -281,50 +169,6 @@ for (int i = 5; i > 0; i--)
 }
 
 
--(IBAction)updatePicRollView:(id)sender
-{
-    @autoreleasepool
-    {
-        int offset = 0;
-        for (long i = images.count; i > 0; i--)
-        {
-            
-            
-            CGRect frame;
-            long val = offset * i;
-            if(val == 0)
-            {
-                
-                frame.origin.x = 16;
-                
-            }
-            else
-            {
-                
-                frame.origin.x = offset * i + 20;
-                
-            }
-            
-            offset = 60;
-            
-            frame.origin.y = 0;
-            frame.size.height = 40;
-            frame.size.width = 40;
-            
-            UIImageView* subview = [[UIImageView alloc] initWithFrame:frame];
-            subview.contentMode = UIViewContentModeScaleToFill;
-            
-            subview.image = images[i-1];
-                                    
-            [self.thumbnailView addSubview:subview];
-            
-        }
-    }
-    
-    self.thumbnailView.contentSize = CGSizeMake(60 * [images count], self.thumbnailView.frame.size.height);
-    [self.thumbnailView setContentOffset:CGPointMake(0, 0)];
-    
-}
 
 -(IBAction)selectFromCameraRoll:(id)sender;
 {
@@ -371,45 +215,6 @@ for (int i = 5; i > 0; i--)
 }
 
 
--(IBAction)updateScrollBarPosition:(id)sender
-{
- if(!isHidden)
- {
-        
-   
-     float degrees = 90.0;
-     float radians = (degrees/180.0) * M_PI;
-     
-     [UIView animateWithDuration:1.0 animations:^{
-        
-        CGRect newRect = CGRectMake(_thumbnailView.frame.origin.x + _thumbnailView.frame.size.width, _thumbnailView.frame.origin.y, _thumbnailView.frame.size.width, _thumbnailView.frame.size.height);
-        _thumbnailView.frame = newRect;
-         _triangleButton.transform = CGAffineTransformMakeRotation(radians);
-         
-        
-    }];
-        isHidden = YES;
-     
- }
-  else
-  {
-   
-      float degrees = 360.0;
-      float radians = (degrees/180.0) * M_PI;
-      
-      [UIView animateWithDuration:1.0 animations:^{
-          
-          CGRect newRect = CGRectMake(_thumbnailView.frame.origin.x - _thumbnailView.frame.size.width, _thumbnailView.frame.origin.y, _thumbnailView.frame.size.width, _thumbnailView.frame.size.height);
-          _thumbnailView.frame = newRect;
-          _triangleButton.transform = CGAffineTransformMakeRotation(radians);
-          
-          
-      }];
-      isHidden = NO;
-      
-  }
-    
-}
 -(IBAction)done:(id)sender
 {
     
