@@ -1,0 +1,895 @@
+Tservicescan
+v6
+r1
+cCheck dependencies
+cCpResource /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.0.sdk/ResourceRules.plist DerivedData/servicescan/Build/Products/Debug-iphoneos/servicescan.app/ResourceRules.plist
+cProcessPCH /Users/sdickson/Code/Darren/ServiceScan/servicescan/DerivedData/servicescan/Build/Intermediates/PrecompiledHeaders/servicescan-Prefix-fdbbmysqjooainbgeawexprwnkjc/servicescan-Prefix.pch.pch servicescan/servicescan-Prefix.pch normal armv7s objective-c com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC DerivedData/servicescan/Build/Intermediates/servicescan.build/Debug-iphoneos/servicescan.build/Objects-normal/armv7s/SecondViewController.o /Users/sdickson/Code/Darren/ServiceScan/servicescan/servicescan/SecondViewController.m normal armv7s objective-c com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC DerivedData/servicescan/Build/Intermediates/servicescan.build/Debug-iphoneos/servicescan.build/Objects-normal/armv7s/UIImage+iPhone5.o /Users/sdickson/Code/Darren/ServiceScan/servicescan/servicescan/UIImage+iPhone5.m normal armv7s objective-c com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC DerivedData/servicescan/Build/Intermediates/servicescan.build/Debug-iphoneos/servicescan.build/Objects-normal/armv7s/AppDelegate.o /Users/sdickson/Code/Darren/ServiceScan/servicescan/servicescan/AppDelegate.m normal armv7s objective-c com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC DerivedData/servicescan/Build/Intermediates/servicescan.build/Debug-iphoneos/servicescan.build/Objects-normal/armv7s/Utils.o /Users/sdickson/Code/Darren/ServiceScan/servicescan/servicescan/Utils.m normal armv7s objective-c com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC DerivedData/servicescan/Build/Intermediates/servicescan.build/Debug-iphoneos/servicescan.build/Objects-normal/armv7s/ScanViewController.o /Users/sdickson/Code/Darren/ServiceScan/servicescan/servicescan/ScanViewController.m normal armv7s objective-c com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC DerivedData/servicescan/Build/Intermediates/servicescan.build/Debug-iphoneos/servicescan.build/Objects-normal/armv7s/main.o /Users/sdickson/Code/Darren/ServiceScan/servicescan/servicescan/main.m normal armv7s objective-c com.apple.compilers.llvm.clang.1_0.compiler
+cLd /Users/sdickson/Code/Darren/ServiceScan/servicescan/DerivedData/servicescan/Build/Products/Debug-iphoneos/servicescan.app/servicescan normal armv7s
+cGenerateDSYMFile /Users/sdickson/Code/Darren/ServiceScan/servicescan/DerivedData/servicescan/Build/Products/Debug-iphoneos/servicescan.app.dSYM /Users/sdickson/Code/Darren/ServiceScan/servicescan/DerivedData/servicescan/Build/Products/Debug-iphoneos/servicescan.app/servicescan
+cCopyPNGFile /Users/sdickson/Code/Darren/ServiceScan/servicescan/DerivedData/servicescan/Build/Products/Debug-iphoneos/servicescan.app/camera.png servicescan/camera.png
+cCompileStoryboard /Users/sdickson/Code/Darren/ServiceScan/servicescan/servicescan/Base.lproj/Main_iPad.storyboard
+cCopyPNGFile /Users/sdickson/Code/Darren/ServiceScan/servicescan/DerivedData/servicescan/Build/Products/Debug-iphoneos/servicescan.app/menubar-right.png servicescan/menubar-right.png
+cCopyPNGFile /Users/sdickson/Code/Darren/ServiceScan/servicescan/DerivedData/servicescan/Build/Products/Debug-iphoneos/servicescan.app/menubar-left@2x.png servicescan/menubar-left@2x.png
+cCopyPNGFile /Users/sdickson/Code/Darren/ServiceScan/servicescan/DerivedData/servicescan/Build/Products/Debug-iphoneos/servicescan.app/tabbar-active.png servicescan/tabbar-active.png
+cCopyPNGFile /Users/sdickson/Code/Darren/ServiceScan/servicescan/DerivedData/servicescan/Build/Products/Debug-iphoneos/servicescan.app/bg.png servicescan/bg.png
+cCopyPNGFile /Users/sdickson/Code/Darren/ServiceScan/servicescan/DerivedData/servicescan/Build/Products/Debug-iphoneos/servicescan.app/menubar-right@2x.png servicescan/menubar-right@2x.png
+cCompileStoryboard /Users/sdickson/Code/Darren/ServiceScan/servicescan/servicescan/Base.lproj/Main_iPhone.storyboard
+cCopyPNGFile /Users/sdickson/Code/Darren/ServiceScan/servicescan/DerivedData/servicescan/Build/Products/Debug-iphoneos/servicescan.app/bg@2x.png servicescan/bg@2x.png
+cCopyPNGFile /Users/sdickson/Code/Darren/ServiceScan/servicescan/DerivedData/servicescan/Build/Products/Debug-iphoneos/servicescan.app/tabbar@2x.png servicescan/tabbar@2x.png
+cCopyPNGFile /Users/sdickson/Code/Darren/ServiceScan/servicescan/DerivedData/servicescan/Build/Products/Debug-iphoneos/servicescan.app/menubar-button.png servicescan/menubar-button.png
+cCopyPNGFile /Users/sdickson/Code/Darren/ServiceScan/servicescan/DerivedData/servicescan/Build/Products/Debug-iphoneos/servicescan.app/menubar-7.png servicescan/menubar-7.png
+cCopyPNGFile /Users/sdickson/Code/Darren/ServiceScan/servicescan/DerivedData/servicescan/Build/Products/Debug-iphoneos/servicescan.app/menubar-button@2x.png servicescan/menubar-button@2x.png
+cCopyPNGFile /Users/sdickson/Code/Darren/ServiceScan/servicescan/DerivedData/servicescan/Build/Products/Debug-iphoneos/servicescan.app/menubar.png servicescan/menubar.png
+cCopyStringsFile /Users/sdickson/Code/Darren/ServiceScan/servicescan/DerivedData/servicescan/Build/Products/Debug-iphoneos/servicescan.app/en.lproj/InfoPlist.strings servicescan/en.lproj/InfoPlist.strings
+cCopyPNGFile /Users/sdickson/Code/Darren/ServiceScan/servicescan/DerivedData/servicescan/Build/Products/Debug-iphoneos/servicescan.app/tabbar-active@2x.png servicescan/tabbar-active@2x.png
+cCopyPNGFile /Users/sdickson/Code/Darren/ServiceScan/servicescan/DerivedData/servicescan/Build/Products/Debug-iphoneos/servicescan.app/menubar-left.png servicescan/menubar-left.png
+cCopyPNGFile /Users/sdickson/Code/Darren/ServiceScan/servicescan/DerivedData/servicescan/Build/Products/Debug-iphoneos/servicescan.app/menubar@2x.png servicescan/menubar@2x.png
+cCopyPNGFile /Users/sdickson/Code/Darren/ServiceScan/servicescan/DerivedData/servicescan/Build/Products/Debug-iphoneos/servicescan.app/tabbar.png servicescan/tabbar.png
+cCopyPNGFile /Users/sdickson/Code/Darren/ServiceScan/servicescan/DerivedData/servicescan/Build/Products/Debug-iphoneos/servicescan.app/SS_APP_ICON_120_120@2x.png servicescan/SS_APP_ICON_120_120@2x.png
+cCompileAssetCatalog /Users/sdickson/Code/Darren/ServiceScan/servicescan/DerivedData/servicescan/Build/Products/Debug-iphoneos/servicescan.app /Users/sdickson/Code/Darren/ServiceScan/servicescan/servicescan/Images.xcassets
+cProcessInfoPlistFile /Users/sdickson/Code/Darren/ServiceScan/servicescan/DerivedData/servicescan/Build/Products/Debug-iphoneos/servicescan.app/Info.plist /Users/sdickson/Code/Darren/ServiceScan/servicescan/servicescan/servicescan-Info.plist
+cProcessProductPackaging /Users/sdickson/Library/MobileDevice/Provisioning\ Profiles/03924BE8-EF16-4491-9C7A-119ABD58BD6F.mobileprovision /Users/sdickson/Code/Darren/ServiceScan/servicescan/DerivedData/servicescan/Build/Products/Debug-iphoneos/servicescan.app/embedded.mobileprovision
+cTouch /Users/sdickson/Code/Darren/ServiceScan/servicescan/DerivedData/servicescan/Build/Products/Debug-iphoneos/servicescan.app
+cProcessProductPackaging /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.0.sdk/Entitlements.plist /Users/sdickson/Code/Darren/ServiceScan/servicescan/DerivedData/servicescan/Build/Intermediates/servicescan.build/Debug-iphoneos/servicescan.build/servicescan.xcent
+cCodeSign /Users/sdickson/Code/Darren/ServiceScan/servicescan/DerivedData/servicescan/Build/Products/Debug-iphoneos/servicescan.app
+
+N/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.0.sdk
+c00000000521BCCE10000000000000110
+t1377553633
+s272
+
+N/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.0.sdk/Entitlements.plist
+c00000000522ACBFD0000000000000094
+t1378536445
+s148
+
+N/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.0.sdk/ResourceRules.plist
+c00000000522ACBFD0000000000000096
+t1378536445
+s150
+
+N/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.0.sdk/SDKSettings.plist
+c00000000522ACBFD000000000000036B
+t1378536445
+s875
+
+N/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.0.sdk/System/Library/CoreServices/SystemVersion.plist
+c00000000522ACC01000000000000019E
+t1378536449
+s414
+
+N/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.0.sdk/System/Library/Frameworks/CoreGraphics.framework/CoreGraphics
+c00000000522ACC0900000000004D6390
+t1378536457
+s5071760
+
+N/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.0.sdk/System/Library/Frameworks/Foundation.framework/Foundation
+c00000000522ACC0D0000000000A8EAD0
+t1378536461
+s11070160
+
+N/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.0.sdk/System/Library/Frameworks/UIKit.framework/UIKit
+c00000000522ACC190000000002597C70
+t1378536473
+s39418992
+
+N/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/5.0/include/module.map
+c00000000520D88540000000000000AC9
+t1376618580
+s2761
+
+N/Users/sdickson/Code/Darren/ServiceScan/servicescan/DerivedData/servicescan/Build/Intermediates/PrecompiledHeaders/servicescan-Prefix-fdbbmysqjooainbgeawexprwnkjc/servicescan-Prefix.pch.pch
+t1389835407
+s87088
+
+N/Users/sdickson/Code/Darren/ServiceScan/servicescan/DerivedData/servicescan/Build/Intermediates/servicescan.build/Debug-iphoneos/servicescan.build/Objects-normal/armv7s/AppDelegate.o
+t1389835408
+s70828
+
+N/Users/sdickson/Code/Darren/ServiceScan/servicescan/DerivedData/servicescan/Build/Intermediates/servicescan.build/Debug-iphoneos/servicescan.build/Objects-normal/armv7s/ScanViewController.o
+t1389835408
+s43124
+
+N/Users/sdickson/Code/Darren/ServiceScan/servicescan/DerivedData/servicescan/Build/Intermediates/servicescan.build/Debug-iphoneos/servicescan.build/Objects-normal/armv7s/SecondViewController.o
+t1389835408
+s41252
+
+N/Users/sdickson/Code/Darren/ServiceScan/servicescan/DerivedData/servicescan/Build/Intermediates/servicescan.build/Debug-iphoneos/servicescan.build/Objects-normal/armv7s/UIImage+iPhone5.o
+t1389835408
+s12508
+
+N/Users/sdickson/Code/Darren/ServiceScan/servicescan/DerivedData/servicescan/Build/Intermediates/servicescan.build/Debug-iphoneos/servicescan.build/Objects-normal/armv7s/Utils.o
+t1389835408
+s11440
+
+N/Users/sdickson/Code/Darren/ServiceScan/servicescan/DerivedData/servicescan/Build/Intermediates/servicescan.build/Debug-iphoneos/servicescan.build/Objects-normal/armv7s/main.o
+t1389835408
+s3800
+
+N/Users/sdickson/Code/Darren/ServiceScan/servicescan/DerivedData/servicescan/Build/Intermediates/servicescan.build/Debug-iphoneos/servicescan.build/Objects-normal/armv7s/servicescan.LinkFileList
+c0000000052D7348F0000000000000451
+t1389835407
+s1105
+
+N/Users/sdickson/Code/Darren/ServiceScan/servicescan/DerivedData/servicescan/Build/Intermediates/servicescan.build/Debug-iphoneos/servicescan.build/assetcatalog_dependencies.txt
+t1389835413
+s329
+
+N/Users/sdickson/Code/Darren/ServiceScan/servicescan/DerivedData/servicescan/Build/Intermediates/servicescan.build/Debug-iphoneos/servicescan.build/assetcatalog_generated_info.plist
+t1389835413
+s181
+
+N/Users/sdickson/Code/Darren/ServiceScan/servicescan/DerivedData/servicescan/Build/Intermediates/servicescan.build/Debug-iphoneos/servicescan.build/servicescan.xcent
+t1389835419
+s420
+
+N/Users/sdickson/Code/Darren/ServiceScan/servicescan/DerivedData/servicescan/Build/Products/Debug-iphoneos/servicescan.app
+t1389835419
+s918
+
+N/Users/sdickson/Code/Darren/ServiceScan/servicescan/DerivedData/servicescan/Build/Products/Debug-iphoneos/servicescan.app.dSYM
+t2
+s0
+
+N/Users/sdickson/Code/Darren/ServiceScan/servicescan/DerivedData/servicescan/Build/Products/Debug-iphoneos/servicescan.app/Base.lproj/Main_iPad.storyboardc
+t1389835418
+s204
+
+N/Users/sdickson/Code/Darren/ServiceScan/servicescan/DerivedData/servicescan/Build/Products/Debug-iphoneos/servicescan.app/Base.lproj/Main_iPhone.storyboardc
+t1389835418
+s204
+
+N/Users/sdickson/Code/Darren/ServiceScan/servicescan/DerivedData/servicescan/Build/Products/Debug-iphoneos/servicescan.app/Info.plist
+t1389835419
+s1997
+
+N/Users/sdickson/Code/Darren/ServiceScan/servicescan/DerivedData/servicescan/Build/Products/Debug-iphoneos/servicescan.app/PkgInfo
+t1389835419
+s8
+
+N/Users/sdickson/Code/Darren/ServiceScan/servicescan/DerivedData/servicescan/Build/Products/Debug-iphoneos/servicescan.app/ResourceRules.plist
+t1389835407
+s150
+
+N/Users/sdickson/Code/Darren/ServiceScan/servicescan/DerivedData/servicescan/Build/Products/Debug-iphoneos/servicescan.app/SS_APP_ICON_120_120@2x.png
+t1389835410
+s22686
+
+N/Users/sdickson/Code/Darren/ServiceScan/servicescan/DerivedData/servicescan/Build/Products/Debug-iphoneos/servicescan.app/bg.png
+t1389835410
+s6132
+
+N/Users/sdickson/Code/Darren/ServiceScan/servicescan/DerivedData/servicescan/Build/Products/Debug-iphoneos/servicescan.app/bg@2x.png
+t1389835410
+s13478
+
+N/Users/sdickson/Code/Darren/ServiceScan/servicescan/DerivedData/servicescan/Build/Products/Debug-iphoneos/servicescan.app/camera.png
+t1389835410
+s364
+
+N/Users/sdickson/Code/Darren/ServiceScan/servicescan/DerivedData/servicescan/Build/Products/Debug-iphoneos/servicescan.app/embedded.mobileprovision
+t1389835419
+s7677
+
+N/Users/sdickson/Code/Darren/ServiceScan/servicescan/DerivedData/servicescan/Build/Products/Debug-iphoneos/servicescan.app/en.lproj/InfoPlist.strings
+t1389835410
+s42
+
+N/Users/sdickson/Code/Darren/ServiceScan/servicescan/DerivedData/servicescan/Build/Products/Debug-iphoneos/servicescan.app/menubar-7.png
+t1389835410
+s10232
+
+N/Users/sdickson/Code/Darren/ServiceScan/servicescan/DerivedData/servicescan/Build/Products/Debug-iphoneos/servicescan.app/menubar-button.png
+t1389835410
+s3796
+
+N/Users/sdickson/Code/Darren/ServiceScan/servicescan/DerivedData/servicescan/Build/Products/Debug-iphoneos/servicescan.app/menubar-button@2x.png
+t1389835410
+s4471
+
+N/Users/sdickson/Code/Darren/ServiceScan/servicescan/DerivedData/servicescan/Build/Products/Debug-iphoneos/servicescan.app/menubar-left.png
+t1389835410
+s7907
+
+N/Users/sdickson/Code/Darren/ServiceScan/servicescan/DerivedData/servicescan/Build/Products/Debug-iphoneos/servicescan.app/menubar-left@2x.png
+t1389835410
+s21111
+
+N/Users/sdickson/Code/Darren/ServiceScan/servicescan/DerivedData/servicescan/Build/Products/Debug-iphoneos/servicescan.app/menubar-right.png
+t1389835410
+s26772
+
+N/Users/sdickson/Code/Darren/ServiceScan/servicescan/DerivedData/servicescan/Build/Products/Debug-iphoneos/servicescan.app/menubar-right@2x.png
+t1389835410
+s69250
+
+N/Users/sdickson/Code/Darren/ServiceScan/servicescan/DerivedData/servicescan/Build/Products/Debug-iphoneos/servicescan.app/menubar.png
+t1389835410
+s7605
+
+N/Users/sdickson/Code/Darren/ServiceScan/servicescan/DerivedData/servicescan/Build/Products/Debug-iphoneos/servicescan.app/menubar@2x.png
+t1389835410
+s22059
+
+N/Users/sdickson/Code/Darren/ServiceScan/servicescan/DerivedData/servicescan/Build/Products/Debug-iphoneos/servicescan.app/servicescan
+t1389835409
+s59112
+
+N/Users/sdickson/Code/Darren/ServiceScan/servicescan/DerivedData/servicescan/Build/Products/Debug-iphoneos/servicescan.app/tabbar-active.png
+t1389835410
+s2616
+
+N/Users/sdickson/Code/Darren/ServiceScan/servicescan/DerivedData/servicescan/Build/Products/Debug-iphoneos/servicescan.app/tabbar-active@2x.png
+t1389835410
+s2355
+
+N/Users/sdickson/Code/Darren/ServiceScan/servicescan/DerivedData/servicescan/Build/Products/Debug-iphoneos/servicescan.app/tabbar.png
+t1389835410
+s6558
+
+N/Users/sdickson/Code/Darren/ServiceScan/servicescan/DerivedData/servicescan/Build/Products/Debug-iphoneos/servicescan.app/tabbar@2x.png
+t1389835410
+s22072
+
+N/Users/sdickson/Code/Darren/ServiceScan/servicescan/servicescan/AppDelegate.m
+c0000000052D72E350000000000000C44
+t1389833781
+s3140
+
+N/Users/sdickson/Code/Darren/ServiceScan/servicescan/servicescan/Base.lproj/Main_iPad.storyboard
+c0000000052D733D70000000000002A9F
+t1389835223
+s10911
+
+N/Users/sdickson/Code/Darren/ServiceScan/servicescan/servicescan/Base.lproj/Main_iPhone.storyboard
+c0000000052D72E350000000000002DDB
+t1389833781
+s11739
+
+N/Users/sdickson/Code/Darren/ServiceScan/servicescan/servicescan/Images.xcassets
+c0000000052D72E3500000000000000CC
+t1389833781
+s204
+
+N/Users/sdickson/Code/Darren/ServiceScan/servicescan/servicescan/SS_APP_ICON_120_120@2x.png
+c0000000052D72E350000000000006774
+t1389833781
+s26484
+
+N/Users/sdickson/Code/Darren/ServiceScan/servicescan/servicescan/ScanViewController.m
+c0000000052D72E3500000000000002A2
+t1389833781
+s674
+
+N/Users/sdickson/Code/Darren/ServiceScan/servicescan/servicescan/SecondViewController.m
+c0000000052D72E350000000000000200
+t1389833781
+s512
+
+N/Users/sdickson/Code/Darren/ServiceScan/servicescan/servicescan/UIImage+iPhone5.m
+c0000000052D72E350000000000000435
+t1389833781
+s1077
+
+N/Users/sdickson/Code/Darren/ServiceScan/servicescan/servicescan/Utils.m
+c0000000052D72E350000000000000333
+t1389833781
+s819
+
+N/Users/sdickson/Code/Darren/ServiceScan/servicescan/servicescan/bg.png
+c0000000052D72E350000000000001B6F
+t1389833781
+s7023
+
+N/Users/sdickson/Code/Darren/ServiceScan/servicescan/servicescan/bg@2x.png
+c0000000052D72E35000000000000348F
+t1389833781
+s13455
+
+N/Users/sdickson/Code/Darren/ServiceScan/servicescan/servicescan/camera.png
+c000000004FABF05200000000000001D9
+t1336668242
+s473
+
+N/Users/sdickson/Code/Darren/ServiceScan/servicescan/servicescan/en.lproj/InfoPlist.strings
+c0000000052D72E35000000000000002D
+t1389833781
+s45
+
+N/Users/sdickson/Code/Darren/ServiceScan/servicescan/servicescan/main.m
+c0000000052D72E35000000000000014C
+t1389833781
+s332
+
+N/Users/sdickson/Code/Darren/ServiceScan/servicescan/servicescan/menubar-7.png
+c0000000052D72E350000000000002791
+t1389833781
+s10129
+
+N/Users/sdickson/Code/Darren/ServiceScan/servicescan/servicescan/menubar-button.png
+c0000000052D72E350000000000000E32
+t1389833781
+s3634
+
+N/Users/sdickson/Code/Darren/ServiceScan/servicescan/servicescan/menubar-button@2x.png
+c0000000052D72E350000000000001153
+t1389833781
+s4435
+
+N/Users/sdickson/Code/Darren/ServiceScan/servicescan/servicescan/menubar-left.png
+c0000000052D72E350000000000002037
+t1389833781
+s8247
+
+N/Users/sdickson/Code/Darren/ServiceScan/servicescan/servicescan/menubar-left@2x.png
+c0000000052D72E350000000000005B0A
+t1389833781
+s23306
+
+N/Users/sdickson/Code/Darren/ServiceScan/servicescan/servicescan/menubar-right.png
+c0000000052D72E350000000000006368
+t1389833781
+s25448
+
+N/Users/sdickson/Code/Darren/ServiceScan/servicescan/servicescan/menubar-right@2x.png
+c0000000052D72E35000000000000F91D
+t1389833781
+s63773
+
+N/Users/sdickson/Code/Darren/ServiceScan/servicescan/servicescan/menubar.png
+c0000000052D72E350000000000001FE8
+t1389833781
+s8168
+
+N/Users/sdickson/Code/Darren/ServiceScan/servicescan/servicescan/menubar@2x.png
+c0000000052D72E350000000000004FF2
+t1389833781
+s20466
+
+N/Users/sdickson/Code/Darren/ServiceScan/servicescan/servicescan/servicescan-Info.plist
+c0000000052D72E350000000000000C6B
+t1389833781
+s3179
+
+N/Users/sdickson/Code/Darren/ServiceScan/servicescan/servicescan/servicescan-Prefix.pch
+c0000000052D72E350000000000000158
+t1389833781
+s344
+
+N/Users/sdickson/Code/Darren/ServiceScan/servicescan/servicescan/tabbar-active.png
+c0000000052D72E350000000000000812
+t1389833781
+s2066
+
+N/Users/sdickson/Code/Darren/ServiceScan/servicescan/servicescan/tabbar-active@2x.png
+c0000000052D72E350000000000000640
+t1389833781
+s1600
+
+N/Users/sdickson/Code/Darren/ServiceScan/servicescan/servicescan/tabbar.png
+c0000000052D72E350000000000001CF2
+t1389833781
+s7410
+
+N/Users/sdickson/Code/Darren/ServiceScan/servicescan/servicescan/tabbar@2x.png
+c0000000052D72E3500000000000055C7
+t1389833781
+s21959
+
+N/Users/sdickson/Library/MobileDevice/Provisioning Profiles/03924BE8-EF16-4491-9C7A-119ABD58BD6F.mobileprovision
+c0000000052D72E980000000000001DFD
+t1389833880
+s7677
+
+CBuild AST from /Users/sdickson/Code/Darren/ServiceScan/servicescan/servicescan/AppDelegate.m
+r0
+
+CBuild AST from /Users/sdickson/Code/Darren/ServiceScan/servicescan/servicescan/ScanViewController.m
+r0
+
+CBuild AST from /Users/sdickson/Code/Darren/ServiceScan/servicescan/servicescan/SecondViewController.m
+r0
+
+CBuild AST from /Users/sdickson/Code/Darren/ServiceScan/servicescan/servicescan/UIImage+iPhone5.m
+r0
+
+CBuild AST from /Users/sdickson/Code/Darren/ServiceScan/servicescan/servicescan/Utils.m
+r0
+
+CBuild AST from /Users/sdickson/Code/Darren/ServiceScan/servicescan/servicescan/main.m
+r0
+
+CCheck dependencies
+r0
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection18"Check dependencies18"Check dependenciesfe64040f6c87b841^1ec6100f6c87b841^---0#1#1#--18"Check dependencies36"07C99113-7AFE-4153-B63E-54DF7D55281E-
+
+CCodeSign /Users/sdickson/Code/Darren/ServiceScan/servicescan/DerivedData/servicescan/Build/Products/Debug-iphoneos/servicescan.app
+s411528219.045781
+e411528220.701577
+r1
+xCodeSign
+x/Users/sdickson/Code/Darren/ServiceScan/servicescan/DerivedData/servicescan/Build/Products/Debug-iphoneos/servicescan.app
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection78"CodeSign DerivedData/servicescan/Build/Products/Debug-iphoneos/servicescan.app78"CodeSign DerivedData/servicescan/Build/Products/Debug-iphoneos/servicescan.appa8c60b1b6c87b841^d09ab31c6c87b841^---0#0#1#-19%DVTDocumentLocation2@129"file:///Users/sdickson/Code/Darren/ServiceScan/servicescan/DerivedData/servicescan/Build/Products/Debug-iphoneos/servicescan.app/0000000000000000^1169"CodeSign DerivedData/servicescan/Build/Products/Debug-iphoneos/servicescan.app    cd /Users/sdickson/Code/Darren/ServiceScan/servicescan    setenv CODESIGN_ALLOCATE /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/codesign_allocate    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    Using code signing identity "iPhone Developer: Ronald Dickson (Z7A22D727B)" and provisioning profile "iOS Team Provisioning Profile: *" (03924BE8-EF16-4491-9C7A-119ABD58BD6F)    codesign --force --sign 99EB70FDE2E2A70E3398E5319A9305C3D6840407 --resource-rules=/Users/sdickson/Code/Darren/ServiceScan/servicescan/DerivedData/servicescan/Build/Products/Debug-iphoneos/servicescan.app/ResourceRules.plist --entitlements /Users/sdickson/Code/Darren/ServiceScan/servicescan/DerivedData/servicescan/Build/Intermediates/servicescan.build/Debug-iphoneos/servicescan.build/servicescan.xcent /Users/sdickson/Code/Darren/ServiceScan/servicescan/DerivedData/servicescan/Build/Products/Debug-iphoneos/servicescan.app36"90F4D722-3D08-4818-B565-CB0A1A7F05D5-
+bC86383B7-7F08-4E96-821C-2324AC1F166D
+
+CCompileAssetCatalog /Users/sdickson/Code/Darren/ServiceScan/servicescan/DerivedData/servicescan/Build/Products/Debug-iphoneos/servicescan.app /Users/sdickson/Code/Darren/ServiceScan/servicescan/servicescan/Images.xcassets
+s411528210.353632
+e411528213.930479
+r1
+xCompileAssetCatalog
+x/Users/sdickson/Code/Darren/ServiceScan/servicescan/DerivedData/servicescan/Build/Products/Debug-iphoneos/servicescan.app
+x/Users/sdickson/Code/Darren/ServiceScan/servicescan/servicescan/Images.xcassets
+o/* com.apple.actool.compilation-results */
+o/Users/sdickson/Code/Darren/ServiceScan/servicescan/DerivedData/servicescan/Build/Products/Debug-iphoneos/servicescan.app/Assets.car
+o/Users/sdickson/Code/Darren/ServiceScan/servicescan/DerivedData/servicescan/Build/Intermediates/servicescan.build/Debug-iphoneos/servicescan.build/assetcatalog_generated_info.plist
+o
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection117"CompileAssetCatalog DerivedData/servicescan/Build/Products/Debug-iphoneos/servicescan.app servicescan/Images.xcassets117"CompileAssetCatalog DerivedData/servicescan/Build/Products/Debug-iphoneos/servicescan.app servicescan/Images.xcassets1d925a126c87b841^3733ee156c87b841^-358"/* com.apple.actool.compilation-results *//Users/sdickson/Code/Darren/ServiceScan/servicescan/DerivedData/servicescan/Build/Products/Debug-iphoneos/servicescan.app/Assets.car/Users/sdickson/Code/Darren/ServiceScan/servicescan/DerivedData/servicescan/Build/Intermediates/servicescan.build/Debug-iphoneos/servicescan.build/assetcatalog_generated_info.plist-0#0#1#-19%DVTDocumentLocation2@87"file:///Users/sdickson/Code/Darren/ServiceScan/servicescan/servicescan/Images.xcassets/0000000000000000^1219"CompileAssetCatalog DerivedData/servicescan/Build/Products/Debug-iphoneos/servicescan.app servicescan/Images.xcassets    cd /Users/sdickson/Code/Darren/ServiceScan/servicescan    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Applications/Xcode.app/Contents/Developer/usr/bin/actool --output-format human-readable-text --notices --warnings --export-dependency-info /Users/sdickson/Code/Darren/ServiceScan/servicescan/DerivedData/servicescan/Build/Intermediates/servicescan.build/Debug-iphoneos/servicescan.build/assetcatalog_dependencies.txt --output-partial-info-plist /Users/sdickson/Code/Darren/ServiceScan/servicescan/DerivedData/servicescan/Build/Intermediates/servicescan.build/Debug-iphoneos/servicescan.build/assetcatalog_generated_info.plist --platform iphoneos --minimum-deployment-target 7.0 --target-device iphone --target-device ipad --compress-pngs --compile /Users/sdickson/Code/Darren/ServiceScan/servicescan/DerivedData/servicescan/Build/Products/Debug-iphoneos/servicescan.app /Users/sdickson/Code/Darren/ServiceScan/servicescan/servicescan/Images.xcassets36"0000C7D9-C4BC-4119-89C1-ED900B52898A-
+bC86383B7-7F08-4E96-821C-2324AC1F166D
+
+CCompileC DerivedData/servicescan/Build/Intermediates/servicescan.build/Debug-iphoneos/servicescan.build/Objects-normal/armv7s/AppDelegate.o /Users/sdickson/Code/Darren/ServiceScan/servicescan/servicescan/AppDelegate.m normal armv7s objective-c com.apple.compilers.llvm.clang.1_0.compiler
+s411528207.690420
+e411528208.131806
+r1
+xCompileC
+xDerivedData/servicescan/Build/Intermediates/servicescan.build/Debug-iphoneos/servicescan.build/Objects-normal/armv7s/AppDelegate.o
+x/Users/sdickson/Code/Darren/ServiceScan/servicescan/servicescan/AppDelegate.m
+xnormal
+xarmv7s
+xobjective-c
+xcom.apple.compilers.llvm.clang.1_0.compiler
+d/Users/sdickson/Code/Darren/ServiceScan/servicescan/servicescan/AppDelegate.m
+d/Users/sdickson/Code/Darren/ServiceScan/servicescan/servicescan/AppDelegate.h
+d/Users/sdickson/Code/Darren/ServiceScan/servicescan/servicescan/UIImage+iPhone5.h
+d/Users/sdickson/Code/Darren/ServiceScan/servicescan/servicescan/Utils.h
+o/Users/sdickson/Code/Darren/ServiceScan/servicescan/servicescan/AppDelegate.m:19:60: warning: 'UIStatusBarStyleBlackOpaque' is deprecated: first deprecated in iOS 7.0 - Use UIStatusBarStyleLightContent [-Wdeprecated-declarations]
+o      [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleBlackOpaque animated:NO];
+o                                                           ^
+oIn module 'UIKit' imported from /Users/sdickson/Code/Darren/ServiceScan/servicescan/servicescan/AppDelegate.h:9:
+o/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.0.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIApplication.h:21:5: note: 'UIStatusBarStyleBlackOpaque' declared here
+o    UIStatusBarStyleBlackOpaque      NS_ENUM_DEPRECATED_IOS(2_0, 7_0, "Use UIStatusBarStyleLightContent") = 2,
+o    ^
+o/Users/sdickson/Code/Darren/ServiceScan/servicescan/servicescan/AppDelegate.m:29:12: warning: 'UITextAttributeTextColor' is deprecated: first deprecated in iOS 7.0 - Use NSForegroundColorAttributeName [-Wdeprecated-declarations]
+o         @{UITextAttributeTextColor: [UIColor colorWithRed:255.0/255.0 green:255.0/255.0 blue:255.0/255.0 alpha:1.0],
+o           ^
+oIn module 'UIKit' imported from /Users/sdickson/Code/Darren/ServiceScan/servicescan/servicescan/AppDelegate.h:9:
+o/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.0.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIStringDrawing.h:23:30: note: 'UITextAttributeTextColor' declared here
+oUIKIT_EXTERN NSString *const UITextAttributeTextColor NS_DEPRECATED_IOS(5_0, 7_0, "Use NSForegroundColorAttributeName");
+o                             ^
+o/Users/sdickson/Code/Darren/ServiceScan/servicescan/servicescan/AppDelegate.m:30:12: warning: 'UITextAttributeTextShadowColor' is deprecated: first deprecated in iOS 7.0 - Use NSShadowAttributeName with an NSShadow instance as the value [-Wdeprecated-declarations]
+o           UITextAttributeTextShadowColor: [UIColor colorWithRed:0.0 green:0.0 blue:0.0 alpha:0.8],
+o           ^
+oIn module 'UIKit' imported from /Users/sdickson/Code/Darren/ServiceScan/servicescan/servicescan/AppDelegate.h:9:
+o/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.0.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIStringDrawing.h:25:30: note: 'UITextAttributeTextShadowColor' declared here
+oUIKIT_EXTERN NSString *const UITextAttributeTextShadowColor NS_DEPRECATED_IOS(5_0, 7_0, "Use NSShadowAttributeName with an NSShadow instance as the value");
+o                             ^
+o/Users/sdickson/Code/Darren/ServiceScan/servicescan/servicescan/AppDelegate.m:31:12: warning: 'UITextAttributeTextShadowOffset' is deprecated: first deprecated in iOS 7.0 - Use NSShadowAttributeName with an NSShadow instance as the value [-Wdeprecated-declarations]
+o           UITextAttributeTextShadowOffset: [NSValue valueWithUIOffset:UIOffsetMake(0, -1)]}];
+o           ^
+oIn module 'UIKit' imported from /Users/sdickson/Code/Darren/ServiceScan/servicescan/servicescan/AppDelegate.h:9:
+o/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.0.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIStringDrawing.h:27:30: note: 'UITextAttributeTextShadowOffset' declared here
+oUIKIT_EXTERN NSString *const UITextAttributeTextShadowOffset NS_DEPRECATED_IOS(5_0, 7_0, "Use NSShadowAttributeName with an NSShadow instance as the value");
+o                             ^
+o4 warnings generated.
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection85"Compile /Users/sdickson/Code/Darren/ServiceScan/servicescan/servicescan/AppDelegate.m235"CompileC DerivedData/servicescan/Build/Intermediates/servicescan.build/Debug-iphoneos/servicescan.build/Objects-normal/armv7s/AppDelegate.o servicescan/AppDelegate.m normal armv7s objective-c com.apple.compilers.llvm.clang.1_0.compilera9d8b00f6c87b841^b6bd21106c87b841^-3533"/Users/sdickson/Code/Darren/ServiceScan/servicescan/servicescan/AppDelegate.m:19:60: warning: 'UIStatusBarStyleBlackOpaque' is deprecated: first deprecated in iOS 7.0 - Use UIStatusBarStyleLightContent [-Wdeprecated-declarations]      [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleBlackOpaque animated:NO];                                                           ^In module 'UIKit' imported from /Users/sdickson/Code/Darren/ServiceScan/servicescan/servicescan/AppDelegate.h:9:/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.0.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIApplication.h:21:5: note: 'UIStatusBarStyleBlackOpaque' declared here    UIStatusBarStyleBlackOpaque      NS_ENUM_DEPRECATED_IOS(2_0, 7_0, "Use UIStatusBarStyleLightContent") = 2,    ^/Users/sdickson/Code/Darren/ServiceScan/servicescan/servicescan/AppDelegate.m:29:12: warning: 'UITextAttributeTextColor' is deprecated: first deprecated in iOS 7.0 - Use NSForegroundColorAttributeName [-Wdeprecated-declarations]         @{UITextAttributeTextColor: [UIColor colorWithRed:255.0/255.0 green:255.0/255.0 blue:255.0/255.0 alpha:1.0],           ^In module 'UIKit' imported from /Users/sdickson/Code/Darren/ServiceScan/servicescan/servicescan/AppDelegate.h:9:/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.0.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIStringDrawing.h:23:30: note: 'UITextAttributeTextColor' declared hereUIKIT_EXTERN NSString *const UITextAttributeTextColor NS_DEPRECATED_IOS(5_0, 7_0, "Use NSForegroundColorAttributeName");                             ^/Users/sdickson/Code/Darren/ServiceScan/servicescan/servicescan/AppDelegate.m:30:12: warning: 'UITextAttributeTextShadowColor' is deprecated: first deprecated in iOS 7.0 - Use NSShadowAttributeName with an NSShadow instance as the value [-Wdeprecated-declarations]           UITextAttributeTextShadowColor: [UIColor colorWithRed:0.0 green:0.0 blue:0.0 alpha:0.8],           ^In module 'UIKit' imported from /Users/sdickson/Code/Darren/ServiceScan/servicescan/servicescan/AppDelegate.h:9:/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.0.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIStringDrawing.h:25:30: note: 'UITextAttributeTextShadowColor' declared hereUIKIT_EXTERN NSString *const UITextAttributeTextShadowColor NS_DEPRECATED_IOS(5_0, 7_0, "Use NSShadowAttributeName with an NSShadow instance as the value");                             ^/Users/sdickson/Code/Darren/ServiceScan/servicescan/servicescan/AppDelegate.m:31:12: warning: 'UITextAttributeTextShadowOffset' is deprecated: first deprecated in iOS 7.0 - Use NSShadowAttributeName with an NSShadow instance as the value [-Wdeprecated-declarations]           UITextAttributeTextShadowOffset: [NSValue valueWithUIOffset:UIOffsetMake(0, -1)]}];           ^In module 'UIKit' imported from /Users/sdickson/Code/Darren/ServiceScan/servicescan/servicescan/AppDelegate.h:9:/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.0.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIStringDrawing.h:27:30: note: 'UITextAttributeTextShadowOffset' declared hereUIKIT_EXTERN NSString *const UITextAttributeTextShadowOffset NS_DEPRECATED_IOS(5_0, 7_0, "Use NSShadowAttributeName with an NSShadow instance as the value");                             ^4 warnings generated.4(36%IDEClangDiagnosticActivityLogMessage2@107"'UIStatusBarStyleBlackOpaque' is deprecated: first deprecated in iOS 7.0 - Use UIStatusBarStyleLightContent-411528208#18446744073709551615#0#1(2@43"'UIStatusBarStyleBlackOpaque' declared here-411528208#18446744073709551615#0#-0#27"com.apple.dt.IDE.diagnostic23%DVTTextDocumentLocation3@174"file:///Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.0.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIApplication.h0000000000000000^20#4#20#4#715#0#14"Semantic Issue--1#27"com.apple.dt.IDE.diagnostic3@84"file:///Users/sdickson/Code/Darren/ServiceScan/servicescan/servicescan/AppDelegate.m0000000000000000^18#59#18#59#407#0#12"Deprecations--2@106"'UITextAttributeTextColor' is deprecated: first deprecated in iOS 7.0 - Use NSForegroundColorAttributeName-411528208#18446744073709551615#0#1(2@40"'UITextAttributeTextColor' declared here-411528208#18446744073709551615#0#-0#27"com.apple.dt.IDE.diagnostic3@176"file:///Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.0.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIStringDrawing.h0000000000000000^22#29#22#29#925#0#14"Semantic Issue--1#27"com.apple.dt.IDE.diagnostic3@84"file:///Users/sdickson/Code/Darren/ServiceScan/servicescan/servicescan/AppDelegate.m0000000000000000^28#11#28#11#721#0#12"Deprecations--2@142"'UITextAttributeTextShadowColor' is deprecated: first deprecated in iOS 7.0 - Use NSShadowAttributeName with an NSShadow instance as the value-411528208#18446744073709551615#0#1(2@46"'UITextAttributeTextShadowColor' declared here-411528208#18446744073709551615#0#-0#27"com.apple.dt.IDE.diagnostic3@176"file:///Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.0.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIStringDrawing.h0000000000000000^24#29#24#29#1146#0#14"Semantic Issue--1#27"com.apple.dt.IDE.diagnostic3@84"file:///Users/sdickson/Code/Darren/ServiceScan/servicescan/servicescan/AppDelegate.m0000000000000000^29#11#29#11#839#0#12"Deprecations--2@143"'UITextAttributeTextShadowOffset' is deprecated: first deprecated in iOS 7.0 - Use NSShadowAttributeName with an NSShadow instance as the value-411528208#18446744073709551615#0#1(2@47"'UITextAttributeTextShadowOffset' declared here-411528208#18446744073709551615#0#-0#27"com.apple.dt.IDE.diagnostic3@176"file:///Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.0.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIStringDrawing.h0000000000000000^26#29#26#29#1444#0#14"Semantic Issue--1#27"com.apple.dt.IDE.diagnostic3@84"file:///Users/sdickson/Code/Darren/ServiceScan/servicescan/servicescan/AppDelegate.m0000000000000000^30#11#30#11#939#0#12"Deprecations--0#0#1#-19%DVTDocumentLocation4@84"file:///Users/sdickson/Code/Darren/ServiceScan/servicescan/servicescan/AppDelegate.m0000000000000000^4094"CompileC DerivedData/servicescan/Build/Intermediates/servicescan.build/Debug-iphoneos/servicescan.build/Objects-normal/armv7s/AppDelegate.o servicescan/AppDelegate.m normal armv7s objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/sdickson/Code/Darren/ServiceScan/servicescan    setenv LANG en_US.US-ASCII    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c -arch armv7s -fmessage-length=0 -fdiagnostics-show-note-include-stack -fmacro-backtrace-limit=0 -std=gnu99 -fobjc-arc -fmodules -fmodules-cache-path=/Users/sdickson/Code/Darren/ServiceScan/servicescan/DerivedData/ModuleCache -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Werror=return-type -Wno-implicit-atomic-properties -Werror=deprecated-objc-isa-usage -Werror=objc-root-class -Wno-receiver-is-weak -Wno-arc-repeated-use-of-weak -Wduplicate-method-match -Wno-missing-braces -Wparentheses -Wswitch -Wunused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wempty-body -Wuninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wconstant-conversion -Wint-conversion -Wbool-conversion -Wenum-conversion -Wshorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wundeclared-selector -Wno-deprecated-implementations -DDEBUG=1 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.0.sdk -fstrict-aliasing -Wprotocol -Wdeprecated-declarations -g -Wno-sign-conversion -miphoneos-version-min=7.0 -iquote /Users/sdickson/Code/Darren/ServiceScan/servicescan/DerivedData/servicescan/Build/Intermediates/servicescan.build/Debug-iphoneos/servicescan.build/servicescan-generated-files.hmap -I/Users/sdickson/Code/Darren/ServiceScan/servicescan/DerivedData/servicescan/Build/Intermediates/servicescan.build/Debug-iphoneos/servicescan.build/servicescan-own-target-headers.hmap -I/Users/sdickson/Code/Darren/ServiceScan/servicescan/DerivedData/servicescan/Build/Intermediates/servicescan.build/Debug-iphoneos/servicescan.build/servicescan-all-target-headers.hmap -iquote /Users/sdickson/Code/Darren/ServiceScan/servicescan/DerivedData/servicescan/Build/Intermediates/servicescan.build/Debug-iphoneos/servicescan.build/servicescan-project-headers.hmap -I/Users/sdickson/Code/Darren/ServiceScan/servicescan/DerivedData/servicescan/Build/Products/Debug-iphoneos/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Users/sdickson/Code/Darren/ServiceScan/servicescan/DerivedData/servicescan/Build/Intermediates/servicescan.build/Debug-iphoneos/servicescan.build/DerivedSources/armv7s -I/Users/sdickson/Code/Darren/ServiceScan/servicescan/DerivedData/servicescan/Build/Intermediates/servicescan.build/Debug-iphoneos/servicescan.build/DerivedSources -F/Users/sdickson/Code/Darren/ServiceScan/servicescan/DerivedData/servicescan/Build/Products/Debug-iphoneos -include /Users/sdickson/Code/Darren/ServiceScan/servicescan/DerivedData/servicescan/Build/Intermediates/PrecompiledHeaders/servicescan-Prefix-fdbbmysqjooainbgeawexprwnkjc/servicescan-Prefix.pch -MMD -MT dependencies -MF /Users/sdickson/Code/Darren/ServiceScan/servicescan/DerivedData/servicescan/Build/Intermediates/servicescan.build/Debug-iphoneos/servicescan.build/Objects-normal/armv7s/AppDelegate.d --serialize-diagnostics /Users/sdickson/Code/Darren/ServiceScan/servicescan/DerivedData/servicescan/Build/Intermediates/servicescan.build/Debug-iphoneos/servicescan.build/Objects-normal/armv7s/AppDelegate.dia -c /Users/sdickson/Code/Darren/ServiceScan/servicescan/servicescan/AppDelegate.m -o /Users/sdickson/Code/Darren/ServiceScan/servicescan/DerivedData/servicescan/Build/Intermediates/servicescan.build/Debug-iphoneos/servicescan.build/Objects-normal/armv7s/AppDelegate.o36"12025BF8-D84E-4595-BE0B-AF872B224039-
+bC86383B7-7F08-4E96-821C-2324AC1F166D
+
+CCompileC DerivedData/servicescan/Build/Intermediates/servicescan.build/Debug-iphoneos/servicescan.build/Objects-normal/armv7s/ScanViewController.o /Users/sdickson/Code/Darren/ServiceScan/servicescan/servicescan/ScanViewController.m normal armv7s objective-c com.apple.compilers.llvm.clang.1_0.compiler
+s411528207.690953
+e411528208.100592
+r1
+xCompileC
+xDerivedData/servicescan/Build/Intermediates/servicescan.build/Debug-iphoneos/servicescan.build/Objects-normal/armv7s/ScanViewController.o
+x/Users/sdickson/Code/Darren/ServiceScan/servicescan/servicescan/ScanViewController.m
+xnormal
+xarmv7s
+xobjective-c
+xcom.apple.compilers.llvm.clang.1_0.compiler
+d/Users/sdickson/Code/Darren/ServiceScan/servicescan/servicescan/ScanViewController.m
+d/Users/sdickson/Code/Darren/ServiceScan/servicescan/servicescan/ScanViewController.h
+d/Users/sdickson/Code/Darren/ServiceScan/servicescan/servicescan/UIImage+iPhone5.h
+d/Users/sdickson/Code/Darren/ServiceScan/servicescan/servicescan/Utils.h
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection92"Compile /Users/sdickson/Code/Darren/ServiceScan/servicescan/servicescan/ScanViewController.m249"CompileC DerivedData/servicescan/Build/Intermediates/servicescan.build/Debug-iphoneos/servicescan.build/Objects-normal/armv7s/ScanViewController.o servicescan/ScanViewController.m normal armv7s objective-c com.apple.compilers.llvm.clang.1_0.compiler88f7b00f6c87b841^b9c419106c87b841^---0#0#1#-19%DVTDocumentLocation2@91"file:///Users/sdickson/Code/Darren/ServiceScan/servicescan/servicescan/ScanViewController.m0000000000000000^4136"CompileC DerivedData/servicescan/Build/Intermediates/servicescan.build/Debug-iphoneos/servicescan.build/Objects-normal/armv7s/ScanViewController.o servicescan/ScanViewController.m normal armv7s objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/sdickson/Code/Darren/ServiceScan/servicescan    setenv LANG en_US.US-ASCII    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c -arch armv7s -fmessage-length=0 -fdiagnostics-show-note-include-stack -fmacro-backtrace-limit=0 -std=gnu99 -fobjc-arc -fmodules -fmodules-cache-path=/Users/sdickson/Code/Darren/ServiceScan/servicescan/DerivedData/ModuleCache -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Werror=return-type -Wno-implicit-atomic-properties -Werror=deprecated-objc-isa-usage -Werror=objc-root-class -Wno-receiver-is-weak -Wno-arc-repeated-use-of-weak -Wduplicate-method-match -Wno-missing-braces -Wparentheses -Wswitch -Wunused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wempty-body -Wuninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wconstant-conversion -Wint-conversion -Wbool-conversion -Wenum-conversion -Wshorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wundeclared-selector -Wno-deprecated-implementations -DDEBUG=1 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.0.sdk -fstrict-aliasing -Wprotocol -Wdeprecated-declarations -g -Wno-sign-conversion -miphoneos-version-min=7.0 -iquote /Users/sdickson/Code/Darren/ServiceScan/servicescan/DerivedData/servicescan/Build/Intermediates/servicescan.build/Debug-iphoneos/servicescan.build/servicescan-generated-files.hmap -I/Users/sdickson/Code/Darren/ServiceScan/servicescan/DerivedData/servicescan/Build/Intermediates/servicescan.build/Debug-iphoneos/servicescan.build/servicescan-own-target-headers.hmap -I/Users/sdickson/Code/Darren/ServiceScan/servicescan/DerivedData/servicescan/Build/Intermediates/servicescan.build/Debug-iphoneos/servicescan.build/servicescan-all-target-headers.hmap -iquote /Users/sdickson/Code/Darren/ServiceScan/servicescan/DerivedData/servicescan/Build/Intermediates/servicescan.build/Debug-iphoneos/servicescan.build/servicescan-project-headers.hmap -I/Users/sdickson/Code/Darren/ServiceScan/servicescan/DerivedData/servicescan/Build/Products/Debug-iphoneos/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Users/sdickson/Code/Darren/ServiceScan/servicescan/DerivedData/servicescan/Build/Intermediates/servicescan.build/Debug-iphoneos/servicescan.build/DerivedSources/armv7s -I/Users/sdickson/Code/Darren/ServiceScan/servicescan/DerivedData/servicescan/Build/Intermediates/servicescan.build/Debug-iphoneos/servicescan.build/DerivedSources -F/Users/sdickson/Code/Darren/ServiceScan/servicescan/DerivedData/servicescan/Build/Products/Debug-iphoneos -include /Users/sdickson/Code/Darren/ServiceScan/servicescan/DerivedData/servicescan/Build/Intermediates/PrecompiledHeaders/servicescan-Prefix-fdbbmysqjooainbgeawexprwnkjc/servicescan-Prefix.pch -MMD -MT dependencies -MF /Users/sdickson/Code/Darren/ServiceScan/servicescan/DerivedData/servicescan/Build/Intermediates/servicescan.build/Debug-iphoneos/servicescan.build/Objects-normal/armv7s/ScanViewController.d --serialize-diagnostics /Users/sdickson/Code/Darren/ServiceScan/servicescan/DerivedData/servicescan/Build/Intermediates/servicescan.build/Debug-iphoneos/servicescan.build/Objects-normal/armv7s/ScanViewController.dia -c /Users/sdickson/Code/Darren/ServiceScan/servicescan/servicescan/ScanViewController.m -o /Users/sdickson/Code/Darren/ServiceScan/servicescan/DerivedData/servicescan/Build/Intermediates/servicescan.build/Debug-iphoneos/servicescan.build/Objects-normal/armv7s/ScanViewController.o36"12E87150-5492-4D97-A4C0-8B37AB56F6C0-
+bC86383B7-7F08-4E96-821C-2324AC1F166D
+
+CCompileC DerivedData/servicescan/Build/Intermediates/servicescan.build/Debug-iphoneos/servicescan.build/Objects-normal/armv7s/SecondViewController.o /Users/sdickson/Code/Darren/ServiceScan/servicescan/servicescan/SecondViewController.m normal armv7s objective-c com.apple.compilers.llvm.clang.1_0.compiler
+s411528207.690004
+e411528208.096669
+r1
+xCompileC
+xDerivedData/servicescan/Build/Intermediates/servicescan.build/Debug-iphoneos/servicescan.build/Objects-normal/armv7s/SecondViewController.o
+x/Users/sdickson/Code/Darren/ServiceScan/servicescan/servicescan/SecondViewController.m
+xnormal
+xarmv7s
+xobjective-c
+xcom.apple.compilers.llvm.clang.1_0.compiler
+d/Users/sdickson/Code/Darren/ServiceScan/servicescan/servicescan/SecondViewController.m
+d/Users/sdickson/Code/Darren/ServiceScan/servicescan/servicescan/SecondViewController.h
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection94"Compile /Users/sdickson/Code/Darren/ServiceScan/servicescan/servicescan/SecondViewController.m253"CompileC DerivedData/servicescan/Build/Intermediates/servicescan.build/Debug-iphoneos/servicescan.build/Objects-normal/armv7s/SecondViewController.o servicescan/SecondViewController.m normal armv7s objective-c com.apple.compilers.llvm.clang.1_0.compiler34b9b00f6c87b841^5dbf18106c87b841^---0#0#1#-19%DVTDocumentLocation2@93"file:///Users/sdickson/Code/Darren/ServiceScan/servicescan/servicescan/SecondViewController.m0000000000000000^4148"CompileC DerivedData/servicescan/Build/Intermediates/servicescan.build/Debug-iphoneos/servicescan.build/Objects-normal/armv7s/SecondViewController.o servicescan/SecondViewController.m normal armv7s objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/sdickson/Code/Darren/ServiceScan/servicescan    setenv LANG en_US.US-ASCII    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c -arch armv7s -fmessage-length=0 -fdiagnostics-show-note-include-stack -fmacro-backtrace-limit=0 -std=gnu99 -fobjc-arc -fmodules -fmodules-cache-path=/Users/sdickson/Code/Darren/ServiceScan/servicescan/DerivedData/ModuleCache -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Werror=return-type -Wno-implicit-atomic-properties -Werror=deprecated-objc-isa-usage -Werror=objc-root-class -Wno-receiver-is-weak -Wno-arc-repeated-use-of-weak -Wduplicate-method-match -Wno-missing-braces -Wparentheses -Wswitch -Wunused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wempty-body -Wuninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wconstant-conversion -Wint-conversion -Wbool-conversion -Wenum-conversion -Wshorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wundeclared-selector -Wno-deprecated-implementations -DDEBUG=1 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.0.sdk -fstrict-aliasing -Wprotocol -Wdeprecated-declarations -g -Wno-sign-conversion -miphoneos-version-min=7.0 -iquote /Users/sdickson/Code/Darren/ServiceScan/servicescan/DerivedData/servicescan/Build/Intermediates/servicescan.build/Debug-iphoneos/servicescan.build/servicescan-generated-files.hmap -I/Users/sdickson/Code/Darren/ServiceScan/servicescan/DerivedData/servicescan/Build/Intermediates/servicescan.build/Debug-iphoneos/servicescan.build/servicescan-own-target-headers.hmap -I/Users/sdickson/Code/Darren/ServiceScan/servicescan/DerivedData/servicescan/Build/Intermediates/servicescan.build/Debug-iphoneos/servicescan.build/servicescan-all-target-headers.hmap -iquote /Users/sdickson/Code/Darren/ServiceScan/servicescan/DerivedData/servicescan/Build/Intermediates/servicescan.build/Debug-iphoneos/servicescan.build/servicescan-project-headers.hmap -I/Users/sdickson/Code/Darren/ServiceScan/servicescan/DerivedData/servicescan/Build/Products/Debug-iphoneos/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Users/sdickson/Code/Darren/ServiceScan/servicescan/DerivedData/servicescan/Build/Intermediates/servicescan.build/Debug-iphoneos/servicescan.build/DerivedSources/armv7s -I/Users/sdickson/Code/Darren/ServiceScan/servicescan/DerivedData/servicescan/Build/Intermediates/servicescan.build/Debug-iphoneos/servicescan.build/DerivedSources -F/Users/sdickson/Code/Darren/ServiceScan/servicescan/DerivedData/servicescan/Build/Products/Debug-iphoneos -include /Users/sdickson/Code/Darren/ServiceScan/servicescan/DerivedData/servicescan/Build/Intermediates/PrecompiledHeaders/servicescan-Prefix-fdbbmysqjooainbgeawexprwnkjc/servicescan-Prefix.pch -MMD -MT dependencies -MF /Users/sdickson/Code/Darren/ServiceScan/servicescan/DerivedData/servicescan/Build/Intermediates/servicescan.build/Debug-iphoneos/servicescan.build/Objects-normal/armv7s/SecondViewController.d --serialize-diagnostics /Users/sdickson/Code/Darren/ServiceScan/servicescan/DerivedData/servicescan/Build/Intermediates/servicescan.build/Debug-iphoneos/servicescan.build/Objects-normal/armv7s/SecondViewController.dia -c /Users/sdickson/Code/Darren/ServiceScan/servicescan/servicescan/SecondViewController.m -o /Users/sdickson/Code/Darren/ServiceScan/servicescan/DerivedData/servicescan/Build/Intermediates/servicescan.build/Debug-iphoneos/servicescan.build/Objects-normal/armv7s/SecondViewController.o36"2A26B2CE-F3E4-4CF4-93E5-23F2B13C31E3-
+bC86383B7-7F08-4E96-821C-2324AC1F166D
+
+CCompileC DerivedData/servicescan/Build/Intermediates/servicescan.build/Debug-iphoneos/servicescan.build/Objects-normal/armv7s/UIImage+iPhone5.o /Users/sdickson/Code/Darren/ServiceScan/servicescan/servicescan/UIImage+iPhone5.m normal armv7s objective-c com.apple.compilers.llvm.clang.1_0.compiler
+s411528207.690194
+e411528208.100556
+r1
+xCompileC
+xDerivedData/servicescan/Build/Intermediates/servicescan.build/Debug-iphoneos/servicescan.build/Objects-normal/armv7s/UIImage+iPhone5.o
+x/Users/sdickson/Code/Darren/ServiceScan/servicescan/servicescan/UIImage+iPhone5.m
+xnormal
+xarmv7s
+xobjective-c
+xcom.apple.compilers.llvm.clang.1_0.compiler
+d/Users/sdickson/Code/Darren/ServiceScan/servicescan/servicescan/UIImage+iPhone5.m
+d/Users/sdickson/Code/Darren/ServiceScan/servicescan/servicescan/UIImage+iPhone5.h
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection89"Compile /Users/sdickson/Code/Darren/ServiceScan/servicescan/servicescan/UIImage+iPhone5.m243"CompileC DerivedData/servicescan/Build/Intermediates/servicescan.build/Debug-iphoneos/servicescan.build/Objects-normal/armv7s/UIImage+iPhone5.o servicescan/UIImage+iPhone5.m normal armv7s objective-c com.apple.compilers.llvm.clang.1_0.compilerecc1b00f6c87b841^c2be19106c87b841^---0#0#1#-19%DVTDocumentLocation2@88"file:///Users/sdickson/Code/Darren/ServiceScan/servicescan/servicescan/UIImage+iPhone5.m0000000000000000^4118"CompileC DerivedData/servicescan/Build/Intermediates/servicescan.build/Debug-iphoneos/servicescan.build/Objects-normal/armv7s/UIImage+iPhone5.o servicescan/UIImage+iPhone5.m normal armv7s objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/sdickson/Code/Darren/ServiceScan/servicescan    setenv LANG en_US.US-ASCII    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c -arch armv7s -fmessage-length=0 -fdiagnostics-show-note-include-stack -fmacro-backtrace-limit=0 -std=gnu99 -fobjc-arc -fmodules -fmodules-cache-path=/Users/sdickson/Code/Darren/ServiceScan/servicescan/DerivedData/ModuleCache -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Werror=return-type -Wno-implicit-atomic-properties -Werror=deprecated-objc-isa-usage -Werror=objc-root-class -Wno-receiver-is-weak -Wno-arc-repeated-use-of-weak -Wduplicate-method-match -Wno-missing-braces -Wparentheses -Wswitch -Wunused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wempty-body -Wuninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wconstant-conversion -Wint-conversion -Wbool-conversion -Wenum-conversion -Wshorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wundeclared-selector -Wno-deprecated-implementations -DDEBUG=1 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.0.sdk -fstrict-aliasing -Wprotocol -Wdeprecated-declarations -g -Wno-sign-conversion -miphoneos-version-min=7.0 -iquote /Users/sdickson/Code/Darren/ServiceScan/servicescan/DerivedData/servicescan/Build/Intermediates/servicescan.build/Debug-iphoneos/servicescan.build/servicescan-generated-files.hmap -I/Users/sdickson/Code/Darren/ServiceScan/servicescan/DerivedData/servicescan/Build/Intermediates/servicescan.build/Debug-iphoneos/servicescan.build/servicescan-own-target-headers.hmap -I/Users/sdickson/Code/Darren/ServiceScan/servicescan/DerivedData/servicescan/Build/Intermediates/servicescan.build/Debug-iphoneos/servicescan.build/servicescan-all-target-headers.hmap -iquote /Users/sdickson/Code/Darren/ServiceScan/servicescan/DerivedData/servicescan/Build/Intermediates/servicescan.build/Debug-iphoneos/servicescan.build/servicescan-project-headers.hmap -I/Users/sdickson/Code/Darren/ServiceScan/servicescan/DerivedData/servicescan/Build/Products/Debug-iphoneos/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Users/sdickson/Code/Darren/ServiceScan/servicescan/DerivedData/servicescan/Build/Intermediates/servicescan.build/Debug-iphoneos/servicescan.build/DerivedSources/armv7s -I/Users/sdickson/Code/Darren/ServiceScan/servicescan/DerivedData/servicescan/Build/Intermediates/servicescan.build/Debug-iphoneos/servicescan.build/DerivedSources -F/Users/sdickson/Code/Darren/ServiceScan/servicescan/DerivedData/servicescan/Build/Products/Debug-iphoneos -include /Users/sdickson/Code/Darren/ServiceScan/servicescan/DerivedData/servicescan/Build/Intermediates/PrecompiledHeaders/servicescan-Prefix-fdbbmysqjooainbgeawexprwnkjc/servicescan-Prefix.pch -MMD -MT dependencies -MF /Users/sdickson/Code/Darren/ServiceScan/servicescan/DerivedData/servicescan/Build/Intermediates/servicescan.build/Debug-iphoneos/servicescan.build/Objects-normal/armv7s/UIImage+iPhone5.d --serialize-diagnostics /Users/sdickson/Code/Darren/ServiceScan/servicescan/DerivedData/servicescan/Build/Intermediates/servicescan.build/Debug-iphoneos/servicescan.build/Objects-normal/armv7s/UIImage+iPhone5.dia -c /Users/sdickson/Code/Darren/ServiceScan/servicescan/servicescan/UIImage+iPhone5.m -o /Users/sdickson/Code/Darren/ServiceScan/servicescan/DerivedData/servicescan/Build/Intermediates/servicescan.build/Debug-iphoneos/servicescan.build/Objects-normal/armv7s/UIImage+iPhone5.o36"FE95FEB2-95A7-4B4A-BAB5-46AFB0F14F54-
+bC86383B7-7F08-4E96-821C-2324AC1F166D
+
+CCompileC DerivedData/servicescan/Build/Intermediates/servicescan.build/Debug-iphoneos/servicescan.build/Objects-normal/armv7s/Utils.o /Users/sdickson/Code/Darren/ServiceScan/servicescan/servicescan/Utils.m normal armv7s objective-c com.apple.compilers.llvm.clang.1_0.compiler
+s411528207.690610
+e411528208.129949
+r1
+xCompileC
+xDerivedData/servicescan/Build/Intermediates/servicescan.build/Debug-iphoneos/servicescan.build/Objects-normal/armv7s/Utils.o
+x/Users/sdickson/Code/Darren/ServiceScan/servicescan/servicescan/Utils.m
+xnormal
+xarmv7s
+xobjective-c
+xcom.apple.compilers.llvm.clang.1_0.compiler
+d/Users/sdickson/Code/Darren/ServiceScan/servicescan/servicescan/Utils.m
+d/Users/sdickson/Code/Darren/ServiceScan/servicescan/servicescan/Utils.h
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection79"Compile /Users/sdickson/Code/Darren/ServiceScan/servicescan/servicescan/Utils.m223"CompileC DerivedData/servicescan/Build/Intermediates/servicescan.build/Debug-iphoneos/servicescan.build/Objects-normal/armv7s/Utils.o servicescan/Utils.m normal armv7s objective-c com.apple.compilers.llvm.clang.1_0.compilerafeab00f6c87b841^914621106c87b841^---0#0#1#-19%DVTDocumentLocation2@78"file:///Users/sdickson/Code/Darren/ServiceScan/servicescan/servicescan/Utils.m0000000000000000^4058"CompileC DerivedData/servicescan/Build/Intermediates/servicescan.build/Debug-iphoneos/servicescan.build/Objects-normal/armv7s/Utils.o servicescan/Utils.m normal armv7s objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/sdickson/Code/Darren/ServiceScan/servicescan    setenv LANG en_US.US-ASCII    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c -arch armv7s -fmessage-length=0 -fdiagnostics-show-note-include-stack -fmacro-backtrace-limit=0 -std=gnu99 -fobjc-arc -fmodules -fmodules-cache-path=/Users/sdickson/Code/Darren/ServiceScan/servicescan/DerivedData/ModuleCache -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Werror=return-type -Wno-implicit-atomic-properties -Werror=deprecated-objc-isa-usage -Werror=objc-root-class -Wno-receiver-is-weak -Wno-arc-repeated-use-of-weak -Wduplicate-method-match -Wno-missing-braces -Wparentheses -Wswitch -Wunused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wempty-body -Wuninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wconstant-conversion -Wint-conversion -Wbool-conversion -Wenum-conversion -Wshorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wundeclared-selector -Wno-deprecated-implementations -DDEBUG=1 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.0.sdk -fstrict-aliasing -Wprotocol -Wdeprecated-declarations -g -Wno-sign-conversion -miphoneos-version-min=7.0 -iquote /Users/sdickson/Code/Darren/ServiceScan/servicescan/DerivedData/servicescan/Build/Intermediates/servicescan.build/Debug-iphoneos/servicescan.build/servicescan-generated-files.hmap -I/Users/sdickson/Code/Darren/ServiceScan/servicescan/DerivedData/servicescan/Build/Intermediates/servicescan.build/Debug-iphoneos/servicescan.build/servicescan-own-target-headers.hmap -I/Users/sdickson/Code/Darren/ServiceScan/servicescan/DerivedData/servicescan/Build/Intermediates/servicescan.build/Debug-iphoneos/servicescan.build/servicescan-all-target-headers.hmap -iquote /Users/sdickson/Code/Darren/ServiceScan/servicescan/DerivedData/servicescan/Build/Intermediates/servicescan.build/Debug-iphoneos/servicescan.build/servicescan-project-headers.hmap -I/Users/sdickson/Code/Darren/ServiceScan/servicescan/DerivedData/servicescan/Build/Products/Debug-iphoneos/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Users/sdickson/Code/Darren/ServiceScan/servicescan/DerivedData/servicescan/Build/Intermediates/servicescan.build/Debug-iphoneos/servicescan.build/DerivedSources/armv7s -I/Users/sdickson/Code/Darren/ServiceScan/servicescan/DerivedData/servicescan/Build/Intermediates/servicescan.build/Debug-iphoneos/servicescan.build/DerivedSources -F/Users/sdickson/Code/Darren/ServiceScan/servicescan/DerivedData/servicescan/Build/Products/Debug-iphoneos -include /Users/sdickson/Code/Darren/ServiceScan/servicescan/DerivedData/servicescan/Build/Intermediates/PrecompiledHeaders/servicescan-Prefix-fdbbmysqjooainbgeawexprwnkjc/servicescan-Prefix.pch -MMD -MT dependencies -MF /Users/sdickson/Code/Darren/ServiceScan/servicescan/DerivedData/servicescan/Build/Intermediates/servicescan.build/Debug-iphoneos/servicescan.build/Objects-normal/armv7s/Utils.d --serialize-diagnostics /Users/sdickson/Code/Darren/ServiceScan/servicescan/DerivedData/servicescan/Build/Intermediates/servicescan.build/Debug-iphoneos/servicescan.build/Objects-normal/armv7s/Utils.dia -c /Users/sdickson/Code/Darren/ServiceScan/servicescan/servicescan/Utils.m -o /Users/sdickson/Code/Darren/ServiceScan/servicescan/DerivedData/servicescan/Build/Intermediates/servicescan.build/Debug-iphoneos/servicescan.build/Objects-normal/armv7s/Utils.o36"8CFB0375-115A-4EB4-A5D1-5F0E8EEE46FF-
+bC86383B7-7F08-4E96-821C-2324AC1F166D
+
+CCompileC DerivedData/servicescan/Build/Intermediates/servicescan.build/Debug-iphoneos/servicescan.build/Objects-normal/armv7s/main.o /Users/sdickson/Code/Darren/ServiceScan/servicescan/servicescan/main.m normal armv7s objective-c com.apple.compilers.llvm.clang.1_0.compiler
+s411528207.691346
+e411528208.096468
+r1
+xCompileC
+xDerivedData/servicescan/Build/Intermediates/servicescan.build/Debug-iphoneos/servicescan.build/Objects-normal/armv7s/main.o
+x/Users/sdickson/Code/Darren/ServiceScan/servicescan/servicescan/main.m
+xnormal
+xarmv7s
+xobjective-c
+xcom.apple.compilers.llvm.clang.1_0.compiler
+d/Users/sdickson/Code/Darren/ServiceScan/servicescan/servicescan/main.m
+d/Users/sdickson/Code/Darren/ServiceScan/servicescan/servicescan/AppDelegate.h
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection78"Compile /Users/sdickson/Code/Darren/ServiceScan/servicescan/servicescan/main.m221"CompileC DerivedData/servicescan/Build/Intermediates/servicescan.build/Debug-iphoneos/servicescan.build/Objects-normal/armv7s/main.o servicescan/main.m normal armv7s objective-c com.apple.compilers.llvm.clang.1_0.compilerb613b10f6c87b841^85b218106c87b841^---0#0#1#-19%DVTDocumentLocation2@77"file:///Users/sdickson/Code/Darren/ServiceScan/servicescan/servicescan/main.m0000000000000000^4052"CompileC DerivedData/servicescan/Build/Intermediates/servicescan.build/Debug-iphoneos/servicescan.build/Objects-normal/armv7s/main.o servicescan/main.m normal armv7s objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/sdickson/Code/Darren/ServiceScan/servicescan    setenv LANG en_US.US-ASCII    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c -arch armv7s -fmessage-length=0 -fdiagnostics-show-note-include-stack -fmacro-backtrace-limit=0 -std=gnu99 -fobjc-arc -fmodules -fmodules-cache-path=/Users/sdickson/Code/Darren/ServiceScan/servicescan/DerivedData/ModuleCache -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Werror=return-type -Wno-implicit-atomic-properties -Werror=deprecated-objc-isa-usage -Werror=objc-root-class -Wno-receiver-is-weak -Wno-arc-repeated-use-of-weak -Wduplicate-method-match -Wno-missing-braces -Wparentheses -Wswitch -Wunused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wempty-body -Wuninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wconstant-conversion -Wint-conversion -Wbool-conversion -Wenum-conversion -Wshorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wundeclared-selector -Wno-deprecated-implementations -DDEBUG=1 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.0.sdk -fstrict-aliasing -Wprotocol -Wdeprecated-declarations -g -Wno-sign-conversion -miphoneos-version-min=7.0 -iquote /Users/sdickson/Code/Darren/ServiceScan/servicescan/DerivedData/servicescan/Build/Intermediates/servicescan.build/Debug-iphoneos/servicescan.build/servicescan-generated-files.hmap -I/Users/sdickson/Code/Darren/ServiceScan/servicescan/DerivedData/servicescan/Build/Intermediates/servicescan.build/Debug-iphoneos/servicescan.build/servicescan-own-target-headers.hmap -I/Users/sdickson/Code/Darren/ServiceScan/servicescan/DerivedData/servicescan/Build/Intermediates/servicescan.build/Debug-iphoneos/servicescan.build/servicescan-all-target-headers.hmap -iquote /Users/sdickson/Code/Darren/ServiceScan/servicescan/DerivedData/servicescan/Build/Intermediates/servicescan.build/Debug-iphoneos/servicescan.build/servicescan-project-headers.hmap -I/Users/sdickson/Code/Darren/ServiceScan/servicescan/DerivedData/servicescan/Build/Products/Debug-iphoneos/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Users/sdickson/Code/Darren/ServiceScan/servicescan/DerivedData/servicescan/Build/Intermediates/servicescan.build/Debug-iphoneos/servicescan.build/DerivedSources/armv7s -I/Users/sdickson/Code/Darren/ServiceScan/servicescan/DerivedData/servicescan/Build/Intermediates/servicescan.build/Debug-iphoneos/servicescan.build/DerivedSources -F/Users/sdickson/Code/Darren/ServiceScan/servicescan/DerivedData/servicescan/Build/Products/Debug-iphoneos -include /Users/sdickson/Code/Darren/ServiceScan/servicescan/DerivedData/servicescan/Build/Intermediates/PrecompiledHeaders/servicescan-Prefix-fdbbmysqjooainbgeawexprwnkjc/servicescan-Prefix.pch -MMD -MT dependencies -MF /Users/sdickson/Code/Darren/ServiceScan/servicescan/DerivedData/servicescan/Build/Intermediates/servicescan.build/Debug-iphoneos/servicescan.build/Objects-normal/armv7s/main.d --serialize-diagnostics /Users/sdickson/Code/Darren/ServiceScan/servicescan/DerivedData/servicescan/Build/Intermediates/servicescan.build/Debug-iphoneos/servicescan.build/Objects-normal/armv7s/main.dia -c /Users/sdickson/Code/Darren/ServiceScan/servicescan/servicescan/main.m -o /Users/sdickson/Code/Darren/ServiceScan/servicescan/DerivedData/servicescan/Build/Intermediates/servicescan.build/Debug-iphoneos/servicescan.build/Objects-normal/armv7s/main.o36"AAD39FB9-E73B-414F-8720-A66519855020-
+bC86383B7-7F08-4E96-821C-2324AC1F166D
+
+CCompileStoryboard /Users/sdickson/Code/Darren/ServiceScan/servicescan/servicescan/Base.lproj/Main_iPad.storyboard
+s411528209.261285
+e411528218.990524
+r1
+xCompileStoryboard
+x/Users/sdickson/Code/Darren/ServiceScan/servicescan/servicescan/Base.lproj/Main_iPad.storyboard
+o/* com.apple.ibtool.document.warnings */
+o/Users/sdickson/Code/Darren/ServiceScan/servicescan/servicescan/Base.lproj/Main_iPad.storyboard:A5M-7J-77L: warning: Horizontal position is ambiguous for "Text View". [17]
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection61"CompileStoryboard servicescan/Base.lproj/Main_iPad.storyboard61"CompileStoryboard servicescan/Base.lproj/Main_iPad.storyboard91ef42116c87b841^6093fd1a6c87b841^-208"/* com.apple.ibtool.document.warnings *//Users/sdickson/Code/Darren/ServiceScan/servicescan/servicescan/Base.lproj/Main_iPad.storyboard:A5M-7J-77L: warning: Horizontal position is ambiguous for "Text View".1(21%IDEActivityLogMessage2@49"Horizontal position is ambiguous for "Text View".-411528218#18446744073709551615#0#-1#-23%DVTTextDocumentLocation3@102"file:///Users/sdickson/Code/Darren/ServiceScan/servicescan/servicescan/Base.lproj/Main_iPad.storyboard0000000000000000^18446744073709551615#18446744073709551615#18446744073709551615#18446744073709551615#18446744073709551615#0#16"Ambiguous Layout--0#0#1#-19%DVTDocumentLocation4@102"file:///Users/sdickson/Code/Darren/ServiceScan/servicescan/servicescan/Base.lproj/Main_iPad.storyboard0000000000000000^870"CompileStoryboard servicescan/Base.lproj/Main_iPad.storyboard    cd /Users/sdickson/Code/Darren/ServiceScan/servicescan    setenv IBSC_MINIMUM_COMPATIBILITY_VERSION 7.0    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    setenv XCODE_DEVELOPER_USR_PATH /Applications/Xcode.app/Contents/Developer/usr/bin/..    /Applications/Xcode.app/Contents/Developer/usr/bin/ibtool --errors --warnings --notices --minimum-deployment-target 7.0 --output-format human-readable-text --compile /Users/sdickson/Code/Darren/ServiceScan/servicescan/DerivedData/servicescan/Build/Products/Debug-iphoneos/servicescan.app/Base.lproj/Main_iPad.storyboardc /Users/sdickson/Code/Darren/ServiceScan/servicescan/servicescan/Base.lproj/Main_iPad.storyboard36"127A5DA5-5E4E-4778-940B-FF8668B38F99-
+bC86383B7-7F08-4E96-821C-2324AC1F166D
+
+CCompileStoryboard /Users/sdickson/Code/Darren/ServiceScan/servicescan/servicescan/Base.lproj/Main_iPhone.storyboard
+s411528209.262506
+e411528218.200106
+r1
+xCompileStoryboard
+x/Users/sdickson/Code/Darren/ServiceScan/servicescan/servicescan/Base.lproj/Main_iPhone.storyboard
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection63"CompileStoryboard servicescan/Base.lproj/Main_iPhone.storyboard63"CompileStoryboard servicescan/Base.lproj/Main_iPhone.storyboard284943116c87b841^de3a331a6c87b841^---0#0#1#-19%DVTDocumentLocation2@104"file:///Users/sdickson/Code/Darren/ServiceScan/servicescan/servicescan/Base.lproj/Main_iPhone.storyboard0000000000000000^876"CompileStoryboard servicescan/Base.lproj/Main_iPhone.storyboard    cd /Users/sdickson/Code/Darren/ServiceScan/servicescan    setenv IBSC_MINIMUM_COMPATIBILITY_VERSION 7.0    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    setenv XCODE_DEVELOPER_USR_PATH /Applications/Xcode.app/Contents/Developer/usr/bin/..    /Applications/Xcode.app/Contents/Developer/usr/bin/ibtool --errors --warnings --notices --minimum-deployment-target 7.0 --output-format human-readable-text --compile /Users/sdickson/Code/Darren/ServiceScan/servicescan/DerivedData/servicescan/Build/Products/Debug-iphoneos/servicescan.app/Base.lproj/Main_iPhone.storyboardc /Users/sdickson/Code/Darren/ServiceScan/servicescan/servicescan/Base.lproj/Main_iPhone.storyboard36"B654A687-28D5-45F1-BA19-C38D80185FFB-
+bC86383B7-7F08-4E96-821C-2324AC1F166D
+
+CCopyPNGFile /Users/sdickson/Code/Darren/ServiceScan/servicescan/DerivedData/servicescan/Build/Products/Debug-iphoneos/servicescan.app/SS_APP_ICON_120_120@2x.png servicescan/SS_APP_ICON_120_120@2x.png
+s411528210.353278
+e411528210.534073
+r1
+xCopyPNGFile
+x/Users/sdickson/Code/Darren/ServiceScan/servicescan/DerivedData/servicescan/Build/Products/Debug-iphoneos/servicescan.app/SS_APP_ICON_120_120@2x.png
+xservicescan/SS_APP_ICON_120_120@2x.png
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection147"CopyPNGFile DerivedData/servicescan/Build/Products/Debug-iphoneos/servicescan.app/SS_APP_ICON_120_120@2x.png servicescan/SS_APP_ICON_120_120@2x.png147"CopyPNGFile DerivedData/servicescan/Build/Products/Debug-iphoneos/servicescan.app/SS_APP_ICON_120_120@2x.png servicescan/SS_APP_ICON_120_120@2x.png38845a126c87b841^cbb988126c87b841^---0#0#1#-19%DVTDocumentLocation2@97"file:///Users/sdickson/Code/Darren/ServiceScan/servicescan/servicescan/SS_APP_ICON_120_120@2x.png0000000000000000^746"CopyPNGFile DerivedData/servicescan/Build/Products/Debug-iphoneos/servicescan.app/SS_APP_ICON_120_120@2x.png servicescan/SS_APP_ICON_120_120@2x.png    cd /Users/sdickson/Code/Darren/ServiceScan/servicescan    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/copypng -compress /Users/sdickson/Code/Darren/ServiceScan/servicescan/servicescan/SS_APP_ICON_120_120@2x.png /Users/sdickson/Code/Darren/ServiceScan/servicescan/DerivedData/servicescan/Build/Products/Debug-iphoneos/servicescan.app/SS_APP_ICON_120_120@2x.png36"E9B9EB23-C651-4259-8AA2-C8C02D0FFDBF-
+bC86383B7-7F08-4E96-821C-2324AC1F166D
+
+CCopyPNGFile /Users/sdickson/Code/Darren/ServiceScan/servicescan/DerivedData/servicescan/Build/Products/Debug-iphoneos/servicescan.app/bg.png servicescan/bg.png
+s411528209.262052
+e411528210.152700
+r1
+xCopyPNGFile
+x/Users/sdickson/Code/Darren/ServiceScan/servicescan/DerivedData/servicescan/Build/Products/Debug-iphoneos/servicescan.app/bg.png
+xservicescan/bg.png
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection107"CopyPNGFile DerivedData/servicescan/Build/Products/Debug-iphoneos/servicescan.app/bg.png servicescan/bg.png107"CopyPNGFile DerivedData/servicescan/Build/Products/Debug-iphoneos/servicescan.app/bg.png servicescan/bg.png422443116c87b841^b11627126c87b841^---0#0#1#-19%DVTDocumentLocation2@77"file:///Users/sdickson/Code/Darren/ServiceScan/servicescan/servicescan/bg.png0000000000000000^666"CopyPNGFile DerivedData/servicescan/Build/Products/Debug-iphoneos/servicescan.app/bg.png servicescan/bg.png    cd /Users/sdickson/Code/Darren/ServiceScan/servicescan    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/copypng -compress /Users/sdickson/Code/Darren/ServiceScan/servicescan/servicescan/bg.png /Users/sdickson/Code/Darren/ServiceScan/servicescan/DerivedData/servicescan/Build/Products/Debug-iphoneos/servicescan.app/bg.png36"B983EA76-880D-4604-BC58-1E2861397E31-
+bC86383B7-7F08-4E96-821C-2324AC1F166D
+
+CCopyPNGFile /Users/sdickson/Code/Darren/ServiceScan/servicescan/DerivedData/servicescan/Build/Products/Debug-iphoneos/servicescan.app/bg@2x.png servicescan/bg@2x.png
+s411528210.152817
+e411528210.244795
+r1
+xCopyPNGFile
+x/Users/sdickson/Code/Darren/ServiceScan/servicescan/DerivedData/servicescan/Build/Products/Debug-iphoneos/servicescan.app/bg@2x.png
+xservicescan/bg@2x.png
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection113"CopyPNGFile DerivedData/servicescan/Build/Products/Debug-iphoneos/servicescan.app/bg@2x.png servicescan/bg@2x.png113"CopyPNGFile DerivedData/servicescan/Build/Products/Debug-iphoneos/servicescan.app/bg@2x.png servicescan/bg@2x.png2f3027126c87b841^e1b23e126c87b841^---0#0#1#-19%DVTDocumentLocation2@80"file:///Users/sdickson/Code/Darren/ServiceScan/servicescan/servicescan/bg@2x.png0000000000000000^678"CopyPNGFile DerivedData/servicescan/Build/Products/Debug-iphoneos/servicescan.app/bg@2x.png servicescan/bg@2x.png    cd /Users/sdickson/Code/Darren/ServiceScan/servicescan    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/copypng -compress /Users/sdickson/Code/Darren/ServiceScan/servicescan/servicescan/bg@2x.png /Users/sdickson/Code/Darren/ServiceScan/servicescan/DerivedData/servicescan/Build/Products/Debug-iphoneos/servicescan.app/bg@2x.png36"F7BE6811-F693-42B6-9787-4952B478FC15-
+bC86383B7-7F08-4E96-821C-2324AC1F166D
+
+CCopyPNGFile /Users/sdickson/Code/Darren/ServiceScan/servicescan/DerivedData/servicescan/Build/Products/Debug-iphoneos/servicescan.app/camera.png servicescan/camera.png
+s411528209.261159
+e411528210.152553
+r1
+xCopyPNGFile
+x/Users/sdickson/Code/Darren/ServiceScan/servicescan/DerivedData/servicescan/Build/Products/Debug-iphoneos/servicescan.app/camera.png
+xservicescan/camera.png
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection115"CopyPNGFile DerivedData/servicescan/Build/Products/Debug-iphoneos/servicescan.app/camera.png servicescan/camera.png115"CopyPNGFile DerivedData/servicescan/Build/Products/Debug-iphoneos/servicescan.app/camera.png servicescan/camera.png6ce842116c87b841^1b0e27126c87b841^---0#0#1#-19%DVTDocumentLocation2@81"file:///Users/sdickson/Code/Darren/ServiceScan/servicescan/servicescan/camera.png0000000000000000^682"CopyPNGFile DerivedData/servicescan/Build/Products/Debug-iphoneos/servicescan.app/camera.png servicescan/camera.png    cd /Users/sdickson/Code/Darren/ServiceScan/servicescan    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/copypng -compress /Users/sdickson/Code/Darren/ServiceScan/servicescan/servicescan/camera.png /Users/sdickson/Code/Darren/ServiceScan/servicescan/DerivedData/servicescan/Build/Products/Debug-iphoneos/servicescan.app/camera.png36"D2D8F798-7536-4AD9-A91D-EB20B82991A8-
+bC86383B7-7F08-4E96-821C-2324AC1F166D
+
+CCopyPNGFile /Users/sdickson/Code/Darren/ServiceScan/servicescan/DerivedData/servicescan/Build/Products/Debug-iphoneos/servicescan.app/menubar-7.png servicescan/menubar-7.png
+s411528210.170681
+e411528210.244569
+r1
+xCopyPNGFile
+x/Users/sdickson/Code/Darren/ServiceScan/servicescan/DerivedData/servicescan/Build/Products/Debug-iphoneos/servicescan.app/menubar-7.png
+xservicescan/menubar-7.png
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection121"CopyPNGFile DerivedData/servicescan/Build/Products/Debug-iphoneos/servicescan.app/menubar-7.png servicescan/menubar-7.png121"CopyPNGFile DerivedData/servicescan/Build/Products/Debug-iphoneos/servicescan.app/menubar-7.png servicescan/menubar-7.png3cc02b126c87b841^959d3e126c87b841^---0#0#1#-19%DVTDocumentLocation2@84"file:///Users/sdickson/Code/Darren/ServiceScan/servicescan/servicescan/menubar-7.png0000000000000000^694"CopyPNGFile DerivedData/servicescan/Build/Products/Debug-iphoneos/servicescan.app/menubar-7.png servicescan/menubar-7.png    cd /Users/sdickson/Code/Darren/ServiceScan/servicescan    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/copypng -compress /Users/sdickson/Code/Darren/ServiceScan/servicescan/servicescan/menubar-7.png /Users/sdickson/Code/Darren/ServiceScan/servicescan/DerivedData/servicescan/Build/Products/Debug-iphoneos/servicescan.app/menubar-7.png36"E612B13E-CC8C-49DF-AC96-B2F295638B25-
+bC86383B7-7F08-4E96-821C-2324AC1F166D
+
+CCopyPNGFile /Users/sdickson/Code/Darren/ServiceScan/servicescan/DerivedData/servicescan/Build/Products/Debug-iphoneos/servicescan.app/menubar-button.png servicescan/menubar-button.png
+s411528210.170482
+e411528210.218453
+r1
+xCopyPNGFile
+x/Users/sdickson/Code/Darren/ServiceScan/servicescan/DerivedData/servicescan/Build/Products/Debug-iphoneos/servicescan.app/menubar-button.png
+xservicescan/menubar-button.png
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection131"CopyPNGFile DerivedData/servicescan/Build/Products/Debug-iphoneos/servicescan.app/menubar-button.png servicescan/menubar-button.png131"CopyPNGFile DerivedData/servicescan/Build/Products/Debug-iphoneos/servicescan.app/menubar-button.png servicescan/menubar-button.pngddb62b126c87b841^42ed37126c87b841^---0#0#1#-19%DVTDocumentLocation2@89"file:///Users/sdickson/Code/Darren/ServiceScan/servicescan/servicescan/menubar-button.png0000000000000000^714"CopyPNGFile DerivedData/servicescan/Build/Products/Debug-iphoneos/servicescan.app/menubar-button.png servicescan/menubar-button.png    cd /Users/sdickson/Code/Darren/ServiceScan/servicescan    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/copypng -compress /Users/sdickson/Code/Darren/ServiceScan/servicescan/servicescan/menubar-button.png /Users/sdickson/Code/Darren/ServiceScan/servicescan/DerivedData/servicescan/Build/Products/Debug-iphoneos/servicescan.app/menubar-button.png36"C9FB1869-1168-4472-8C6B-D4BAF641A6AB-
+bC86383B7-7F08-4E96-821C-2324AC1F166D
+
+CCopyPNGFile /Users/sdickson/Code/Darren/ServiceScan/servicescan/DerivedData/servicescan/Build/Products/Debug-iphoneos/servicescan.app/menubar-button@2x.png servicescan/menubar-button@2x.png
+s411528210.218678
+e411528210.244892
+r1
+xCopyPNGFile
+x/Users/sdickson/Code/Darren/ServiceScan/servicescan/DerivedData/servicescan/Build/Products/Debug-iphoneos/servicescan.app/menubar-button@2x.png
+xservicescan/menubar-button@2x.png
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection137"CopyPNGFile DerivedData/servicescan/Build/Products/Debug-iphoneos/servicescan.app/menubar-button@2x.png servicescan/menubar-button@2x.png137"CopyPNGFile DerivedData/servicescan/Build/Products/Debug-iphoneos/servicescan.app/menubar-button@2x.png servicescan/menubar-button@2x.png390e38126c87b841^06ba3e126c87b841^---0#0#1#-19%DVTDocumentLocation2@92"file:///Users/sdickson/Code/Darren/ServiceScan/servicescan/servicescan/menubar-button@2x.png0000000000000000^726"CopyPNGFile DerivedData/servicescan/Build/Products/Debug-iphoneos/servicescan.app/menubar-button@2x.png servicescan/menubar-button@2x.png    cd /Users/sdickson/Code/Darren/ServiceScan/servicescan    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/copypng -compress /Users/sdickson/Code/Darren/ServiceScan/servicescan/servicescan/menubar-button@2x.png /Users/sdickson/Code/Darren/ServiceScan/servicescan/DerivedData/servicescan/Build/Products/Debug-iphoneos/servicescan.app/menubar-button@2x.png36"E763DBFA-BE0F-4CC0-9B40-02FED342067F-
+bC86383B7-7F08-4E96-821C-2324AC1F166D
+
+CCopyPNGFile /Users/sdickson/Code/Darren/ServiceScan/servicescan/DerivedData/servicescan/Build/Products/Debug-iphoneos/servicescan.app/menubar-left.png servicescan/menubar-left.png
+s411528210.245228
+e411528210.352991
+r1
+xCopyPNGFile
+x/Users/sdickson/Code/Darren/ServiceScan/servicescan/DerivedData/servicescan/Build/Products/Debug-iphoneos/servicescan.app/menubar-left.png
+xservicescan/menubar-left.png
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection127"CopyPNGFile DerivedData/servicescan/Build/Products/Debug-iphoneos/servicescan.app/menubar-left.png servicescan/menubar-left.png127"CopyPNGFile DerivedData/servicescan/Build/Products/Debug-iphoneos/servicescan.app/menubar-left.png servicescan/menubar-left.pnge9d73e126c87b841^cb665a126c87b841^---0#0#1#-19%DVTDocumentLocation2@87"file:///Users/sdickson/Code/Darren/ServiceScan/servicescan/servicescan/menubar-left.png0000000000000000^706"CopyPNGFile DerivedData/servicescan/Build/Products/Debug-iphoneos/servicescan.app/menubar-left.png servicescan/menubar-left.png    cd /Users/sdickson/Code/Darren/ServiceScan/servicescan    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/copypng -compress /Users/sdickson/Code/Darren/ServiceScan/servicescan/servicescan/menubar-left.png /Users/sdickson/Code/Darren/ServiceScan/servicescan/DerivedData/servicescan/Build/Products/Debug-iphoneos/servicescan.app/menubar-left.png36"2D54B607-58EE-4290-810B-E6250E8D10C0-
+bC86383B7-7F08-4E96-821C-2324AC1F166D
+
+CCopyPNGFile /Users/sdickson/Code/Darren/ServiceScan/servicescan/DerivedData/servicescan/Build/Products/Debug-iphoneos/servicescan.app/menubar-left@2x.png servicescan/menubar-left@2x.png
+s411528209.261535
+e411528210.170341
+r1
+xCopyPNGFile
+x/Users/sdickson/Code/Darren/ServiceScan/servicescan/DerivedData/servicescan/Build/Products/Debug-iphoneos/servicescan.app/menubar-left@2x.png
+xservicescan/menubar-left@2x.png
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection133"CopyPNGFile DerivedData/servicescan/Build/Products/Debug-iphoneos/servicescan.app/menubar-left@2x.png servicescan/menubar-left@2x.png133"CopyPNGFile DerivedData/servicescan/Build/Products/Debug-iphoneos/servicescan.app/menubar-left@2x.png servicescan/menubar-left@2x.png7d0743116c87b841^23a32b126c87b841^---0#0#1#-19%DVTDocumentLocation2@90"file:///Users/sdickson/Code/Darren/ServiceScan/servicescan/servicescan/menubar-left@2x.png0000000000000000^718"CopyPNGFile DerivedData/servicescan/Build/Products/Debug-iphoneos/servicescan.app/menubar-left@2x.png servicescan/menubar-left@2x.png    cd /Users/sdickson/Code/Darren/ServiceScan/servicescan    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/copypng -compress /Users/sdickson/Code/Darren/ServiceScan/servicescan/servicescan/menubar-left@2x.png /Users/sdickson/Code/Darren/ServiceScan/servicescan/DerivedData/servicescan/Build/Products/Debug-iphoneos/servicescan.app/menubar-left@2x.png36"E0EE8536-DBEF-4B6A-8344-7DA3AE48F02C-
+bC86383B7-7F08-4E96-821C-2324AC1F166D
+
+CCopyPNGFile /Users/sdickson/Code/Darren/ServiceScan/servicescan/DerivedData/servicescan/Build/Products/Debug-iphoneos/servicescan.app/menubar-right.png servicescan/menubar-right.png
+s411528209.261406
+e411528210.218450
+r1
+xCopyPNGFile
+x/Users/sdickson/Code/Darren/ServiceScan/servicescan/DerivedData/servicescan/Build/Products/Debug-iphoneos/servicescan.app/menubar-right.png
+xservicescan/menubar-right.png
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection129"CopyPNGFile DerivedData/servicescan/Build/Products/Debug-iphoneos/servicescan.app/menubar-right.png servicescan/menubar-right.png129"CopyPNGFile DerivedData/servicescan/Build/Products/Debug-iphoneos/servicescan.app/menubar-right.png servicescan/menubar-right.pngf4fb42116c87b841^95f137126c87b841^---0#0#1#-19%DVTDocumentLocation2@88"file:///Users/sdickson/Code/Darren/ServiceScan/servicescan/servicescan/menubar-right.png0000000000000000^710"CopyPNGFile DerivedData/servicescan/Build/Products/Debug-iphoneos/servicescan.app/menubar-right.png servicescan/menubar-right.png    cd /Users/sdickson/Code/Darren/ServiceScan/servicescan    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/copypng -compress /Users/sdickson/Code/Darren/ServiceScan/servicescan/servicescan/menubar-right.png /Users/sdickson/Code/Darren/ServiceScan/servicescan/DerivedData/servicescan/Build/Products/Debug-iphoneos/servicescan.app/menubar-right.png36"F4CE704A-37C2-40AF-857F-BD6138F14EFD-
+bC86383B7-7F08-4E96-821C-2324AC1F166D
+
+CCopyPNGFile /Users/sdickson/Code/Darren/ServiceScan/servicescan/DerivedData/servicescan/Build/Products/Debug-iphoneos/servicescan.app/menubar-right@2x.png servicescan/menubar-right@2x.png
+s411528209.262324
+e411528210.502610
+r1
+xCopyPNGFile
+x/Users/sdickson/Code/Darren/ServiceScan/servicescan/DerivedData/servicescan/Build/Products/Debug-iphoneos/servicescan.app/menubar-right@2x.png
+xservicescan/menubar-right@2x.png
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection135"CopyPNGFile DerivedData/servicescan/Build/Products/Debug-iphoneos/servicescan.app/menubar-right@2x.png servicescan/menubar-right@2x.png135"CopyPNGFile DerivedData/servicescan/Build/Products/Debug-iphoneos/servicescan.app/menubar-right@2x.png servicescan/menubar-right@2x.png473e43116c87b841^8fc380126c87b841^---0#0#1#-19%DVTDocumentLocation2@91"file:///Users/sdickson/Code/Darren/ServiceScan/servicescan/servicescan/menubar-right@2x.png0000000000000000^722"CopyPNGFile DerivedData/servicescan/Build/Products/Debug-iphoneos/servicescan.app/menubar-right@2x.png servicescan/menubar-right@2x.png    cd /Users/sdickson/Code/Darren/ServiceScan/servicescan    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/copypng -compress /Users/sdickson/Code/Darren/ServiceScan/servicescan/servicescan/menubar-right@2x.png /Users/sdickson/Code/Darren/ServiceScan/servicescan/DerivedData/servicescan/Build/Products/Debug-iphoneos/servicescan.app/menubar-right@2x.png36"E54CF72B-B95E-4512-BD29-625A6A3A27D6-
+bC86383B7-7F08-4E96-821C-2324AC1F166D
+
+CCopyPNGFile /Users/sdickson/Code/Darren/ServiceScan/servicescan/DerivedData/servicescan/Build/Products/Debug-iphoneos/servicescan.app/menubar.png servicescan/menubar.png
+s411528210.218804
+e411528210.254512
+r1
+xCopyPNGFile
+x/Users/sdickson/Code/Darren/ServiceScan/servicescan/DerivedData/servicescan/Build/Products/Debug-iphoneos/servicescan.app/menubar.png
+xservicescan/menubar.png
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection117"CopyPNGFile DerivedData/servicescan/Build/Products/Debug-iphoneos/servicescan.app/menubar.png servicescan/menubar.png117"CopyPNGFile DerivedData/servicescan/Build/Products/Debug-iphoneos/servicescan.app/menubar.png servicescan/menubar.pngdc0f38126c87b841^172841126c87b841^---0#0#1#-19%DVTDocumentLocation2@82"file:///Users/sdickson/Code/Darren/ServiceScan/servicescan/servicescan/menubar.png0000000000000000^686"CopyPNGFile DerivedData/servicescan/Build/Products/Debug-iphoneos/servicescan.app/menubar.png servicescan/menubar.png    cd /Users/sdickson/Code/Darren/ServiceScan/servicescan    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/copypng -compress /Users/sdickson/Code/Darren/ServiceScan/servicescan/servicescan/menubar.png /Users/sdickson/Code/Darren/ServiceScan/servicescan/DerivedData/servicescan/Build/Products/Debug-iphoneos/servicescan.app/menubar.png36"B98405BE-C583-4960-85F5-6D886ABB0706-
+bC86383B7-7F08-4E96-821C-2324AC1F166D
+
+CCopyPNGFile /Users/sdickson/Code/Darren/ServiceScan/servicescan/DerivedData/servicescan/Build/Products/Debug-iphoneos/servicescan.app/menubar@2x.png servicescan/menubar@2x.png
+s411528210.254284
+e411528210.502309
+r1
+xCopyPNGFile
+x/Users/sdickson/Code/Darren/ServiceScan/servicescan/DerivedData/servicescan/Build/Products/Debug-iphoneos/servicescan.app/menubar@2x.png
+xservicescan/menubar@2x.png
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection123"CopyPNGFile DerivedData/servicescan/Build/Products/Debug-iphoneos/servicescan.app/menubar@2x.png servicescan/menubar@2x.png123"CopyPNGFile DerivedData/servicescan/Build/Products/Debug-iphoneos/servicescan.app/menubar@2x.png servicescan/menubar@2x.png763541126c87b841^1abf80126c87b841^---0#0#1#-19%DVTDocumentLocation2@85"file:///Users/sdickson/Code/Darren/ServiceScan/servicescan/servicescan/menubar@2x.png0000000000000000^698"CopyPNGFile DerivedData/servicescan/Build/Products/Debug-iphoneos/servicescan.app/menubar@2x.png servicescan/menubar@2x.png    cd /Users/sdickson/Code/Darren/ServiceScan/servicescan    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/copypng -compress /Users/sdickson/Code/Darren/ServiceScan/servicescan/servicescan/menubar@2x.png /Users/sdickson/Code/Darren/ServiceScan/servicescan/DerivedData/servicescan/Build/Products/Debug-iphoneos/servicescan.app/menubar@2x.png36"00BC5A3D-30C3-4035-AD12-3394F86069F4-
+bC86383B7-7F08-4E96-821C-2324AC1F166D
+
+CCopyPNGFile /Users/sdickson/Code/Darren/ServiceScan/servicescan/DerivedData/servicescan/Build/Products/Debug-iphoneos/servicescan.app/tabbar-active.png servicescan/tabbar-active.png
+s411528209.261673
+e411528210.170146
+r1
+xCopyPNGFile
+x/Users/sdickson/Code/Darren/ServiceScan/servicescan/DerivedData/servicescan/Build/Products/Debug-iphoneos/servicescan.app/tabbar-active.png
+xservicescan/tabbar-active.png
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection129"CopyPNGFile DerivedData/servicescan/Build/Products/Debug-iphoneos/servicescan.app/tabbar-active.png servicescan/tabbar-active.png129"CopyPNGFile DerivedData/servicescan/Build/Products/Debug-iphoneos/servicescan.app/tabbar-active.png servicescan/tabbar-active.png0a1243116c87b841^8a8f2b126c87b841^---0#0#1#-19%DVTDocumentLocation2@88"file:///Users/sdickson/Code/Darren/ServiceScan/servicescan/servicescan/tabbar-active.png0000000000000000^710"CopyPNGFile DerivedData/servicescan/Build/Products/Debug-iphoneos/servicescan.app/tabbar-active.png servicescan/tabbar-active.png    cd /Users/sdickson/Code/Darren/ServiceScan/servicescan    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/copypng -compress /Users/sdickson/Code/Darren/ServiceScan/servicescan/servicescan/tabbar-active.png /Users/sdickson/Code/Darren/ServiceScan/servicescan/DerivedData/servicescan/Build/Products/Debug-iphoneos/servicescan.app/tabbar-active.png36"DA7B8A0B-A911-4124-81FF-A815CFB0CE1D-
+bC86383B7-7F08-4E96-821C-2324AC1F166D
+
+CCopyPNGFile /Users/sdickson/Code/Darren/ServiceScan/servicescan/DerivedData/servicescan/Build/Products/Debug-iphoneos/servicescan.app/tabbar-active@2x.png servicescan/tabbar-active@2x.png
+s411528210.245068
+e411528210.352987
+r1
+xCopyPNGFile
+x/Users/sdickson/Code/Darren/ServiceScan/servicescan/DerivedData/servicescan/Build/Products/Debug-iphoneos/servicescan.app/tabbar-active@2x.png
+xservicescan/tabbar-active@2x.png
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection135"CopyPNGFile DerivedData/servicescan/Build/Products/Debug-iphoneos/servicescan.app/tabbar-active@2x.png servicescan/tabbar-active@2x.png135"CopyPNGFile DerivedData/servicescan/Build/Products/Debug-iphoneos/servicescan.app/tabbar-active@2x.png servicescan/tabbar-active@2x.png2dd03e126c87b841^895e5a126c87b841^---0#0#1#-19%DVTDocumentLocation2@91"file:///Users/sdickson/Code/Darren/ServiceScan/servicescan/servicescan/tabbar-active@2x.png0000000000000000^722"CopyPNGFile DerivedData/servicescan/Build/Products/Debug-iphoneos/servicescan.app/tabbar-active@2x.png servicescan/tabbar-active@2x.png    cd /Users/sdickson/Code/Darren/ServiceScan/servicescan    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/copypng -compress /Users/sdickson/Code/Darren/ServiceScan/servicescan/servicescan/tabbar-active@2x.png /Users/sdickson/Code/Darren/ServiceScan/servicescan/DerivedData/servicescan/Build/Products/Debug-iphoneos/servicescan.app/tabbar-active@2x.png36"E5D4E07D-FD0B-422D-97CB-E7BC4D237845-
+bC86383B7-7F08-4E96-821C-2324AC1F166D
+
+CCopyPNGFile /Users/sdickson/Code/Darren/ServiceScan/servicescan/DerivedData/servicescan/Build/Products/Debug-iphoneos/servicescan.app/tabbar.png servicescan/tabbar.png
+s411528210.254825
+e411528210.502922
+r1
+xCopyPNGFile
+x/Users/sdickson/Code/Darren/ServiceScan/servicescan/DerivedData/servicescan/Build/Products/Debug-iphoneos/servicescan.app/tabbar.png
+xservicescan/tabbar.png
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection115"CopyPNGFile DerivedData/servicescan/Build/Products/Debug-iphoneos/servicescan.app/tabbar.png servicescan/tabbar.png115"CopyPNGFile DerivedData/servicescan/Build/Products/Debug-iphoneos/servicescan.app/tabbar.png servicescan/tabbar.png6f4a41126c87b841^bdc880126c87b841^---0#0#1#-19%DVTDocumentLocation2@81"file:///Users/sdickson/Code/Darren/ServiceScan/servicescan/servicescan/tabbar.png0000000000000000^682"CopyPNGFile DerivedData/servicescan/Build/Products/Debug-iphoneos/servicescan.app/tabbar.png servicescan/tabbar.png    cd /Users/sdickson/Code/Darren/ServiceScan/servicescan    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/copypng -compress /Users/sdickson/Code/Darren/ServiceScan/servicescan/servicescan/tabbar.png /Users/sdickson/Code/Darren/ServiceScan/servicescan/DerivedData/servicescan/Build/Products/Debug-iphoneos/servicescan.app/tabbar.png36"A542FDEA-2B59-4EAA-B050-8DBAED316EB9-
+bC86383B7-7F08-4E96-821C-2324AC1F166D
+
+CCopyPNGFile /Users/sdickson/Code/Darren/ServiceScan/servicescan/DerivedData/servicescan/Build/Products/Debug-iphoneos/servicescan.app/tabbar@2x.png servicescan/tabbar@2x.png
+s411528210.152929
+e411528210.353300
+r1
+xCopyPNGFile
+x/Users/sdickson/Code/Darren/ServiceScan/servicescan/DerivedData/servicescan/Build/Products/Debug-iphoneos/servicescan.app/tabbar@2x.png
+xservicescan/tabbar@2x.png
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection121"CopyPNGFile DerivedData/servicescan/Build/Products/Debug-iphoneos/servicescan.app/tabbar@2x.png servicescan/tabbar@2x.png121"CopyPNGFile DerivedData/servicescan/Build/Products/Debug-iphoneos/servicescan.app/tabbar@2x.png servicescan/tabbar@2x.pnga93327126c87b841^8b715a126c87b841^---0#0#1#-19%DVTDocumentLocation2@84"file:///Users/sdickson/Code/Darren/ServiceScan/servicescan/servicescan/tabbar@2x.png0000000000000000^694"CopyPNGFile DerivedData/servicescan/Build/Products/Debug-iphoneos/servicescan.app/tabbar@2x.png servicescan/tabbar@2x.png    cd /Users/sdickson/Code/Darren/ServiceScan/servicescan    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/copypng -compress /Users/sdickson/Code/Darren/ServiceScan/servicescan/servicescan/tabbar@2x.png /Users/sdickson/Code/Darren/ServiceScan/servicescan/DerivedData/servicescan/Build/Products/Debug-iphoneos/servicescan.app/tabbar@2x.png36"18B19CAE-51B2-41D7-8F81-A3DEFA442E25-
+bC86383B7-7F08-4E96-821C-2324AC1F166D
+
+CCopyStringsFile /Users/sdickson/Code/Darren/ServiceScan/servicescan/DerivedData/servicescan/Build/Products/Debug-iphoneos/servicescan.app/en.lproj/InfoPlist.strings servicescan/en.lproj/InfoPlist.strings
+s411528210.245058
+e411528210.254078
+r1
+xCopyStringsFile
+x/Users/sdickson/Code/Darren/ServiceScan/servicescan/DerivedData/servicescan/Build/Products/Debug-iphoneos/servicescan.app/en.lproj/InfoPlist.strings
+xservicescan/en.lproj/InfoPlist.strings
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection43"Copy servicescan/en.lproj/InfoPlist.strings151"CopyStringsFile DerivedData/servicescan/Build/Products/Debug-iphoneos/servicescan.app/en.lproj/InfoPlist.strings servicescan/en.lproj/InfoPlist.strings5fd03e126c87b841^2c0c41126c87b841^---0#0#1#-19%DVTDocumentLocation2@97"file:///Users/sdickson/Code/Darren/ServiceScan/servicescan/servicescan/en.lproj/InfoPlist.strings0000000000000000^662"CopyStringsFile DerivedData/servicescan/Build/Products/Debug-iphoneos/servicescan.app/en.lproj/InfoPlist.strings servicescan/en.lproj/InfoPlist.strings    cd /Users/sdickson/Code/Darren/ServiceScan/servicescan    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    builtin-copyStrings --validate --inputencoding utf-8 --outputencoding binary --outdir /Users/sdickson/Code/Darren/ServiceScan/servicescan/DerivedData/servicescan/Build/Products/Debug-iphoneos/servicescan.app/en.lproj -- servicescan/en.lproj/InfoPlist.strings36"B74C61AA-693F-4EE5-A933-7CD374D7F162-
+bC86383B7-7F08-4E96-821C-2324AC1F166D
+
+CCpResource /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.0.sdk/ResourceRules.plist DerivedData/servicescan/Build/Products/Debug-iphoneos/servicescan.app/ResourceRules.plist
+s411528207.066036
+e411528207.066835
+r1
+xCpResource
+x/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.0.sdk/ResourceRules.plist
+xDerivedData/servicescan/Build/Products/Debug-iphoneos/servicescan.app/ResourceRules.plist
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection94"Copy DerivedData/servicescan/Build/Products/Debug-iphoneos/servicescan.app/ResourceRules.plist222"CpResource /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.0.sdk/ResourceRules.plist DerivedData/servicescan/Build/Products/Debug-iphoneos/servicescan.app/ResourceRules.plistcff6100f6c87b841^8b4f110f6c87b841^---0#0#1#-19%DVTDocumentLocation2@148"file:///Users/sdickson/Code/Darren/ServiceScan/servicescan/DerivedData/servicescan/Build/Products/Debug-iphoneos/servicescan.app/ResourceRules.plist0034fc78ddffdf42^826"CpResource /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.0.sdk/ResourceRules.plist DerivedData/servicescan/Build/Products/Debug-iphoneos/servicescan.app/ResourceRules.plist    cd /Users/sdickson/Code/Darren/ServiceScan/servicescan    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.0.sdk/ResourceRules.plist /Users/sdickson/Code/Darren/ServiceScan/servicescan/DerivedData/servicescan/Build/Products/Debug-iphoneos/servicescan.app36"DB6543FC-6585-4AF4-8FA9-80F12F8B7277-
+bC86383B7-7F08-4E96-821C-2324AC1F166D
+
+CGenerateDSYMFile /Users/sdickson/Code/Darren/ServiceScan/servicescan/DerivedData/servicescan/Build/Products/Debug-iphoneos/servicescan.app.dSYM /Users/sdickson/Code/Darren/ServiceScan/servicescan/DerivedData/servicescan/Build/Products/Debug-iphoneos/servicescan.app/servicescan
+s411528209.229729
+e411528209.260798
+r1
+xGenerateDSYMFile
+x/Users/sdickson/Code/Darren/ServiceScan/servicescan/DerivedData/servicescan/Build/Products/Debug-iphoneos/servicescan.app.dSYM
+x/Users/sdickson/Code/Darren/ServiceScan/servicescan/DerivedData/servicescan/Build/Products/Debug-iphoneos/servicescan.app/servicescan
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection135"Generate /Users/sdickson/Code/Darren/ServiceScan/servicescan/DerivedData/servicescan/Build/Products/Debug-iphoneos/servicescan.app.dSYM173"GenerateDSYMFile DerivedData/servicescan/Build/Products/Debug-iphoneos/servicescan.app.dSYM DerivedData/servicescan/Build/Products/Debug-iphoneos/servicescan.app/servicescandcda3a116c87b841^5dc542116c87b841^---0#0#1#-19%DVTDocumentLocation2@133"file:///Users/sdickson/Code/Darren/ServiceScan/servicescan/DerivedData/servicescan/Build/Products/Debug-iphoneos/servicescan.app.dSYM0034fc78ddffdf42^785"GenerateDSYMFile DerivedData/servicescan/Build/Products/Debug-iphoneos/servicescan.app.dSYM DerivedData/servicescan/Build/Products/Debug-iphoneos/servicescan.app/servicescan    cd /Users/sdickson/Code/Darren/ServiceScan/servicescan    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/dsymutil /Users/sdickson/Code/Darren/ServiceScan/servicescan/DerivedData/servicescan/Build/Products/Debug-iphoneos/servicescan.app/servicescan -o /Users/sdickson/Code/Darren/ServiceScan/servicescan/DerivedData/servicescan/Build/Products/Debug-iphoneos/servicescan.app.dSYM36"1AA86798-F449-4982-B4DC-F2F7C984EAB2-
+bC86383B7-7F08-4E96-821C-2324AC1F166D
+
+CLd /Users/sdickson/Code/Darren/ServiceScan/servicescan/DerivedData/servicescan/Build/Products/Debug-iphoneos/servicescan.app/servicescan normal armv7s
+s411528208.132471
+e411528209.229137
+r1
+xLd
+x/Users/sdickson/Code/Darren/ServiceScan/servicescan/DerivedData/servicescan/Build/Products/Debug-iphoneos/servicescan.app/servicescan
+xnormal
+xarmv7s
+d/Users/sdickson/Code/Darren/ServiceScan/servicescan/DerivedData/servicescan/Build/Intermediates/servicescan.build/Debug-iphoneos/servicescan.build/Objects-normal/armv7s/servicescan.LinkFileList
+d/Users/sdickson/Code/Darren/ServiceScan/servicescan/DerivedData/servicescan/Build/Intermediates/servicescan.build/Debug-iphoneos/servicescan.build/Objects-normal/armv7s/SecondViewController.o
+d/Users/sdickson/Code/Darren/ServiceScan/servicescan/DerivedData/servicescan/Build/Intermediates/servicescan.build/Debug-iphoneos/servicescan.build/Objects-normal/armv7s/UIImage+iPhone5.o
+d/Users/sdickson/Code/Darren/ServiceScan/servicescan/DerivedData/servicescan/Build/Intermediates/servicescan.build/Debug-iphoneos/servicescan.build/Objects-normal/armv7s/AppDelegate.o
+d/Users/sdickson/Code/Darren/ServiceScan/servicescan/DerivedData/servicescan/Build/Intermediates/servicescan.build/Debug-iphoneos/servicescan.build/Objects-normal/armv7s/Utils.o
+d/Users/sdickson/Code/Darren/ServiceScan/servicescan/DerivedData/servicescan/Build/Intermediates/servicescan.build/Debug-iphoneos/servicescan.build/Objects-normal/armv7s/ScanViewController.o
+d/Users/sdickson/Code/Darren/ServiceScan/servicescan/DerivedData/servicescan/Build/Intermediates/servicescan.build/Debug-iphoneos/servicescan.build/Objects-normal/armv7s/main.o
+d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.0.sdk/System/Library/Frameworks/CoreGraphics.framework/CoreGraphics
+d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.0.sdk/System/Library/Frameworks/UIKit.framework/UIKit
+d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.0.sdk/System/Library/Frameworks/Foundation.framework/Foundation
+d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.0.sdk/usr/lib/libobjc.dylib
+d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.0.sdk/usr/lib/libSystem.dylib
+d/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/5.0/lib/darwin/libclang_rt.ios.a
+d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.0.sdk/System/Library/Frameworks/CoreVideo.framework/CoreVideo
+d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.0.sdk/System/Library/Frameworks/CoreImage.framework/CoreImage
+d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.0.sdk/System/Library/Frameworks/Security.framework/Security
+d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.0.sdk/System/Library/Frameworks/CFNetwork.framework/CFNetwork
+d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.0.sdk/System/Library/Frameworks/OpenGLES.framework/OpenGLES
+d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.0.sdk/System/Library/Frameworks/QuartzCore.framework/QuartzCore
+d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.0.sdk/System/Library/Frameworks/CoreFoundation.framework/CoreFoundation
+d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.0.sdk/System/Library/Frameworks/CoreText.framework/CoreText
+d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.0.sdk/usr/lib/system/libcache.dylib
+d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.0.sdk/usr/lib/system/libcommonCrypto.dylib
+d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.0.sdk/usr/lib/system/libcompiler_rt.dylib
+d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.0.sdk/usr/lib/system/libcopyfile.dylib
+d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.0.sdk/usr/lib/system/libcorecrypto.dylib
+d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.0.sdk/usr/lib/system/libdispatch.dylib
+d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.0.sdk/usr/lib/system/libdyld.dylib
+d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.0.sdk/usr/lib/system/libkeymgr.dylib
+d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.0.sdk/usr/lib/system/liblaunch.dylib
+d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.0.sdk/usr/lib/system/libmacho.dylib
+d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.0.sdk/usr/lib/system/libremovefile.dylib
+d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.0.sdk/usr/lib/system/libsystem_asl.dylib
+d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.0.sdk/usr/lib/system/libsystem_blocks.dylib
+d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.0.sdk/usr/lib/system/libsystem_c.dylib
+d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.0.sdk/usr/lib/system/libsystem_configuration.dylib
+d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.0.sdk/usr/lib/system/libsystem_dnssd.dylib
+d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.0.sdk/usr/lib/system/libsystem_info.dylib
+d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.0.sdk/usr/lib/system/libsystem_kernel.dylib
+d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.0.sdk/usr/lib/system/libsystem_m.dylib
+d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.0.sdk/usr/lib/system/libsystem_malloc.dylib
+d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.0.sdk/usr/lib/system/libsystem_network.dylib
+d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.0.sdk/usr/lib/system/libsystem_notify.dylib
+d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.0.sdk/usr/lib/system/libsystem_platform.dylib
+d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.0.sdk/usr/lib/system/libsystem_pthread.dylib
+d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.0.sdk/usr/lib/system/libsystem_sandbox.dylib
+d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.0.sdk/usr/lib/system/libsystem_stats.dylib
+d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.0.sdk/usr/lib/system/libunwind.dylib
+d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.0.sdk/usr/lib/system/libxpc.dylib
+d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.0.sdk/System/Library/PrivateFrameworks/UIFoundation.framework/UIFoundation
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection138"Link /Users/sdickson/Code/Darren/ServiceScan/servicescan/DerivedData/servicescan/Build/Products/Debug-iphoneos/servicescan.app/servicescan98"Ld DerivedData/servicescan/Build/Products/Debug-iphoneos/servicescan.app/servicescan normal armv7secf621106c87b841^1ea93a116c87b841^---0#0#1#--1536"Ld DerivedData/servicescan/Build/Products/Debug-iphoneos/servicescan.app/servicescan normal armv7s    cd /Users/sdickson/Code/Darren/ServiceScan/servicescan    setenv IPHONEOS_DEPLOYMENT_TARGET 7.0    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -arch armv7s -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.0.sdk -L/Users/sdickson/Code/Darren/ServiceScan/servicescan/DerivedData/servicescan/Build/Products/Debug-iphoneos -F/Users/sdickson/Code/Darren/ServiceScan/servicescan/DerivedData/servicescan/Build/Products/Debug-iphoneos -filelist /Users/sdickson/Code/Darren/ServiceScan/servicescan/DerivedData/servicescan/Build/Intermediates/servicescan.build/Debug-iphoneos/servicescan.build/Objects-normal/armv7s/servicescan.LinkFileList -dead_strip -fobjc-arc -fobjc-link-runtime -miphoneos-version-min=7.0 -framework CoreGraphics -framework UIKit -framework Foundation -Xlinker -dependency_info -Xlinker /Users/sdickson/Code/Darren/ServiceScan/servicescan/DerivedData/servicescan/Build/Intermediates/servicescan.build/Debug-iphoneos/servicescan.build/Objects-normal/armv7s/servicescan_dependency_info.dat -o /Users/sdickson/Code/Darren/ServiceScan/servicescan/DerivedData/servicescan/Build/Products/Debug-iphoneos/servicescan.app/servicescan36"7FDB6525-CD09-4DA2-B4E2-DCCBD73E44CA-
+bC86383B7-7F08-4E96-821C-2324AC1F166D
+
+CProcessInfoPlistFile /Users/sdickson/Code/Darren/ServiceScan/servicescan/DerivedData/servicescan/Build/Products/Debug-iphoneos/servicescan.app/Info.plist /Users/sdickson/Code/Darren/ServiceScan/servicescan/servicescan/servicescan-Info.plist
+s411528218.991038
+e411528219.025156
+r1
+xProcessInfoPlistFile
+x/Users/sdickson/Code/Darren/ServiceScan/servicescan/DerivedData/servicescan/Build/Products/Debug-iphoneos/servicescan.app/Info.plist
+x/Users/sdickson/Code/Darren/ServiceScan/servicescan/servicescan/servicescan-Info.plist
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection94"Process /Users/sdickson/Code/Darren/ServiceScan/servicescan/servicescan/servicescan-Info.plist136"ProcessInfoPlistFile DerivedData/servicescan/Build/Products/Debug-iphoneos/servicescan.app/Info.plist servicescan/servicescan-Info.plista0c2fd1a6c87b841^1571061b6c87b841^---0#0#1#-19%DVTDocumentLocation2@93"file:///Users/sdickson/Code/Darren/ServiceScan/servicescan/servicescan/servicescan-Info.plist0000000000000000^1198"ProcessInfoPlistFile DerivedData/servicescan/Build/Products/Debug-iphoneos/servicescan.app/Info.plist servicescan/servicescan-Info.plist    cd /Users/sdickson/Code/Darren/ServiceScan/servicescan    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    builtin-infoPlistUtility /Users/sdickson/Code/Darren/ServiceScan/servicescan/servicescan/servicescan-Info.plist -genpkginfo /Users/sdickson/Code/Darren/ServiceScan/servicescan/DerivedData/servicescan/Build/Products/Debug-iphoneos/servicescan.app/PkgInfo -expandbuildsettings -format binary -platform iphoneos -resourcerulesfile /Users/sdickson/Code/Darren/ServiceScan/servicescan/DerivedData/servicescan/Build/Products/Debug-iphoneos/servicescan.app/ResourceRules.plist -additionalcontentfile /Users/sdickson/Code/Darren/ServiceScan/servicescan/DerivedData/servicescan/Build/Intermediates/servicescan.build/Debug-iphoneos/servicescan.build/assetcatalog_generated_info.plist -o /Users/sdickson/Code/Darren/ServiceScan/servicescan/DerivedData/servicescan/Build/Products/Debug-iphoneos/servicescan.app/Info.plist36"A4BA3832-7B28-4162-80BA-BD8B29732C74-
+bC86383B7-7F08-4E96-821C-2324AC1F166D
+
+CProcessPCH /Users/sdickson/Code/Darren/ServiceScan/servicescan/DerivedData/servicescan/Build/Intermediates/PrecompiledHeaders/servicescan-Prefix-fdbbmysqjooainbgeawexprwnkjc/servicescan-Prefix.pch.pch servicescan/servicescan-Prefix.pch normal armv7s objective-c com.apple.compilers.llvm.clang.1_0.compiler
+s411528207.067300
+e411528207.689424
+r1
+xProcessPCH
+x/Users/sdickson/Code/Darren/ServiceScan/servicescan/DerivedData/servicescan/Build/Intermediates/PrecompiledHeaders/servicescan-Prefix-fdbbmysqjooainbgeawexprwnkjc/servicescan-Prefix.pch.pch
+xservicescan/servicescan-Prefix.pch
+xnormal
+xarmv7s
+xobjective-c
+xcom.apple.compilers.llvm.clang.1_0.compiler
+d/Users/sdickson/Code/Darren/ServiceScan/servicescan/servicescan/servicescan-Prefix.pch
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection45"Precompile servicescan/servicescan-Prefix.pch253"ProcessPCH DerivedData/servicescan/Build/Intermediates/PrecompiledHeaders/servicescan-Prefix-fdbbmysqjooainbgeawexprwnkjc/servicescan-Prefix.pch.pch servicescan/servicescan-Prefix.pch normal armv7s objective-c com.apple.compilers.llvm.clang.1_0.compilerc34a110f6c87b841^ae7eb00f6c87b841^---0#0#1#-19%DVTDocumentLocation2@93"file:///Users/sdickson/Code/Darren/ServiceScan/servicescan/servicescan/servicescan-Prefix.pch0000000000000000^3950"ProcessPCH DerivedData/servicescan/Build/Intermediates/PrecompiledHeaders/servicescan-Prefix-fdbbmysqjooainbgeawexprwnkjc/servicescan-Prefix.pch.pch servicescan/servicescan-Prefix.pch normal armv7s objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/sdickson/Code/Darren/ServiceScan/servicescan    setenv LANG en_US.US-ASCII    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c-header -arch armv7s -fmessage-length=0 -fdiagnostics-show-note-include-stack -fmacro-backtrace-limit=0 -std=gnu99 -fobjc-arc -fmodules -fmodules-cache-path=/Users/sdickson/Code/Darren/ServiceScan/servicescan/DerivedData/ModuleCache -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Werror=return-type -Wno-implicit-atomic-properties -Werror=deprecated-objc-isa-usage -Werror=objc-root-class -Wno-receiver-is-weak -Wno-arc-repeated-use-of-weak -Wduplicate-method-match -Wno-missing-braces -Wparentheses -Wswitch -Wunused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wempty-body -Wuninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wconstant-conversion -Wint-conversion -Wbool-conversion -Wenum-conversion -Wshorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wundeclared-selector -Wno-deprecated-implementations -DDEBUG=1 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.0.sdk -fstrict-aliasing -Wprotocol -Wdeprecated-declarations -g -Wno-sign-conversion -miphoneos-version-min=7.0 -iquote /Users/sdickson/Code/Darren/ServiceScan/servicescan/DerivedData/servicescan/Build/Intermediates/servicescan.build/Debug-iphoneos/servicescan.build/servicescan-generated-files.hmap -I/Users/sdickson/Code/Darren/ServiceScan/servicescan/DerivedData/servicescan/Build/Intermediates/servicescan.build/Debug-iphoneos/servicescan.build/servicescan-own-target-headers.hmap -I/Users/sdickson/Code/Darren/ServiceScan/servicescan/DerivedData/servicescan/Build/Intermediates/servicescan.build/Debug-iphoneos/servicescan.build/servicescan-all-target-headers.hmap -iquote /Users/sdickson/Code/Darren/ServiceScan/servicescan/DerivedData/servicescan/Build/Intermediates/servicescan.build/Debug-iphoneos/servicescan.build/servicescan-project-headers.hmap -I/Users/sdickson/Code/Darren/ServiceScan/servicescan/DerivedData/servicescan/Build/Products/Debug-iphoneos/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Users/sdickson/Code/Darren/ServiceScan/servicescan/DerivedData/servicescan/Build/Intermediates/servicescan.build/Debug-iphoneos/servicescan.build/DerivedSources/armv7s -I/Users/sdickson/Code/Darren/ServiceScan/servicescan/DerivedData/servicescan/Build/Intermediates/servicescan.build/Debug-iphoneos/servicescan.build/DerivedSources -F/Users/sdickson/Code/Darren/ServiceScan/servicescan/DerivedData/servicescan/Build/Products/Debug-iphoneos --serialize-diagnostics /Users/sdickson/Code/Darren/ServiceScan/servicescan/DerivedData/servicescan/Build/Intermediates/PrecompiledHeaders/servicescan-Prefix-fdbbmysqjooainbgeawexprwnkjc/servicescan-Prefix.pch.dia -MMD -MT dependencies -MF /Users/sdickson/Code/Darren/ServiceScan/servicescan/DerivedData/servicescan/Build/Intermediates/PrecompiledHeaders/servicescan-Prefix-fdbbmysqjooainbgeawexprwnkjc/servicescan-Prefix.pch.d -c /Users/sdickson/Code/Darren/ServiceScan/servicescan/servicescan/servicescan-Prefix.pch -o /Users/sdickson/Code/Darren/ServiceScan/servicescan/DerivedData/servicescan/Build/Intermediates/PrecompiledHeaders/servicescan-Prefix-fdbbmysqjooainbgeawexprwnkjc/servicescan-Prefix.pch.pch36"B981582B-A7E9-402F-B6F6-B9444EFA6CB2-
+bC86383B7-7F08-4E96-821C-2324AC1F166D
+
+CProcessPCH /Users/sdickson/Code/Darren/ServiceScan/servicescan/DerivedData/servicescan/Index/PrecompiledHeaders/servicescan-Prefix-eyxtauriyeqwgegslksvzppnzbnx_ast/servicescan-Prefix.pch.pch servicescan/servicescan-Prefix.pch normal armv7s objective-c com.apple.compilers.llvm.clang.1_0.astbuilder
+r0
+
+CProcessProductPackaging /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.0.sdk/Entitlements.plist /Users/sdickson/Code/Darren/ServiceScan/servicescan/DerivedData/servicescan/Build/Intermediates/servicescan.build/Debug-iphoneos/servicescan.build/servicescan.xcent
+s411528219.044582
+e411528219.045530
+r1
+xProcessProductPackaging
+x/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.0.sdk/Entitlements.plist
+x/Users/sdickson/Code/Darren/ServiceScan/servicescan/DerivedData/servicescan/Build/Intermediates/servicescan.build/Debug-iphoneos/servicescan.build/servicescan.xcent
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection257"ProcessProductPackaging /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.0.sdk/Entitlements.plist DerivedData/servicescan/Build/Intermediates/servicescan.build/Debug-iphoneos/servicescan.build/servicescan.xcent257"ProcessProductPackaging /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.0.sdk/Entitlements.plist DerivedData/servicescan/Build/Intermediates/servicescan.build/Debug-iphoneos/servicescan.build/servicescan.xcentfc710b1b6c87b841^82a80b1b6c87b841^---0#0#1#-19%DVTDocumentLocation2@171"file:///Users/sdickson/Code/Darren/ServiceScan/servicescan/DerivedData/servicescan/Build/Intermediates/servicescan.build/Debug-iphoneos/servicescan.build/servicescan.xcent0034fc78ddffdf42^856"ProcessProductPackaging /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.0.sdk/Entitlements.plist DerivedData/servicescan/Build/Intermediates/servicescan.build/Debug-iphoneos/servicescan.build/servicescan.xcent    cd /Users/sdickson/Code/Darren/ServiceScan/servicescan    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    builtin-productPackagingUtility /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.0.sdk/Entitlements.plist -entitlements -format xml -o /Users/sdickson/Code/Darren/ServiceScan/servicescan/DerivedData/servicescan/Build/Intermediates/servicescan.build/Debug-iphoneos/servicescan.build/servicescan.xcent36"458D2048-AB24-4476-A94B-38D6FC55B93C-
+bC86383B7-7F08-4E96-821C-2324AC1F166D
+
+CProcessProductPackaging /Users/sdickson/Library/MobileDevice/Provisioning\ Profiles/03924BE8-EF16-4491-9C7A-119ABD58BD6F.mobileprovision /Users/sdickson/Code/Darren/ServiceScan/servicescan/DerivedData/servicescan/Build/Products/Debug-iphoneos/servicescan.app/embedded.mobileprovision
+s411528219.025439
+e411528219.043426
+r1
+xProcessProductPackaging
+x/Users/sdickson/Library/MobileDevice/Provisioning Profiles/03924BE8-EF16-4491-9C7A-119ABD58BD6F.mobileprovision
+x/Users/sdickson/Code/Darren/ServiceScan/servicescan/DerivedData/servicescan/Build/Products/Debug-iphoneos/servicescan.app/embedded.mobileprovision
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection231"ProcessProductPackaging /Users/sdickson/Library/MobileDevice/Provisioning\ Profiles/03924BE8-EF16-4491-9C7A-119ABD58BD6F.mobileprovision DerivedData/servicescan/Build/Products/Debug-iphoneos/servicescan.app/embedded.mobileprovision231"ProcessProductPackaging /Users/sdickson/Library/MobileDevice/Provisioning\ Profiles/03924BE8-EF16-4491-9C7A-119ABD58BD6F.mobileprovision DerivedData/servicescan/Build/Products/Debug-iphoneos/servicescan.app/embedded.mobileprovision5d8b061b6c87b841^9f1e0b1b6c87b841^---0#0#1#-19%DVTDocumentLocation2@153"file:///Users/sdickson/Code/Darren/ServiceScan/servicescan/DerivedData/servicescan/Build/Products/Debug-iphoneos/servicescan.app/embedded.mobileprovision0034fc78ddffdf42^778"ProcessProductPackaging /Users/sdickson/Library/MobileDevice/Provisioning\ Profiles/03924BE8-EF16-4491-9C7A-119ABD58BD6F.mobileprovision DerivedData/servicescan/Build/Products/Debug-iphoneos/servicescan.app/embedded.mobileprovision    cd /Users/sdickson/Code/Darren/ServiceScan/servicescan    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    builtin-productPackagingUtility /Users/sdickson/Library/MobileDevice/Provisioning\ Profiles/03924BE8-EF16-4491-9C7A-119ABD58BD6F.mobileprovision -o /Users/sdickson/Code/Darren/ServiceScan/servicescan/DerivedData/servicescan/Build/Products/Debug-iphoneos/servicescan.app/embedded.mobileprovision36"BEA7FE93-4813-43F0-A983-A6C4FBF6A3BB-
+bC86383B7-7F08-4E96-821C-2324AC1F166D
+
+CTouch /Users/sdickson/Code/Darren/ServiceScan/servicescan/DerivedData/servicescan/Build/Products/Debug-iphoneos/servicescan.app
+r0
+

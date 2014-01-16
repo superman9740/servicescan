@@ -32,6 +32,19 @@
     
        
 }
+
+-(IBAction)showScanner:(id)sender
+{
+    
+    
+    cameraViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"camera"];
+    cameraViewController.delegate = self;
+    [self presentViewController:cameraViewController animated:YES completion:nil];
+    
+    
+    
+    
+}
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];

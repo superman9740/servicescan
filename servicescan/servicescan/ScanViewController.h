@@ -7,7 +7,18 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "CustomCameraViewController.h"
 
 @interface ScanViewController : UIViewController
+{
+
+    
+     CustomCameraViewController* cameraViewController;
+    
+    
+}
+
+-(IBAction)showScanner:(id)sender;
+
 
 @end
