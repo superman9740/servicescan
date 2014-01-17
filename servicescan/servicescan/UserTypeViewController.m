@@ -34,10 +34,7 @@
 
 -(IBAction)logInAsUser:(id)sender
 {
-    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
-    [defaults setObject:@"1" forKey:@"userType"];
-    [defaults synchronize];
-    
+    [[AppController sharedInstance] loginAsUser];
     
     [self dismissViewControllerAnimated:YES completion:nil];
     
@@ -46,9 +43,7 @@
 
 -(IBAction)logInAsContractor:(id)sender
 {
-    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
-    [defaults setObject:@"2" forKey:@"userType"];
-    [defaults synchronize];
+    [[AppController sharedInstance] loginAsContractor];
     
     [self dismissViewControllerAnimated:YES completion:nil];
     

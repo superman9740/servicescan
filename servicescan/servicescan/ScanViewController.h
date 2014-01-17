@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "CustomCameraViewController.h"
+#import "UserScanCompletedViewController.h"
 
 @class AppController;
 
@@ -17,7 +18,8 @@
 {
 
     
-     CustomCameraViewController* cameraViewController;
+    CustomCameraViewController* cameraViewController;
+    UserScanCompletedViewController* userScanCompletedViewController;
     
     
 }

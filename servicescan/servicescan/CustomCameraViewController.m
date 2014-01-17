@@ -95,10 +95,8 @@ static inline double radians (double degrees) {return degrees * M_PI/180;}
             dispatch_async(dispatch_get_main_queue(), ^{
             
                 [self.session stopRunning];
-                
-                NSString* alertText = [NSString stringWithFormat:@"QR code - %@", scannedValue];
-                UIAlertView* alertView = [[UIAlertView alloc] initWithTitle:@"Scan" message:alertText delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil];
-                [alertView show];
+                [self.delegate didCaptureQRCode:scannedValue];
+                [self.session startRunning];
                 
                // [_previewLayer removeFromSuperlayer];
                 

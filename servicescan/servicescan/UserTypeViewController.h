@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "AppController.h"
 
 @interface UserTypeViewController : UIViewController
 {

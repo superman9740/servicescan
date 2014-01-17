@@ -14,9 +14,12 @@
     
 }
 
-@property (assign, nonatomic) int userType;
+@property (assign, nonatomic) NSInteger userType;
+@property (strong, nonatomic) NSString* qrCode;
 
 + (id)sharedInstance;
 
+-(void)loginAsUser;
+-(void)loginAsContractor;
 
 @end

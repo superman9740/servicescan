@@ -31,21 +31,37 @@ static  AppController* sharedInstance = nil;
     {
     
         NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
-        NSString* userID = [defaults objectForKey:@"userType"];
-        if(userID == nil)
-        {
-            _userType = -1;
-            
-        }
-        else
-        {
-            _userType = userID.intValue;
-            
-        }
+        _userType = [defaults integerForKey:@"userType"];
+        
         
     }
     
     return self;
+    
+}
+
+
+-(void)loginAsUser
+{
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    _userType = 1;
+    
+    [defaults setInteger:1 forKey:@"userType"];
+    
+    
+    [defaults synchronize];
+    
+    
+}
+-(void)loginAsContractor
+{
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    _userType = 2;
+    
+    [defaults setInteger:2 forKey:@"userType"];
+    
+    [defaults synchronize];
+
     
 }
 @end

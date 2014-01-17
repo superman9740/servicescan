@@ -21,7 +21,7 @@
 
 @protocol CustomCameraDelegate <NSObject>
 @required
--(void)didFinishImageSelection:(NSArray*)images;
+-(void)didCaptureQRCode:(NSString*)code;
 
 
 @end;

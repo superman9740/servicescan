@@ -44,6 +44,7 @@
     [[UITabBar appearance] setShadowImage:[UIImage imageNamed:@"transparentShadow.png"]];
     
     [[UITabBar appearance] setSelectionIndicatorImage:[UIImage tallImageNamed:@"tabbar-active.png"]];
+    [[UITextField appearance] setBackground:[UIImage imageNamed:@"text-input.png"]];
     
 
     
