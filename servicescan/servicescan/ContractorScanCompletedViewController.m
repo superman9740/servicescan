@@ -48,7 +48,7 @@
 {
        
     self.scrollView.scrollEnabled = YES;
-    self.scrollView.contentSize = CGSizeMake(self.view.frame.size.width,600 );
+    self.scrollView.contentSize = CGSizeMake(self.view.frame.size.width,800 );
     
     
     
@@ -56,6 +56,55 @@
 
 -(IBAction)saveApplicanceRecord:(id)sender
 {
+
+    ServiceScan* scan = [[ServiceScan alloc] init];
+    
+    NSString* contractorName = _contractorFirstName.text;
+    NSArray* names = [contractorName componentsSeparatedByString:@" "];
+    
+    scan.contractorFirstName = names[0];
+    
+    scan.contractorLastName = names[1];
+    scan.contractorAddress  = _contractorAddress.text;
+    
+    scan.contractorCity = _contractorCity.text;
+    scan.contractorState = _contractorState.text;
+    scan.contractorZip = _contractorZip.text;
+    scan.contractorPhone = _contractorPhone.text;
+    NSString* customerName = _customerFirstName.text;
+    
+    names = [customerName componentsSeparatedByString:@" "];
+    
+    scan.customerFirstName = names[0];
+    scan.customerLastName = names[1];
+    scan.customerAddress = _customerAddress.text;
+    scan.customerCity = _customerCity.text;
+    scan.customerState = _customerState.text;
+    scan.customerZip = _customerZip.text;
+    scan.customerPhone = _customerPhone.text;
+    scan.applianceSerial = _applianceSerial.text;
+    scan.applianceModel = _applianceModel.text;
+    scan.applianceType = _applianceType.text;
+    scan.qrCode = [[AppController sharedInstance] qrCode];
+    
+    
+    NSData* tempData = [scan getJson];
+    
+    NSString* tempStr = [[NSString alloc] initWithData:tempData encoding:NSUTF8StringEncoding];
+
+    NSString* urlString = [NSString stringWithFormat:@"http://10.0.0.4:8080/ServiceScanServerSide/SaveNewServiceScan?scan=%@",[tempStr stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding]];
+    
+    NSURL* url = [NSURL URLWithString:urlString];
+    
+    NSError* error = nil;
+    NSURLResponse* response = nil;
+    NSURLRequest* request = [NSURLRequest requestWithURL:url];
+    
+    [NSURLConnection sendSynchronousRequest:request returningResponse:&response error:&error];
+    
+    
+    
+    
     
     UIAlertView* alertView = [[UIAlertView alloc] initWithTitle:@"Save Record" message:@"The applicance record has been saved." delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil];
     [alertView show];

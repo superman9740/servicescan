@@ -21,6 +21,7 @@
 		3C95E59D188773E000C608C6 /* MasterCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C95E59C188773E000C608C6 /* MasterCell.m */; };
 		3C95E5A01887745D00C608C6 /* list-item-bg.png in Resources */ = {isa = PBXBuildFile; fileRef = 3C95E59E1887745D00C608C6 /* list-item-bg.png */; };
 		3C95E5A11887745D00C608C6 /* list-item-bg@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3C95E59F1887745D00C608C6 /* list-item-bg@2x.png */; };
+		3C95E5A5188C4EF900C608C6 /* ServiceScan.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C95E5A4188C4EF900C608C6 /* ServiceScan.m */; };
 		DE26ECEA1889B68B00F52113 /* UserScanCompletedViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DE26ECE91889B68B00F52113 /* UserScanCompletedViewController.m */; };
 		DE26ECED1889B74300F52113 /* text-input.png in Resources */ = {isa = PBXBuildFile; fileRef = DE26ECEB1889B74300F52113 /* text-input.png */; };
 		DE26ECEE1889B74300F52113 /* text-input@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DE26ECEC1889B74300F52113 /* text-input@2x.png */; };
@@ -98,6 +99,8 @@
 		3C95E59C188773E000C608C6 /* MasterCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MasterCell.m; sourceTree = "<group>"; };
 		3C95E59E1887745D00C608C6 /* list-item-bg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "list-item-bg.png"; sourceTree = "<group>"; };
 		3C95E59F1887745D00C608C6 /* list-item-bg@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "list-item-bg@2x.png"; sourceTree = "<group>"; };
+		3C95E5A3188C4EF900C608C6 /* ServiceScan.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ServiceScan.h; sourceTree = "<group>"; };
+		3C95E5A4188C4EF900C608C6 /* ServiceScan.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ServiceScan.m; sourceTree = "<group>"; };
 		DE26ECE81889B68B00F52113 /* UserScanCompletedViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserScanCompletedViewController.h; sourceTree = "<group>"; };
 		DE26ECE91889B68B00F52113 /* UserScanCompletedViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserScanCompletedViewController.m; sourceTree = "<group>"; };
 		DE26ECEB1889B74300F52113 /* text-input.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "text-input.png"; sourceTree = "<group>"; };
@@ -207,6 +210,15 @@
 			name = CustomCamera;
 			sourceTree = "<group>";
 		};
+		3C95E5A2188C4ED700C608C6 /* ValueObjects */ = {
+			isa = PBXGroup;
+			children = (
+				3C95E5A3188C4EF900C608C6 /* ServiceScan.h */,
+				3C95E5A4188C4EF900C608C6 /* ServiceScan.m */,
+			);
+			name = ValueObjects;
+			sourceTree = "<group>";
+		};
 		DE26ECE71889B66900F52113 /* UserScanCompleted */ = {
 			isa = PBXGroup;
 			children = (
@@ -258,6 +270,7 @@
 		DE33C05F1885D7A1005F528A /* servicescan */ = {
 			isa = PBXGroup;
 			children = (
+				3C95E5A2188C4ED700C608C6 /* ValueObjects */,
 				DE26ECEF1889BB7900F52113 /* ContractorScanCompleted */,
 				DE26ECE71889B66900F52113 /* UserScanCompleted */,
 				DE809ADA188879AD009A5672 /* AppController */,
@@ -554,6 +567,7 @@
 				3C95E58C18876FF700C608C6 /* Highlighter.m in Sources */,
 				DE26ECF21889BB9600F52113 /* ContractorScanCompletedViewController.m in Sources */,
 				DE26ECEA1889B68B00F52113 /* UserScanCompletedViewController.m in Sources */,
+				3C95E5A5188C4EF900C608C6 /* ServiceScan.m in Sources */,
 				DE809AD5188867D1009A5672 /* UserTypeViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

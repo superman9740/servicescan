@@ -7,12 +7,19 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "AppController.h"
 
 @interface UserScanCompletedViewController : UIViewController<UITextFieldDelegate>
 {
     
     
 }
+
+@property (nonatomic, strong) IBOutlet UILabel* contractorName;
+@property (nonatomic, strong) IBOutlet UILabel* contractorAddress;
+@property (nonatomic, strong) IBOutlet UILabel* applianceModel;
+
+
 
 -(IBAction)requestService:(id)sender;
 
