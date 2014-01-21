@@ -48,7 +48,8 @@
     
     cameraViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"camera"];
     cameraViewController.delegate = self;
-    
+    UIBarButtonItem* barButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemDone target:self action:@selector(closeScanner:)];
+    self.navigationItem.leftBarButtonItem = barButtonItem;
     [self.view addSubview:cameraViewController.view];
     
     
@@ -57,10 +58,61 @@
     
     
 }
+-(IBAction)closeScanner:(id)sender
+{
+    [cameraViewController.view removeFromSuperview];
+    
+    
+}
 
 -(void)didCaptureQRCode:(NSString*)code
 {
+    [[AppController sharedInstance] setQrCode:code];
+    
+    NSString* urlString = [NSString stringWithFormat:@"http://servicescans.com:8080/ServiceScanServerSide/GetScanData?qrCode=%@",[[AppController sharedInstance] qrCode]];
+    
+    NSURL* url = [NSURL URLWithString:urlString];
+    
+    NSError* error = nil;
+    NSURLResponse* response = nil;
+    NSURLRequest* request = [NSURLRequest requestWithURL:url];
+    
+    NSData* jsonData = [NSURLConnection sendSynchronousRequest:request returningResponse:&response error:&error];
+    if(error.code == -1004)
+    {
+        
+        
+        UIAlertView* alertView = [[UIAlertView alloc] initWithTitle:@"Service Error" message:@"There was an error connecting to the server.  Please try again." delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil];
+        [alertView show];
+        return;
+        
+    }
+    
+    NSString* jsonString = [[NSString alloc] initWithData:jsonData encoding:NSUTF8StringEncoding];
+    
+    if([jsonString isEqualToString:@"-1\n"])
+    {
+        UIAlertView* alertView = [[UIAlertView alloc] initWithTitle:@"Service Error" message:@"That QR code doesn't seem to be associated with a service contractor.  Please try again." delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil];
+        [alertView show];
+        return;
+        
+        
+    }
+    NSDictionary* dict = [NSJSONSerialization JSONObjectWithData:jsonData options:0 error:&error];
+    
+    NSString* contractorFirstName = [dict valueForKey:@"contractorFirstName"];
+    
+    NSString* contractorAddress = [dict valueForKey:@"contractorAddress"];
+    
+    NSString* applianceModel = [dict valueForKey:@"applianceModel"];
+    ServiceScan* serviceScan = [[AppController sharedInstance] serviceScan];
+    serviceScan.contractorFirstName = contractorFirstName;
+    serviceScan.contractorAddress = contractorAddress;
+    serviceScan.applianceModel = applianceModel;
+    
+    
     NSInteger userType = [[AppController sharedInstance] userType];
+    
     
     [[AppController sharedInstance] setQrCode:code];
     switch (userType)
@@ -83,6 +135,13 @@
     }
     
 }
+
+-(IBAction)resetUserType:(id)sender
+{
+    [self performSegueWithIdentifier:@"showUserType" sender:self];
+    
+}
+
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];

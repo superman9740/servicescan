@@ -9,9 +9,11 @@ package com.servicescan;
 import com.dickson.servicescanserverside.Scan;
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.util.List;
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.Persistence;
+import javax.persistence.TypedQuery;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -41,12 +43,7 @@ public class SaveNewServiceScan extends HttpServlet {
         PrintWriter out = response.getWriter();
         try {
             /* TODO output your page here. You may use following sample code. */
-            out.println("<!DOCTYPE html>");
-            out.println("<html>");
-            out.println("<head>");
-            out.println("<title>Servlet SaveNewServiceScan</title>");            
-            out.println("</head>");
-            out.println("<body>");
+            
             
             String json = request.getParameter("scan");
             JSONObject jsonObject = JSONObject.fromObject( json );  
@@ -77,6 +74,22 @@ public class SaveNewServiceScan extends HttpServlet {
             EntityManagerFactory emf = Persistence.createEntityManagerFactory("com.dickson_ServiceScanServerSide_war_1.0-SNAPSHOTPU");
             EntityManager em = emf.createEntityManager();
             em.getTransaction().begin();
+            
+            //First, check to make sure this qr code has not already been used
+            
+            TypedQuery<Scan> query = em.createQuery("SELECT c FROM Scan c WHERE c.qrcode = :qrcode", Scan.class);
+             query.setParameter("qrcode", qrCode);
+             List<Scan> scans = query.getResultList();
+            
+             if(scans.size() > 0)
+             {
+                 
+                 out.println("-1");
+                 return;
+                 
+             }
+            
+            
             
             Scan newScan = new Scan();
             
@@ -109,8 +122,7 @@ public class SaveNewServiceScan extends HttpServlet {
             out.println(json);
             
             
-            out.println("</body>");
-            out.println("</html>");
+            
         } 
         catch(Exception e)
         {

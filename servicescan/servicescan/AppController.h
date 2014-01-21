@@ -7,6 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "ServiceScan.h"
 
 @interface AppController : NSObject
 {
@@ -16,6 +17,7 @@
 
 @property (assign, nonatomic) NSInteger userType;
 @property (strong, nonatomic) NSString* qrCode;
+@property (strong, nonatomic) ServiceScan* serviceScan;
 
 + (id)sharedInstance;
 

@@ -51,7 +51,15 @@ public class GetScanData extends HttpServlet {
              query.setParameter("qrcode", qrCode);
              List<Scan> scans = query.getResultList();
             
+             if(scans.isEmpty())
+             {
+                 
+                 out.println("-1");
+                 return;
+                 
+             }
              Scan firstResult = (Scan)scans.get(0);
+             
              JSONObject jsonObject = JSONObject.fromObject(firstResult);
              
              System.out.println( jsonObject );  

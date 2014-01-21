@@ -25,6 +25,8 @@
 }
 
 -(IBAction)showScanner:(id)sender;
+-(IBAction)resetUserType:(id)sender;
+-(IBAction)closeScanner:(id)sender;
 
 
 @end

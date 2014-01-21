@@ -92,7 +92,7 @@
     
     NSString* tempStr = [[NSString alloc] initWithData:tempData encoding:NSUTF8StringEncoding];
 
-    NSString* urlString = [NSString stringWithFormat:@"http://10.0.0.4:8080/ServiceScanServerSide/SaveNewServiceScan?scan=%@",[tempStr stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding]];
+    NSString* urlString = [NSString stringWithFormat:@"http://servicescans.com:8080/ServiceScanServerSide/SaveNewServiceScan?scan=%@",[tempStr stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding]];
     
     NSURL* url = [NSURL URLWithString:urlString];
     
@@ -102,6 +102,28 @@
     
     [NSURLConnection sendSynchronousRequest:request returningResponse:&response error:&error];
     
+    NSData* jsonData = [NSURLConnection sendSynchronousRequest:request returningResponse:&response error:&error];
+    if(error.code == -1004)
+    {
+        
+        
+        UIAlertView* alertView = [[UIAlertView alloc] initWithTitle:@"Service Error" message:@"There was an error connecting to the server.  Please try again." delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil];
+        [alertView show];
+        return;
+        
+    }
+    
+    NSString* jsonString = [[NSString alloc] initWithData:jsonData encoding:NSUTF8StringEncoding];
+    
+    if([jsonString isEqualToString:@"-1\n"])
+    {
+        UIAlertView* alertView = [[UIAlertView alloc] initWithTitle:@"Service Error" message:@"That QR code has already been associated with a service contractor.  Please try again." delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil];
+        [alertView show];
+        return;
+        
+        
+    }
+
     
     
     

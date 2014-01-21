@@ -32,6 +32,7 @@ static  AppController* sharedInstance = nil;
     
         NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
         _userType = [defaults integerForKey:@"userType"];
+        _serviceScan = [[ServiceScan alloc] init];
         
         
     }

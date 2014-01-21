@@ -30,31 +30,12 @@
     self.title = @"Scan Details";
     
     
-    
-    NSString* urlString = [NSString stringWithFormat:@"http://10.0.0.4:8080/ServiceScanServerSide/GetScanData?qrCode=%@",[[AppController sharedInstance] qrCode]];
-    
-    NSURL* url = [NSURL URLWithString:urlString];
-    
-    NSError* error = nil;
-    NSURLResponse* response = nil;
-    NSURLRequest* request = [NSURLRequest requestWithURL:url];
-    
-    NSData* jsonData = [NSURLConnection sendSynchronousRequest:request returningResponse:&response error:&error];
-   
-    NSString* jsonString = [[NSString alloc] initWithData:jsonData encoding:NSUTF8StringEncoding];
-    
-    NSDictionary* dict = [NSJSONSerialization JSONObjectWithData:jsonData options:0 error:&error];
-    
-    NSString* contractorFirstName = [dict valueForKey:@"contractorFirstName"];
-    
-    NSString* contractorAddress = [dict valueForKey:@"contractorAddress"];
-    
-    NSString* applianceModel = [dict valueForKey:@"applianceModel"];
-    
-    _contractorName.text = contractorFirstName;
-    _contractorAddress.text = contractorAddress;
-    _applianceModel.text = applianceModel;
-    
+    ServiceScan* serviceScan = [[AppController sharedInstance] serviceScan];
+    _contractorName.text = serviceScan.contractorFirstName;
+    _contractorAddress.text =  serviceScan.contractorAddress;
+    _applianceModel.text =  serviceScan.applianceModel;
+
+       
 }
 
 -(IBAction)requestService:(id)sender
