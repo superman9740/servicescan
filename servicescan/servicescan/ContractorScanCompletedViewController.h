@@ -19,13 +19,6 @@
 }
 
 
-@property (nonatomic, strong) IBOutlet UITextField* contractorFirstName;
-@property (nonatomic, strong) IBOutlet UITextField* contractorLastName;
-@property (nonatomic, strong) IBOutlet UITextField* contractorAddress;
-@property (nonatomic, strong) IBOutlet UITextField* contractorCity;
-@property (nonatomic, strong) IBOutlet UITextField* contractorState;
-@property (nonatomic, strong) IBOutlet UITextField* contractorZip;
-@property (nonatomic, strong) IBOutlet UITextField* contractorPhone;
 
 @property (nonatomic, strong) IBOutlet UITextField* customerFirstName;
 @property (nonatomic, strong) IBOutlet UITextField* customerLastName;

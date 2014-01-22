@@ -16,7 +16,7 @@
     
     
 
-    NSMutableDictionary* dict = [NSMutableDictionary dictionaryWithObjectsAndKeys:self.contractorFirstName, @"contractorFirstName", self.contractorLastName, @"contractorLastName", self.contractorAddress, @"contractorAddress", self.contractorCity, @"contractorCity",self.contractorState, @"contractorState", self.contractorZip, @"contractorZip", self.contractorPhone, @"contractorPhone", self.customerFirstName, @"customerFirstName", self.customerLastName, @"customerLastName", self.customerAddress, @"customerAddress", self.customerCity, @"customerCity",self.customerState, @"customerState", self.customerZip, @"customerZip", self.customerPhone, @"customerPhone", self.applianceSerial, @"applianceSerial", self.applianceModel, @"applianceModel", self.applianceType, @"applianceType", self.qrCode, @"qrCode", nil];
+    NSMutableDictionary* dict = [NSMutableDictionary dictionaryWithObjectsAndKeys:self.contractorFirstName, @"contractorFirstName", self.contractorLastName, @"contractorLastName", self.contractorAddress, @"contractorAddress", self.contractorCity, @"contractorCity",self.contractorState, @"contractorState", self.contractorZip, @"contractorZip", self.contractorPhone, @"contractorPhone", self.customerFirstName, @"customerFirstName", self.customerLastName, @"customerLastName", self.customerAddress, @"customerAddress", self.customerCity, @"customerCity",self.customerState, @"customerState", self.customerZip, @"customerZip", self.customerPhone, @"customerPhone", self.applianceSerial, @"applianceSerial", self.applianceModel, @"applianceModel", self.applianceType, @"applianceType", self.qrCode, @"qrCode",self.deviceToken, @"deviceToken", nil];
     
     NSError* error = nil;
     NSData *jsonData = [NSJSONSerialization dataWithJSONObject:dict

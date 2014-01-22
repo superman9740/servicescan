@@ -69,6 +69,9 @@
 		DE809AD8188878BF009A5672 /* button-red.png in Resources */ = {isa = PBXBuildFile; fileRef = DE809AD6188878BF009A5672 /* button-red.png */; };
 		DE809AD9188878BF009A5672 /* button-red@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DE809AD7188878BF009A5672 /* button-red@2x.png */; };
 		DE809ADD188879E3009A5672 /* AppController.m in Sources */ = {isa = PBXBuildFile; fileRef = DE809ADC188879E3009A5672 /* AppController.m */; };
+		DEE83A55189075DB005B6B23 /* SettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DEE83A54189075DB005B6B23 /* SettingsViewController.m */; };
+		DEE83A5818907BD7005B6B23 /* ContractorSettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DEE83A5718907BD7005B6B23 /* ContractorSettingsViewController.m */; };
+		DEE83A5B189081CD005B6B23 /* Contractor.m in Sources */ = {isa = PBXBuildFile; fileRef = DEE83A5A189081CD005B6B23 /* Contractor.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -162,6 +165,12 @@
 		DE809AD7188878BF009A5672 /* button-red@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "button-red@2x.png"; sourceTree = "<group>"; };
 		DE809ADB188879E3009A5672 /* AppController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppController.h; sourceTree = "<group>"; };
 		DE809ADC188879E3009A5672 /* AppController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppController.m; sourceTree = "<group>"; };
+		DEE83A53189075DB005B6B23 /* SettingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingsViewController.h; sourceTree = "<group>"; };
+		DEE83A54189075DB005B6B23 /* SettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingsViewController.m; sourceTree = "<group>"; };
+		DEE83A5618907BD7005B6B23 /* ContractorSettingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContractorSettingsViewController.h; sourceTree = "<group>"; };
+		DEE83A5718907BD7005B6B23 /* ContractorSettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContractorSettingsViewController.m; sourceTree = "<group>"; };
+		DEE83A59189081CD005B6B23 /* Contractor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Contractor.h; sourceTree = "<group>"; };
+		DEE83A5A189081CD005B6B23 /* Contractor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Contractor.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -215,6 +224,8 @@
 			children = (
 				3C95E5A3188C4EF900C608C6 /* ServiceScan.h */,
 				3C95E5A4188C4EF900C608C6 /* ServiceScan.m */,
+				DEE83A59189081CD005B6B23 /* Contractor.h */,
+				DEE83A5A189081CD005B6B23 /* Contractor.m */,
 			);
 			name = ValueObjects;
 			sourceTree = "<group>";
@@ -270,6 +281,7 @@
 		DE33C05F1885D7A1005F528A /* servicescan */ = {
 			isa = PBXGroup;
 			children = (
+				DEE83A52189075C2005B6B23 /* Settings */,
 				3C95E5A2188C4ED700C608C6 /* ValueObjects */,
 				DE26ECEF1889BB7900F52113 /* ContractorScanCompleted */,
 				DE26ECE71889B66900F52113 /* UserScanCompleted */,
@@ -418,6 +430,17 @@
 			name = AppController;
 			sourceTree = "<group>";
 		};
+		DEE83A52189075C2005B6B23 /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				DEE83A53189075DB005B6B23 /* SettingsViewController.h */,
+				DEE83A54189075DB005B6B23 /* SettingsViewController.m */,
+				DEE83A5618907BD7005B6B23 /* ContractorSettingsViewController.h */,
+				DEE83A5718907BD7005B6B23 /* ContractorSettingsViewController.m */,
+			);
+			name = Settings;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -553,6 +576,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DEE83A5818907BD7005B6B23 /* ContractorSettingsViewController.m in Sources */,
 				3C95E59D188773E000C608C6 /* MasterCell.m in Sources */,
 				DE33C0761885D7A1005F528A /* HistoryViewController.m in Sources */,
 				DE809ADD188879E3009A5672 /* AppController.m in Sources */,
@@ -562,8 +586,10 @@
 				DE33C0731885D7A1005F528A /* ScanViewController.m in Sources */,
 				3C95E58918876FC100C608C6 /* CustomCameraViewController.m in Sources */,
 				DE809AD1188866CF009A5672 /* TabBarViewController.m in Sources */,
+				DEE83A55189075DB005B6B23 /* SettingsViewController.m in Sources */,
 				DE5448751888600A007B14BD /* CustomCameraRectangle.m in Sources */,
 				DE33C0661885D7A1005F528A /* main.m in Sources */,
+				DEE83A5B189081CD005B6B23 /* Contractor.m in Sources */,
 				3C95E58C18876FF700C608C6 /* Highlighter.m in Sources */,
 				DE26ECF21889BB9600F52113 /* ContractorScanCompletedViewController.m in Sources */,
 				DE26ECEA1889B68B00F52113 /* UserScanCompletedViewController.m in Sources */,

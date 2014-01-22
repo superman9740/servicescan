@@ -47,6 +47,9 @@
     [[UITextField appearance] setBackground:[UIImage imageNamed:@"text-input.png"]];
     
 
+    [[UIApplication sharedApplication] registerForRemoteNotificationTypes:(UIRemoteNotificationTypeBadge | UIRemoteNotificationTypeSound|UIRemoteNotificationTypeAlert)];
+    
+    application.applicationIconBadgeNumber = 0;
     
     
     return YES;
@@ -73,6 +76,102 @@
 {
     // Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
 }
+
+- (void) application:(UIApplication *)application didReceiveLocalNotification:(UILocalNotification *)notification
+{
+    application.applicationIconBadgeNumber = notification.applicationIconBadgeNumber-1;
+    
+}
+- (void) application:(UIApplication *)application didReceiveRemoteNotification:(NSDictionary *)userInfo
+{
+    
+    NSDictionary *aps = (NSDictionary *)[userInfo objectForKey:@"aps"];
+    NSDictionary *alert = (NSDictionary *)[aps objectForKey:@"alert"];
+    
+    
+    
+    NSString* qrCode = [alert valueForKey:@"action-loc-key"];
+    
+    NSString* urlString = [NSString stringWithFormat:@"http://servicescans.com:8080/ServiceScanServerSide/LookupScan?qrCode=%@",qrCode];
+    
+    NSURL* url = [NSURL URLWithString:urlString];
+    
+    NSError* error = nil;
+    NSURLResponse* response = nil;
+    NSURLRequest* request = [NSURLRequest requestWithURL:url];
+    
+    NSData* jsonData = [NSURLConnection sendSynchronousRequest:request returningResponse:&response error:&error];
+    if(error.code == -1004)
+    {
+        
+        
+       // UIAlertView* alertView = [[UIAlertView alloc] initWithTitle:@"Service Error" message:@"There was an error connecting to the server.  Please try again." delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil];
+      //  [alertView show];
+        return;
+        
+    }
+    
+    NSString* jsonString = [[NSString alloc] initWithData:jsonData encoding:NSUTF8StringEncoding];
+    
+    if([jsonString isEqualToString:@"-1\n"])
+    {
+      //  UIAlertView* alertView = [[UIAlertView alloc] initWithTitle:@"Service Error" message:@"That QR code doesn't seem to be associated with a service contractor.  Please try again." delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil];
+       // [alertView show];
+        return;
+        
+        
+    }
+    NSDictionary* dict = [NSJSONSerialization JSONObjectWithData:jsonData options:0 error:&error];
+    
+    NSString* contractorFirstName = [dict valueForKey:@"contractorFirstName"];
+    
+    NSString* contractorAddress = [dict valueForKey:@"contractorAddress"];
+    
+    NSString* applianceModel = [dict valueForKey:@"applianceModel"];
+    ServiceScan* serviceScan = [[AppController sharedInstance] serviceScan];
+    serviceScan.contractorFirstName = contractorFirstName;
+    serviceScan.contractorAddress = contractorAddress;
+    serviceScan.applianceModel = applianceModel;
+    serviceScan.customerFirstName = [dict valueForKey:@"customerFirstName"];
+    serviceScan.customerLastName = [dict valueForKey:@"customerLastName"];
+    serviceScan.customerAddress = [dict valueForKey:@"customerAddress"];
+    serviceScan.customerCity = [dict valueForKey:@"customerCity"];
+    serviceScan.customerState = [dict valueForKey:@"customerState"];
+    serviceScan.customerZip = [dict valueForKey:@"customerZip"];
+    serviceScan.customerPhone = [dict valueForKey:@"customerPhone"];
+    
+    NSString* customerRequest = [NSString stringWithFormat:@"Customer %@ %@ has sent you a request for service.  Their address is %@ %@ %@ %@.  They can be reached at %@",
+                                 serviceScan.customerFirstName, serviceScan.customerLastName, serviceScan.customerAddress, serviceScan.customerCity,serviceScan.customerState,
+                                 serviceScan.customerZip, serviceScan.customerPhone];
+    
+    UIAlertView* alertView = [[UIAlertView alloc] initWithTitle:@"Incoming Request" message:customerRequest delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil];
+    [alertView show];
+    
+    
+    
+}
+
+
+- (void)application:(UIApplication *)app didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)devToken
+{
+    const unsigned *tokenBytes = [devToken bytes];
+    NSString *hexToken = [NSString stringWithFormat:@"%08x%08x%08x%08x%08x%08x%08x%08x",
+                          ntohl(tokenBytes[0]), ntohl(tokenBytes[1]), ntohl(tokenBytes[2]),
+                          ntohl(tokenBytes[3]), ntohl(tokenBytes[4]), ntohl(tokenBytes[5]),
+                          ntohl(tokenBytes[6]), ntohl(tokenBytes[7])];
+    [[AppController sharedInstance] setDeviceToken:hexToken];
+    
+    
+}
+
+- (void)application:(UIApplication *)app didFailToRegisterForRemoteNotificationsWithError:(NSError *)err {
+    
+    NSLog(@"Error in registration. Error: %@", err);
+    
+}
+
+
+
 
 - (void)applicationWillTerminate:(UIApplication *)application
 {

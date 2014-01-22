@@ -68,6 +68,7 @@ public class SaveNewServiceScan extends HttpServlet {
             String applianceSerialNbr = jsonObject.get( "applianceSerial" ).toString();
             String applianceType = jsonObject.get( "applianceType" ).toString();
             String qrCode = jsonObject.get("qrCode").toString();
+            String deviceToken = jsonObject.get("deviceToken").toString();
             
             //JPA
             
@@ -112,7 +113,7 @@ public class SaveNewServiceScan extends HttpServlet {
             newScan.setApplianceSerial(applianceSerialNbr);
             newScan.setApplianceType(applianceType);
             newScan.setQrcode(qrCode);
-            
+            newScan.setDeviceToken(deviceToken);
             em.persist(newScan);
             em.getTransaction().commit();
             em.close();

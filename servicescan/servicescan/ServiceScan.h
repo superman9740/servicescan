@@ -39,6 +39,7 @@
 
 
 @property (nonatomic, strong) NSString* qrCode;
+@property (nonatomic, strong) NSString* deviceToken;
 
 
 

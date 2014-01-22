@@ -6,7 +6,9 @@
 
 package com.dickson.servicescanserverside;
 
+import java.io.BufferedReader;
 import java.io.IOException;
+import java.io.InputStreamReader;
 import java.io.PrintWriter;
 import java.util.List;
 import javax.persistence.EntityManager;
@@ -20,6 +22,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import net.sf.json.JSONObject;
+
 
 /**
  *
@@ -58,14 +61,43 @@ public class GetScanData extends HttpServlet {
                  return;
                  
              }
-             Scan firstResult = (Scan)scans.get(0);
              
-             JSONObject jsonObject = JSONObject.fromObject(firstResult);
+             
+             //Send push notification to contractor
+             String[] command = { "/opt/PushNotifications/src/Pusher", scans.get(0).getDeviceToken(), scans.get(0).getQrcode() }; 
+             BufferedReader is = null;
+             BufferedReader es = null;
+             Process process;
+            process = Runtime.getRuntime().exec(command);
+            String line;
+            is = new BufferedReader(new InputStreamReader(process.getInputStream()));
+            while((line = is.readLine()) != null)
+                System.out.println(line);
+                es = new BufferedReader(new InputStreamReader(process.getErrorStream()));
+            
+            while((line = es.readLine()) != null)
+            System.err.println(line);
+
+    int exitCode = process.waitFor();
+    if (exitCode == 0)
+        System.out.println("It worked");
+    else
+        System.out.println("Something bad happend. Exit code: " + exitCode);
+             
+             
+             
+             
+             
+             
+             
+            
+             JSONObject jsonObject = JSONObject.fromObject(scans.get(0));
              
              System.out.println( jsonObject );  
              out.println(jsonObject);
              
              
+    
             
         } 
         catch(Exception e)

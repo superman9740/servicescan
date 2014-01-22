@@ -146,6 +146,9 @@ public class Scan implements Serializable {
     @Column(name = "applianceType")
     private String applianceType;
 
+    @Column(name = "deviceToken")
+    private String deviceToken;
+
     public Scan() {
     }
 
@@ -153,7 +156,7 @@ public class Scan implements Serializable {
         this.id = id;
     }
 
-    public Scan(Long id, String qrcode, String contractorFirstName, String contractorLastName, String contractorAddress, String contractorCity, String contractorState, String contractorZip, String contractorPhone, String customerFirstName, String customerLastName, String customerAddress, String customerCity, String customerState, String customerZip, String customerPhone, String applianceSerial, String applianceModel, String applianceType) {
+    public Scan(Long id, String qrcode, String contractorFirstName, String contractorLastName, String contractorAddress, String contractorCity, String contractorState, String contractorZip, String contractorPhone, String customerFirstName, String customerLastName, String customerAddress, String customerCity, String customerState, String customerZip, String customerPhone, String applianceSerial, String applianceModel, String applianceType,String deviceToken) {
         this.id = id;
         this.qrcode = qrcode;
         this.contractorFirstName = contractorFirstName;
@@ -173,6 +176,8 @@ public class Scan implements Serializable {
         this.applianceSerial = applianceSerial;
         this.applianceModel = applianceModel;
         this.applianceType = applianceType;
+        this.deviceToken = deviceToken;
+        
     }
 
     public Long getId() {
@@ -350,6 +355,20 @@ public class Scan implements Serializable {
     @Override
     public String toString() {
         return "com.dickson.servicescanserverside.Scan[ id=" + id + " ]";
+    }
+
+    /**
+     * @return the deviceToken
+     */
+    public String getDeviceToken() {
+        return deviceToken;
+    }
+
+    /**
+     * @param deviceToken the deviceToken to set
+     */
+    public void setDeviceToken(String deviceToken) {
+        this.deviceToken = deviceToken;
     }
     
 }

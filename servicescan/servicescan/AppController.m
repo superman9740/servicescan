@@ -33,11 +33,31 @@ static  AppController* sharedInstance = nil;
         NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
         _userType = [defaults integerForKey:@"userType"];
         _serviceScan = [[ServiceScan alloc] init];
+        [self loadContractorInfo];
         
         
     }
     
     return self;
+    
+}
+-(void)updateContractorInfo:(Contractor*)contractor
+{
+    
+    NSData *encodedObject = [NSKeyedArchiver archivedDataWithRootObject:contractor];
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    [defaults setObject:encodedObject forKey:@"contractor"];
+    [defaults synchronize];
+    self.contractor = contractor;
+    
+}
+-(void)loadContractorInfo
+{
+    
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    NSData *encodedObject = [defaults objectForKey:@"contractor"];
+    Contractor* contractor = [NSKeyedUnarchiver unarchiveObjectWithData:encodedObject];
+    self.contractor = contractor;
     
 }
 

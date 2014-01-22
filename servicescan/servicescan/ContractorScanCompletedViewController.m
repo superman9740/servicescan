@@ -58,19 +58,20 @@
 {
 
     ServiceScan* scan = [[ServiceScan alloc] init];
+    Contractor* contractor = [[AppController sharedInstance] contractor];
     
-    NSString* contractorName = _contractorFirstName.text;
+    NSString* contractorName = contractor.firstName;
     NSArray* names = [contractorName componentsSeparatedByString:@" "];
     
-    scan.contractorFirstName = names[0];
+    scan.contractorFirstName = contractor.firstName;
     
-    scan.contractorLastName = names[1];
-    scan.contractorAddress  = _contractorAddress.text;
+    scan.contractorLastName = contractor.lastName;
+    scan.contractorAddress  = contractor.address;
     
-    scan.contractorCity = _contractorCity.text;
-    scan.contractorState = _contractorState.text;
-    scan.contractorZip = _contractorZip.text;
-    scan.contractorPhone = _contractorPhone.text;
+    scan.contractorCity = contractor.city;
+    scan.contractorState = contractor.state;
+    scan.contractorZip = contractor.zip;
+    scan.contractorPhone = contractor.phone;
     NSString* customerName = _customerFirstName.text;
     
     names = [customerName componentsSeparatedByString:@" "];
@@ -86,6 +87,7 @@
     scan.applianceModel = _applianceModel.text;
     scan.applianceType = _applianceType.text;
     scan.qrCode = [[AppController sharedInstance] qrCode];
+    scan.deviceToken = [[AppController sharedInstance] deviceToken];
     
     
     NSData* tempData = [scan getJson];
@@ -100,7 +102,6 @@
     NSURLResponse* response = nil;
     NSURLRequest* request = [NSURLRequest requestWithURL:url];
     
-    [NSURLConnection sendSynchronousRequest:request returningResponse:&response error:&error];
     
     NSData* jsonData = [NSURLConnection sendSynchronousRequest:request returningResponse:&response error:&error];
     if(error.code == -1004)
