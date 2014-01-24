@@ -36,7 +36,9 @@
 {
     [[AppController sharedInstance] loginAsUser];
     
-    [self dismissViewControllerAnimated:YES completion:nil];
+    UIAlertView* alertView = [[UIAlertView alloc] initWithTitle:@"Set User Type" message:@"Your login type is now set as user." delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil];
+    [alertView show];
+    
     
     
 }
@@ -45,7 +47,9 @@
 {
     [[AppController sharedInstance] loginAsContractor];
     
-    [self dismissViewControllerAnimated:YES completion:nil];
+    UIAlertView* alertView = [[UIAlertView alloc] initWithTitle:@"Set User Type" message:@"Your login type is now set as contractor." delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil];
+    [alertView show];
+
     
     
 }

@@ -26,6 +26,14 @@ static inline double radians (double degrees) {return degrees * M_PI/180;}
     [self setupCaptureSession:[self backCamera]];
     rectangleView = [[CustomCameraRectangle alloc] initWithFrame:CGRectMake(20, 20, 200, 200)];
     rectangleView.center = CGPointMake(self.view.bounds.size.width / 2, self.view.bounds.size.height / 2 - 20);
+    CGRect frame = rectangleView.frame;
+    frame.origin.x += 25;
+    
+    UILabel* label = [[UILabel alloc] initWithFrame:frame];
+    //label.center = rectangleView.center;
+    
+    label.text = @"Center QR code here";
+    [self.view addSubview:label];
     
     
     [self.view addSubview:rectangleView];
@@ -204,7 +212,7 @@ static inline double radians (double degrees) {return degrees * M_PI/180;}
         }
         
         [images addObject:imageToSave];
-        [self updatePicRollView:self];
+       
         
     
     [pickerController dismissViewControllerAnimated:YES completion:nil];

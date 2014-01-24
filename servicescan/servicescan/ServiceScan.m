@@ -7,6 +7,7 @@
 //
 
 #import "ServiceScan.h"
+#import "AppController.h"
 
 @implementation ServiceScan
 
@@ -14,9 +15,10 @@
 -(NSData*)getJson
 {
     
+    Contractor* contractor = [[AppController sharedInstance] contractor];
     
 
-    NSMutableDictionary* dict = [NSMutableDictionary dictionaryWithObjectsAndKeys:self.contractorFirstName, @"contractorFirstName", self.contractorLastName, @"contractorLastName", self.contractorAddress, @"contractorAddress", self.contractorCity, @"contractorCity",self.contractorState, @"contractorState", self.contractorZip, @"contractorZip", self.contractorPhone, @"contractorPhone", self.customerFirstName, @"customerFirstName", self.customerLastName, @"customerLastName", self.customerAddress, @"customerAddress", self.customerCity, @"customerCity",self.customerState, @"customerState", self.customerZip, @"customerZip", self.customerPhone, @"customerPhone", self.applianceSerial, @"applianceSerial", self.applianceModel, @"applianceModel", self.applianceType, @"applianceType", self.qrCode, @"qrCode",self.deviceToken, @"deviceToken", nil];
+    NSMutableDictionary* dict = [NSMutableDictionary dictionaryWithObjectsAndKeys:contractor.firstName, @"contractorFirstName", contractor.lastName, @"contractorLastName", contractor.address, @"contractorAddress", contractor.city, @"contractorCity",contractor.state, @"contractorState", contractor.zip, @"contractorZip", contractor.phone, @"contractorPhone", self.customerFirstName, @"customerFirstName", self.customerLastName, @"customerLastName", self.customerAddress, @"customerAddress", self.customerCity, @"customerCity",self.customerState, @"customerState", self.customerZip, @"customerZip", self.customerPhone, @"customerPhone", self.applianceSerial, @"applianceSerial", self.applianceModel, @"applianceModel", self.applianceType, @"applianceType", self.qrCode, @"qrCode",self.deviceToken, @"deviceToken", nil];
     
     NSError* error = nil;
     NSData *jsonData = [NSJSONSerialization dataWithJSONObject:dict

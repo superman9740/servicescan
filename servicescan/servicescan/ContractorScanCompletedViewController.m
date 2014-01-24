@@ -7,6 +7,7 @@
 //
 
 #import "ContractorScanCompletedViewController.h"
+#import "AppController.h"
 
 @interface ContractorScanCompletedViewController ()
 
@@ -63,15 +64,6 @@
     NSString* contractorName = contractor.firstName;
     NSArray* names = [contractorName componentsSeparatedByString:@" "];
     
-    scan.contractorFirstName = contractor.firstName;
-    
-    scan.contractorLastName = contractor.lastName;
-    scan.contractorAddress  = contractor.address;
-    
-    scan.contractorCity = contractor.city;
-    scan.contractorState = contractor.state;
-    scan.contractorZip = contractor.zip;
-    scan.contractorPhone = contractor.phone;
     NSString* customerName = _customerFirstName.text;
     
     names = [customerName componentsSeparatedByString:@" "];

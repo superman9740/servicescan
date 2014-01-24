@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="4514" systemVersion="13A603" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="8YX-ce-x5E">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="4514" systemVersion="13B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="8YX-ce-x5E">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3747"/>
     </dependencies>
@@ -34,9 +34,6 @@
                                             </subviews>
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
-                                        <connections>
-                                            <segue destination="i0F-6h-1su" kind="push" id="K2c-oJ-1aR"/>
-                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                                 <connections>
@@ -59,7 +56,7 @@
         <!--Contractor Settings View Controller-->
         <scene sceneID="MfQ-I1-a8J">
             <objects>
-                <viewController id="i0F-6h-1su" customClass="ContractorSettingsViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="contractorSettings" id="i0F-6h-1su" customClass="ContractorSettingsViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="eAV-e2-OHm">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -201,16 +198,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="e6g-Pd-Xne">
-                                <rect key="frame" x="51" y="269" width="219" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Tap Here To Open Scanner">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="showScanner:" destination="CZ4-MO-1fc" eventType="touchUpInside" id="v53-rh-S7j"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="4Xc-oP-zgP">
                                 <rect key="frame" x="88" y="380" width="145" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -249,7 +236,7 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" id="Vkg-NR-1Ox">
-                                <rect key="frame" x="0.0" y="-82" width="320" height="611"/>
+                                <rect key="frame" x="0.0" y="-155" width="320" height="674"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <subviews>
                                     <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Customer Name:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="kpQ-u9-jIJ">
@@ -627,7 +614,7 @@
         <!--User Type View Controller-->
         <scene sceneID="Zrw-Qh-0dx">
             <objects>
-                <viewController id="xP8-Ii-Tyg" customClass="UserTypeViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="resetUserType" useStoryboardIdentifierAsRestorationIdentifier="YES" id="xP8-Ii-Tyg" customClass="UserTypeViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="4qb-Dg-HCt">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>

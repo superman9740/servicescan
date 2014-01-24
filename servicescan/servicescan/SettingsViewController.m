@@ -11,6 +11,7 @@
 #import "Utils.h"
 #import "MasterCell.h"
 #import "ContractorSettingsViewController.h"
+#import "UserTypeViewController.h"
 
 
 @interface SettingsViewController ()
@@ -52,7 +53,7 @@
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
     // Return the number of sections.
-    return 2;
+    return 3;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
@@ -78,6 +79,12 @@
         case 1:
         {
             cell.textLabel.text = @"Buy more QR Labels";
+            break;
+            
+        }
+        case 2:
+        {
+            cell.textLabel.text = @"Reset User Type";
             break;
             
         }
@@ -109,6 +116,12 @@
             break;
             
         }
+        case 2:
+        {
+            returnString = @"Misc";
+            break;
+            
+        }
             
         default:
             break;
@@ -117,6 +130,43 @@
     return returnString;
     
 }
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    
+    switch (indexPath.section)
+    {
+        case 0:
+        {
+            ContractorSettingsViewController* viewController = [self.storyboard instantiateViewControllerWithIdentifier:@"contractorSettings"];
+            [self.navigationController pushViewController:viewController animated:YES];
+            
+            break;
+            
+        }
+        case 1:
+        {
+            break;
+            
+        }
+        case 2:
+        {
+            
+            UserTypeViewController* userTypeViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"resetUserType"];
+            [self.navigationController pushViewController:userTypeViewController animated:YES];
+            
+            break;
+            
+        }
+            
+        default:
+            break;
+    }
+    
+    
+    
+    
+}
+
 /*
 // Override to support conditional editing of the table view.
 - (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath

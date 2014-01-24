@@ -14,16 +14,6 @@
     
 }
 
-@property (nonatomic, strong) NSString* contractorFirstName;
-@property (nonatomic, strong) NSString* contractorLastName;
-
-@property (nonatomic, strong) NSString* contractorAddress;
-@property (nonatomic, strong) NSString* contractorCity;
-@property (nonatomic, strong) NSString* contractorState;
-
-@property (nonatomic, strong) NSString* contractorZip;
-@property (nonatomic, strong) NSString* contractorPhone;
-
 @property (nonatomic, strong) NSString* customerFirstName;
 @property (nonatomic, strong) NSString* customerLastName;
 @property (nonatomic, strong) NSString* customerAddress;

@@ -22,7 +22,13 @@
 {
     [super viewDidLoad];
     self.title = @"Scan";
-    
+
+    cameraViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"camera"];
+    cameraViewController.delegate = self;
+    UIBarButtonItem* barButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemDone target:self action:@selector(closeScanner:)];
+    self.navigationItem.leftBarButtonItem = barButtonItem;
+    [self.view addSubview:cameraViewController.view];
+
 }
 -(void)viewWillAppear:(BOOL)animated
 {
@@ -38,6 +44,7 @@
     
    
     
+ 
     
        
 }
@@ -45,12 +52,6 @@
 -(IBAction)showScanner:(id)sender
 {
     
-    
-    cameraViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"camera"];
-    cameraViewController.delegate = self;
-    UIBarButtonItem* barButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemDone target:self action:@selector(closeScanner:)];
-    self.navigationItem.leftBarButtonItem = barButtonItem;
-    [self.view addSubview:cameraViewController.view];
     
     
     
@@ -118,8 +119,6 @@
             
             NSString* applianceModel = [dict valueForKey:@"applianceModel"];
             ServiceScan* serviceScan = [[AppController sharedInstance] serviceScan];
-            serviceScan.contractorFirstName = contractorFirstName;
-            serviceScan.contractorAddress = contractorAddress;
             serviceScan.applianceModel = applianceModel;
             
             [self performSegueWithIdentifier:@"showUserScanCompleted" sender:self];

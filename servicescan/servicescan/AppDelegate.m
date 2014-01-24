@@ -123,14 +123,9 @@
     }
     NSDictionary* dict = [NSJSONSerialization JSONObjectWithData:jsonData options:0 error:&error];
     
-    NSString* contractorFirstName = [dict valueForKey:@"contractorFirstName"];
-    
-    NSString* contractorAddress = [dict valueForKey:@"contractorAddress"];
     
     NSString* applianceModel = [dict valueForKey:@"applianceModel"];
     ServiceScan* serviceScan = [[AppController sharedInstance] serviceScan];
-    serviceScan.contractorFirstName = contractorFirstName;
-    serviceScan.contractorAddress = contractorAddress;
     serviceScan.applianceModel = applianceModel;
     serviceScan.customerFirstName = [dict valueForKey:@"customerFirstName"];
     serviceScan.customerLastName = [dict valueForKey:@"customerLastName"];

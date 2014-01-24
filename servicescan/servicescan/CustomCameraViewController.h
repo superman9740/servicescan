@@ -59,14 +59,12 @@
 
 
 
--(IBAction)takePhoto:(id)sender;
--(IBAction)updatePicRollView:(id)sender;
-- (UIImage *) imageFromSampleBuffer:(CMSampleBufferRef) sampleBuffer;
+
+
 
 -(void)setupCaptureSession:(AVCaptureDevice*)camera;
 -(IBAction)selectFromCameraRoll:(id)sender;
 
--(IBAction)updateScrollBarPosition:(id)sender;
 -(IBAction)done:(id)sender;
 -(IBAction)switchCameras:(id)sender;
 
