@@ -32,7 +32,8 @@
     self.title = @"Contractor Settings";
     Contractor* contractor = [[AppController sharedInstance] contractor];
     
-    self.contractorFirstName.text = contractor.firstName;
+    
+    self.contractorFirstName.text = [NSString stringWithFormat:@"%@ %@", contractor.firstName, contractor.lastName];
     self.contractorAddress.text = contractor.address;
     self.contractorCity.text = contractor.city;
     self.contractorState.text = contractor.state;
@@ -53,7 +54,21 @@
         contractor = [[Contractor alloc] init];
         
     }
-    contractor.firstName = self.contractorFirstName.text;
+    NSArray* names = [self.contractorFirstName.text componentsSeparatedByString:@" "];
+    
+    if([names count] > 0)
+    {
+        contractor.firstName = names[0];
+        contractor.lastName = names[1];
+    }
+    else
+    {
+        contractor.firstName = self.contractorFirstName.text;
+        contractor.lastName = @" ";
+        
+        
+    }
+
     contractor.address = self.contractorAddress.text;
     contractor.city = self.contractorCity.text;
     contractor.state = self.contractorState.text;

@@ -25,8 +25,7 @@
 
     cameraViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"camera"];
     cameraViewController.delegate = self;
-    UIBarButtonItem* barButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemDone target:self action:@selector(closeScanner:)];
-    self.navigationItem.leftBarButtonItem = barButtonItem;
+   
     [self.view addSubview:cameraViewController.view];
 
 }

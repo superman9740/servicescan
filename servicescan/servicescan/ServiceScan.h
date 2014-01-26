@@ -14,6 +14,8 @@
     
 }
 
+
+
 @property (nonatomic, strong) NSString* customerFirstName;
 @property (nonatomic, strong) NSString* customerLastName;
 @property (nonatomic, strong) NSString* customerAddress;

@@ -33,7 +33,10 @@ static  AppController* sharedInstance = nil;
         NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
         _userType = [defaults integerForKey:@"userType"];
         _serviceScan = [[ServiceScan alloc] init];
+        _contractorHistory = [[NSMutableArray alloc] initWithCapacity:10];
+        
         [self loadContractorInfo];
+        [self loadContractorHistory];
         
         
     }
@@ -61,7 +64,62 @@ static  AppController* sharedInstance = nil;
     
 }
 
+-(void)loadContractorHistory
+{
+    
+    
+    
+    NSData* tempData = [self.contractor getJson];
+    
+    NSString* tempStr = [[NSString alloc] initWithData:tempData encoding:NSUTF8StringEncoding];
+    
+    NSString* urlString = [NSString stringWithFormat:@"http://servicescans.com:8080/ServiceScanServerSide/GetHistoryForContractor?contractor=%@",[tempStr stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding]];
+    
+    NSURL* url = [NSURL URLWithString:urlString];
+    
+    NSError* error = nil;
+    NSURLResponse* response = nil;
+    NSURLRequest* request = [NSURLRequest requestWithURL:url];
+    
+    
+    NSData* jsonData = [NSURLConnection sendSynchronousRequest:request returningResponse:&response error:&error];
+    if(error.code == -1004)
+    {
+        
+        /*
+        UIAlertView* alertView = [[UIAlertView alloc] initWithTitle:@"Service Error" message:@"There was an error connecting to the server.  Please try again." delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil];
+        [alertView show];
+        return;
+        */
+    }
+    
+    NSDictionary* dict =  [NSJSONSerialization JSONObjectWithData: jsonData  options: NSJSONReadingMutableContainers   error: &error];
+    
+    /*
+    if([dict n])
+    {
+        UIAlertView* alertView = [[UIAlertView alloc] initWithTitle:@"Service Error" message:@"That QR code has already been associated with a service contractor.  Please try again." delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil];
+        [alertView show];
+        return;
+        
+        
+    }
+    else
+    {
+        
+        
+    }
+  */
+    
 
+    
+    
+
+    
+    
+    
+    
+}
 -(void)loginAsUser
 {
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];

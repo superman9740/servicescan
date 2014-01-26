@@ -37,4 +37,29 @@
     }
     return self;
 }
+
+-(NSData*)getJson
+{
+    
+    
+    NSMutableDictionary* dict = [NSMutableDictionary dictionaryWithObjectsAndKeys:self.firstName, @"contractorFirstName", self.lastName, @"contractorLastName", self.address, @"contractorAddress", self.city, @"contractorCity",self.state, @"contractorState", self.zip, @"contractorZip", self.phone, @"contractorPhone", nil];
+    
+    NSError* error = nil;
+    NSData *jsonData = [NSJSONSerialization dataWithJSONObject:dict
+                                                       options:0
+                                                         error:&error];
+    
+    
+    NSString* tempStr = [[NSString alloc] initWithData:jsonData encoding:NSUTF8StringEncoding];
+    
+    NSLog(@"Json Object:  %@", tempStr);
+    
+    return jsonData;
+    
+    
+    
+    
+    
+}
+
 @end

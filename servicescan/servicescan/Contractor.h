@@ -21,4 +21,12 @@
 @property (nonatomic, strong) NSString* state;
 @property (nonatomic, strong) NSString* zip;
 @property (nonatomic, strong) NSString* phone;
+
+
+
+
+
+-(NSData*)getJson;
+
+
 @end
