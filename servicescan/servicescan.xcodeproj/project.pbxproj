@@ -72,6 +72,7 @@
 		DEE83A55189075DB005B6B23 /* SettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DEE83A54189075DB005B6B23 /* SettingsViewController.m */; };
 		DEE83A5818907BD7005B6B23 /* ContractorSettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DEE83A5718907BD7005B6B23 /* ContractorSettingsViewController.m */; };
 		DEE83A5B189081CD005B6B23 /* Contractor.m in Sources */ = {isa = PBXBuildFile; fileRef = DEE83A5A189081CD005B6B23 /* Contractor.m */; };
+		DEF2E33818970328003F8AF7 /* Request.m in Sources */ = {isa = PBXBuildFile; fileRef = DEF2E33718970328003F8AF7 /* Request.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -171,6 +172,8 @@
 		DEE83A5718907BD7005B6B23 /* ContractorSettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContractorSettingsViewController.m; sourceTree = "<group>"; };
 		DEE83A59189081CD005B6B23 /* Contractor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Contractor.h; sourceTree = "<group>"; };
 		DEE83A5A189081CD005B6B23 /* Contractor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Contractor.m; sourceTree = "<group>"; };
+		DEF2E33618970328003F8AF7 /* Request.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Request.h; sourceTree = "<group>"; };
+		DEF2E33718970328003F8AF7 /* Request.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Request.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -226,6 +229,8 @@
 				3C95E5A4188C4EF900C608C6 /* ServiceScan.m */,
 				DEE83A59189081CD005B6B23 /* Contractor.h */,
 				DEE83A5A189081CD005B6B23 /* Contractor.m */,
+				DEF2E33618970328003F8AF7 /* Request.h */,
+				DEF2E33718970328003F8AF7 /* Request.m */,
 			);
 			name = ValueObjects;
 			sourceTree = "<group>";
@@ -577,6 +582,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DEE83A5818907BD7005B6B23 /* ContractorSettingsViewController.m in Sources */,
+				DEF2E33818970328003F8AF7 /* Request.m in Sources */,
 				3C95E59D188773E000C608C6 /* MasterCell.m in Sources */,
 				DE33C0761885D7A1005F528A /* HistoryViewController.m in Sources */,
 				DE809ADD188879E3009A5672 /* AppController.m in Sources */,

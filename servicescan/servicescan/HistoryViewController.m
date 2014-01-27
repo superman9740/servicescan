@@ -45,13 +45,15 @@
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return 2;
+    return [[[AppController sharedInstance] contractorHistory] count];
 }
 
 #pragma mark - Table view delegate
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     static NSString *CellIdentifier = @"Cell";
+    Request* request = [[[AppController sharedInstance] contractorHistory] objectAtIndex:indexPath.row];
+    
     MasterCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     cell.disclosureImageView.image = [UIImage tallImageNamed:@"list-arrow.png"];
     
@@ -59,7 +61,9 @@
         cell.backgroundColor = [UIColor clearColor];
     }
     
-    // Configure the cell...
+    cell.titleLabel.text = [NSString stringWithFormat:@"Customer %@ %@ sent a service request.", request.userFirstName, request.userLastName];
+    cell.textLabel.text = [NSString stringWithFormat:@" %@ %@ %@ %@ %@", request.address, request.city, request.state, request.zip, request.phone];
+    
     
     return cell;
 }

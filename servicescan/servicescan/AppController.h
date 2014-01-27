@@ -9,6 +9,7 @@
 #import <Foundation/Foundation.h>
 #import "ServiceScan.h"
 #import "Contractor.h"
+#import "Request.h"
 
 @interface AppController : NSObject
 {

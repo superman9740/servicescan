@@ -38,7 +38,8 @@
     self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
 
     [self.view setBackgroundColor:[UIColor colorWithPatternImage:[UIImage imageNamed:@"bg.png"]]];
-
+    self.title = @"Settings";
+    
     
 }
 

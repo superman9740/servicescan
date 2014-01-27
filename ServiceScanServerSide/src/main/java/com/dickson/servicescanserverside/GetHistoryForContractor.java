@@ -69,7 +69,7 @@ public class GetHistoryForContractor extends HttpServlet {
             
             //First, check to make sure this qr code has not already been used
             
-             Query queryObj = em.createNativeQuery("SELECT * FROM Scan c  WHERE c.contractorFirstName = ?1 and c.contractorLastName = ?2 and c.contractorAddress = ?3 and c.contractorCity = ?4 and c.contractorState = ?5 and c.contractorZip = ?6 and c.contractorPhone = ?7 and exists (select qrCode from Request where Request.qrCode = c.qrCode)", Scan.class);
+             Query queryObj = em.createNativeQuery("SELECT * FROM Scan c, Request r  WHERE c.contractorFirstName = ?1 and c.contractorLastName = ?2 and c.contractorAddress = ?3 and c.contractorCity = ?4 and c.contractorState = ?5 and c.contractorZip = ?6 and c.contractorPhone = ?7 and r.qrCode = c.qrCode", Scan.class);
              queryObj.setParameter(1, contractorFirstName);
              queryObj.setParameter(2, contractorLastName);
              queryObj.setParameter(3, contractorAddress);

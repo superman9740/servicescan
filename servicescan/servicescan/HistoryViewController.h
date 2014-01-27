@@ -7,6 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "Request.h"
+#import "AppController.h"
 
 @interface HistoryViewController : UIViewController
 {

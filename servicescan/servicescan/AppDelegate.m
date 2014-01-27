@@ -80,6 +80,8 @@
 - (void) application:(UIApplication *)application didReceiveLocalNotification:(UILocalNotification *)notification
 {
     application.applicationIconBadgeNumber = notification.applicationIconBadgeNumber-1;
+    [[AppController sharedInstance] loadContractorHistory];
+    
     
 }
 - (void) application:(UIApplication *)application didReceiveRemoteNotification:(NSDictionary *)userInfo
@@ -142,6 +144,7 @@
     UIAlertView* alertView = [[UIAlertView alloc] initWithTitle:@"Incoming Request" message:customerRequest delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil];
     [alertView show];
     
+    [[AppController sharedInstance] loadContractorHistory];
     
     
 }

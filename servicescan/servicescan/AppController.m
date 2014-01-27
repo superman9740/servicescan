@@ -92,8 +92,28 @@ static  AppController* sharedInstance = nil;
         return;
         */
     }
+    NSString* returnString = [[NSString alloc] initWithData:jsonData encoding:NSUTF8StringEncoding];
+    if([returnString isEqualToString:@"-1\n"])
+    {
+        return;
+        
+    }
+    NSArray* dictArray =  [NSJSONSerialization JSONObjectWithData: jsonData  options: NSJSONReadingAllowFragments   error: &error];
     
-    NSDictionary* dict =  [NSJSONSerialization JSONObjectWithData: jsonData  options: NSJSONReadingMutableContainers   error: &error];
+    for (NSDictionary* dict in dictArray)
+    {
+        Request* request = [[Request alloc] init];
+        
+        request.userFirstName = dict[@"customerFirstName"];
+        request.userLastName = dict[@"customerLastName"];
+        request.city = dict[@"customerCity"];
+        request.state = dict[@"customerState"];
+        request.zip = dict[@"customerZip"];
+        request.phone = dict[@"customerPhone"];
+        [_contractorHistory addObject:request];
+        
+        
+    }
     
     /*
     if([dict n])
