@@ -12,6 +12,7 @@
 #import "MasterCell.h"
 #import "ContractorSettingsViewController.h"
 #import "UserTypeViewController.h"
+#import "InAppPurchaseViewController.h"
 
 
 @interface SettingsViewController ()
@@ -146,6 +147,9 @@
         }
         case 1:
         {
+            InAppPurchaseViewController* purchaseViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"inAppPurchase"];
+            [self.navigationController pushViewController:purchaseViewController animated:YES];
+            
             break;
             
         }

@@ -60,6 +60,7 @@
 		DE33C0C31885EE34005F528A /* menubar@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DE33C0BB1885EE34005F528A /* menubar@2x.png */; };
 		DE33C0C71885EE61005F528A /* Utils.m in Sources */ = {isa = PBXBuildFile; fileRef = DE33C0C61885EE61005F528A /* Utils.m */; };
 		DE33C0C91885EF4A005F528A /* menubar-7.png in Resources */ = {isa = PBXBuildFile; fileRef = DE33C0C81885EF4A005F528A /* menubar-7.png */; };
+		DE418645189868C1004918C7 /* InAppPurchaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DE418644189868C1004918C7 /* InAppPurchaseViewController.m */; };
 		DE5448751888600A007B14BD /* CustomCameraRectangle.m in Sources */ = {isa = PBXBuildFile; fileRef = DE5448741888600A007B14BD /* CustomCameraRectangle.m */; };
 		DE809ACB18886504009A5672 /* list-arrow.png in Resources */ = {isa = PBXBuildFile; fileRef = DE809AC818886504009A5672 /* list-arrow.png */; };
 		DE809ACC18886504009A5672 /* list-arrow@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DE809AC918886504009A5672 /* list-arrow@2x.png */; };
@@ -153,6 +154,8 @@
 		DE33C0C51885EE61005F528A /* Utils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Utils.h; sourceTree = "<group>"; };
 		DE33C0C61885EE61005F528A /* Utils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Utils.m; sourceTree = "<group>"; };
 		DE33C0C81885EF4A005F528A /* menubar-7.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "menubar-7.png"; sourceTree = "<group>"; };
+		DE418643189868C1004918C7 /* InAppPurchaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InAppPurchaseViewController.h; sourceTree = "<group>"; };
+		DE418644189868C1004918C7 /* InAppPurchaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InAppPurchaseViewController.m; sourceTree = "<group>"; };
 		DE5448731888600A007B14BD /* CustomCameraRectangle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomCameraRectangle.h; sourceTree = "<group>"; };
 		DE5448741888600A007B14BD /* CustomCameraRectangle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomCameraRectangle.m; sourceTree = "<group>"; };
 		DE809AC818886504009A5672 /* list-arrow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "list-arrow.png"; sourceTree = "<group>"; };
@@ -286,6 +289,7 @@
 		DE33C05F1885D7A1005F528A /* servicescan */ = {
 			isa = PBXGroup;
 			children = (
+				DE4186411898689A004918C7 /* InAppPurchase */,
 				DEE83A52189075C2005B6B23 /* Settings */,
 				3C95E5A2188C4ED700C608C6 /* ValueObjects */,
 				DE26ECEF1889BB7900F52113 /* ContractorScanCompleted */,
@@ -406,6 +410,15 @@
 				DE33C0C61885EE61005F528A /* Utils.m */,
 			);
 			name = Utils;
+			sourceTree = "<group>";
+		};
+		DE4186411898689A004918C7 /* InAppPurchase */ = {
+			isa = PBXGroup;
+			children = (
+				DE418643189868C1004918C7 /* InAppPurchaseViewController.h */,
+				DE418644189868C1004918C7 /* InAppPurchaseViewController.m */,
+			);
+			name = InAppPurchase;
 			sourceTree = "<group>";
 		};
 		DE809ACE188866B0009A5672 /* TabBar */ = {
@@ -589,6 +602,7 @@
 				DE33C0B31885ED71005F528A /* UIImage+iPhone5.m in Sources */,
 				DE33C06A1885D7A1005F528A /* AppDelegate.m in Sources */,
 				DE33C0C71885EE61005F528A /* Utils.m in Sources */,
+				DE418645189868C1004918C7 /* InAppPurchaseViewController.m in Sources */,
 				DE33C0731885D7A1005F528A /* ScanViewController.m in Sources */,
 				3C95E58918876FC100C608C6 /* CustomCameraViewController.m in Sources */,
 				DE809AD1188866CF009A5672 /* TabBarViewController.m in Sources */,
