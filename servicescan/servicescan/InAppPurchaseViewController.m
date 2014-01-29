@@ -48,7 +48,7 @@
 {
     
     self.scrollView.scrollEnabled = YES;
-    self.scrollView.contentSize = CGSizeMake(self.view.frame.size.width,600 );
+    self.scrollView.contentSize = CGSizeMake(self.view.frame.size.width,700 );
     
     
     
@@ -70,7 +70,7 @@
 
 - (NSAttributedString *)pickerView:(UIPickerView *)pickerView attributedTitleForRow:(NSInteger)row forComponent:(NSInteger)component
 {
-    NSString* title = [NSString stringWithFormat:@"%d",row];
+    NSString* title = [NSString stringWithFormat:@"%ld",(long)row];
 
     NSAttributedString *attString = [[NSAttributedString alloc] initWithString:title attributes:@{NSForegroundColorAttributeName:[UIColor whiteColor]}];
     
@@ -79,8 +79,14 @@
 }
 - (void)pickerView:(UIPickerView *)pickerView didSelectRow:(NSInteger)row   inComponent:(NSInteger)component
 {
-    NSString* stringVal = [NSString stringWithFormat:@"%d", row];
+    NSString* stringVal = [NSString stringWithFormat:@"%ld", (long)row];
     _numberOfRolls.text = stringVal;
+    
+    double totalAmount = 1 * row;
+    
+    NSString* totalVal = [NSString stringWithFormat:@"$%.2lf", totalAmount];
+    _totalPrice.text = totalVal;
+    
     
 
 }

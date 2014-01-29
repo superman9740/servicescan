@@ -17,6 +17,7 @@
 @property (nonatomic, strong) IBOutlet UIScrollView* scrollView;
 @property (nonatomic, strong) IBOutlet UIPickerView* pickerView;
 @property (nonatomic, strong) IBOutlet UILabel* numberOfRolls;
+@property (nonatomic, strong) IBOutlet UILabel* totalPrice;
 
 
 @property (weak, nonatomic) UITextField* activeTextField;

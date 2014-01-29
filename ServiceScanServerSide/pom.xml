@@ -21,6 +21,12 @@
             <version>SNAPSHOT</version>
             <scope>provided</scope>
         </dependency>
+        <dependency>
+            <groupId>authorize</groupId>
+            <artifactId>com_authorize</artifactId>
+            <version>1</version>
+            <scope>compile</scope>
+        </dependency>
        <dependency>
             <groupId>com.notnoop.apns</groupId>
             <artifactId>apns</artifactId>
@@ -68,6 +74,11 @@
             <artifactId>javax.persistence</artifactId>
             <version>SNAPSHOT</version>
             <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>authorize</groupId>
+            <artifactId>com_authorize</artifactId>
+            <version>1.0</version>
         </dependency>
         <dependency>
             <groupId>javax</groupId>
