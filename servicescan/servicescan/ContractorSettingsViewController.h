@@ -24,6 +24,9 @@
 @property (nonatomic, strong) IBOutlet UITextField* contractorState;
 @property (nonatomic, strong) IBOutlet UITextField* contractorZip;
 @property (nonatomic, strong) IBOutlet UITextField* contractorPhone;
+@property (nonatomic, strong) IBOutlet UITextField* contractorEmail;
+
+
 @property (nonatomic, strong) IBOutlet UIScrollView* scrollView;
 
 -(IBAction)updateInformation:(id)sender;

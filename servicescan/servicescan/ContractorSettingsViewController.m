@@ -39,6 +39,7 @@
     self.contractorState.text = contractor.state;
     self.contractorZip.text = contractor.zip;
     self.contractorPhone.text = contractor.phone;
+    self.contractorEmail.text = contractor.email;
     
     [[NSNotificationCenter defaultCenter] addObserver:self
                                              selector:@selector(keyboardDidShow:)
@@ -117,6 +118,7 @@
     contractor.state = self.contractorState.text;
     contractor.zip = self.contractorZip.text;
     contractor.phone = self.contractorPhone.text;
+    contractor.email = self.contractorEmail.text;
     
     [[AppController sharedInstance] updateContractorInfo:contractor];
     

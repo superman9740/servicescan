@@ -19,6 +19,22 @@
 @property (nonatomic, strong) IBOutlet UILabel* numberOfRolls;
 @property (nonatomic, strong) IBOutlet UILabel* totalPrice;
 
+@property (nonatomic, strong) IBOutlet UITextField* cardNumber;
+@property (nonatomic, strong) IBOutlet UITextField* address;
+@property (nonatomic, strong) IBOutlet UITextField* city;
+@property (nonatomic, strong) IBOutlet UITextField* state;
+@property (nonatomic, strong) IBOutlet UITextField* zip;
+@property (nonatomic, strong) IBOutlet UITextField* expMonth;
+@property (nonatomic, strong) IBOutlet UITextField* expYear;
+@property (nonatomic, strong) IBOutlet UITextField* cvv;
+
+
+
+
+
+
+
+
 
 @property (weak, nonatomic) UITextField* activeTextField;
 @property (nonatomic) BOOL viewWasMoved;

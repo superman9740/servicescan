@@ -62,7 +62,7 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="vnn-JJ-vV0">
-                                <rect key="frame" x="0.0" y="53" width="320" height="338"/>
+                                <rect key="frame" x="0.0" y="53" width="320" height="416"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
                                     <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Contractor Name:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="vPo-0X-0HI">
@@ -168,7 +168,7 @@
                                         </connections>
                                     </textField>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="bnY-wY-Nsm">
-                                        <rect key="frame" x="119" y="288" width="73" height="30"/>
+                                        <rect key="frame" x="124" y="341" width="73" height="30"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <state key="normal" title="Update">
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -177,6 +177,20 @@
                                             <action selector="updateInformation:" destination="i0F-6h-1su" eventType="touchUpInside" id="TfF-Oa-ppA"/>
                                         </connections>
                                     </button>
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Contractor Email:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="bUG-fF-GTn">
+                                        <rect key="frame" x="20" y="296" width="114" height="21"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" minimumFontSize="17" id="HGx-cL-g7L">
+                                        <rect key="frame" x="165" y="292" width="135" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
                                 </subviews>
                             </scrollView>
                         </subviews>
@@ -186,6 +200,7 @@
                     <connections>
                         <outlet property="contractorAddress" destination="DDu-VT-lpn" id="xgK-9S-zJj"/>
                         <outlet property="contractorCity" destination="Ahd-wX-tW6" id="KC1-5U-sSD"/>
+                        <outlet property="contractorEmail" destination="HGx-cL-g7L" id="VFI-gg-SfN"/>
                         <outlet property="contractorFirstName" destination="0z3-ww-7av" id="fhT-1B-Szc"/>
                         <outlet property="contractorPhone" destination="pSI-h4-zhd" id="T3z-EX-fU6"/>
                         <outlet property="contractorState" destination="4g1-Rh-o4s" id="fB3-Ha-f4A"/>
@@ -206,7 +221,7 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="Bic-a4-mwS">
-                                <rect key="frame" x="-20" y="64" width="360" height="566"/>
+                                <rect key="frame" x="-20" y="63" width="360" height="566"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
                                     <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Number Of Rolls:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="o25-CS-1XY">
@@ -346,7 +361,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Total:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="EaG-Km-BgE">
-                                        <rect key="frame" x="147" y="468" width="42" height="21"/>
+                                        <rect key="frame" x="204" y="468" width="42" height="21"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -404,6 +419,20 @@
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CVV:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="OA8-4Y-rGK">
+                                        <rect key="frame" x="40" y="468" width="42" height="21"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" minimumFontSize="17" id="4P5-A2-uu1">
+                                        <rect key="frame" x="74" y="464" width="55" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
                                 </subviews>
                             </scrollView>
                         </subviews>
@@ -412,10 +441,18 @@
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
+                        <outlet property="address" destination="58Z-Hg-nzL" id="Lfb-Q6-z7A"/>
+                        <outlet property="cardNumber" destination="Jlk-T7-9HF" id="xeh-sO-y0O"/>
+                        <outlet property="city" destination="mKV-BI-GG8" id="lox-xZ-egj"/>
+                        <outlet property="cvv" destination="4P5-A2-uu1" id="TUv-QI-Efe"/>
+                        <outlet property="expMonth" destination="sQS-W3-BmS" id="yRM-aN-ebu"/>
+                        <outlet property="expYear" destination="Xc2-Lo-CvO" id="Ix3-9V-npQ"/>
                         <outlet property="numberOfRolls" destination="gOf-99-vOP" id="A29-Gz-gUE"/>
                         <outlet property="pickerView" destination="74g-ng-Qi6" id="LBE-0B-Hlc"/>
                         <outlet property="scrollView" destination="Bic-a4-mwS" id="ZB0-RR-DnY"/>
+                        <outlet property="state" destination="eTb-De-HiA" id="wAS-fC-RGW"/>
                         <outlet property="totalPrice" destination="VDZ-pm-laG" id="5Wr-Y0-Lp2"/>
+                        <outlet property="zip" destination="pJR-KV-TNa" id="Jiw-ba-xYq"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1rq-R1-Kdq" userLabel="First Responder" sceneMemberID="firstResponder"/>

@@ -10,6 +10,7 @@
 #import "ServiceScan.h"
 #import "Contractor.h"
 #import "Request.h"
+#import "InAppPurchase.h"
 
 @interface AppController : NSObject
 {
@@ -30,5 +31,6 @@
 -(void)loginAsContractor;
 -(void)updateContractorInfo:(Contractor*)contractor;
 -(void)loadContractorHistory;
+-(void)purchaseRoll:(InAppPurchase*)inappPurchase;
 
 @end

@@ -24,6 +24,7 @@ import net.authorize.aim.Result;
 import net.authorize.aim.Transaction;
 import net.authorize.data.*;
 import net.authorize.data.creditcard.*;
+import net.sf.json.JSONObject;
 /**
  *
  * @author USMEM-W-003157
@@ -45,6 +46,24 @@ public class PurchaseRoll extends HttpServlet {
         response.setContentType("text/html;charset=UTF-8");
         PrintWriter out = response.getWriter();
         try {
+            
+            String json = request.getParameter("inapp_purchase");
+            JSONObject jsonObject = JSONObject.fromObject( json );  
+            Object bean = JSONObject.toBean( jsonObject );  
+            
+            
+            String nameOnCard = jsonObject.get( "nameOnCard" ).toString();
+            String cardNumber = jsonObject.get( "cardNumber" ).toString();
+            String cardAddress = jsonObject.get( "cardAddress" ).toString();
+            String cardCity = jsonObject.get( "cardCity" ).toString();
+            String cardState = jsonObject.get( "cardState" ).toString();
+            String cardZip = jsonObject.get( "cardZip" ).toString();
+            String cardExpMonth = jsonObject.get( "cardExpMonth" ).toString();
+            String cardExpYear = jsonObject.get( "cardExpYear" ).toString();
+            String cardCVV = jsonObject.get( "cardCVV" ).toString();
+            
+            
+            
            String apiLoginID = "86h3s58L5Mk";
             String transactionKey = "5Q36GuV9CwnNR46K";
             Merchant merchant = Merchant.createMerchant(Environment.SANDBOX,
@@ -52,10 +71,10 @@ public class PurchaseRoll extends HttpServlet {
 
             // create credit card
             CreditCard creditCard = CreditCard.createCreditCard();
-            creditCard.setCreditCardNumber("4111 1111 1111 1111");
-            creditCard.setExpirationMonth("12");
-            creditCard.setExpirationYear("2015");
-
+            creditCard.setCreditCardNumber(cardNumber);
+            creditCard.setExpirationMonth(cardExpMonth);
+            creditCard.setExpirationYear("cardExpYear");
+            creditCard.setCardCode(cardCVV);
             // create transaction
             Transaction authCaptureTransaction = merchant.createAIMTransaction(
                 TransactionType.AUTH_CAPTURE, new BigDecimal(1.99));

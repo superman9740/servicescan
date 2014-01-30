@@ -70,6 +70,7 @@
 		DE809AD8188878BF009A5672 /* button-red.png in Resources */ = {isa = PBXBuildFile; fileRef = DE809AD6188878BF009A5672 /* button-red.png */; };
 		DE809AD9188878BF009A5672 /* button-red@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DE809AD7188878BF009A5672 /* button-red@2x.png */; };
 		DE809ADD188879E3009A5672 /* AppController.m in Sources */ = {isa = PBXBuildFile; fileRef = DE809ADC188879E3009A5672 /* AppController.m */; };
+		DED7DBF6189B0966005E8B60 /* InAppPurchase.m in Sources */ = {isa = PBXBuildFile; fileRef = DED7DBF5189B0966005E8B60 /* InAppPurchase.m */; };
 		DEE83A55189075DB005B6B23 /* SettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DEE83A54189075DB005B6B23 /* SettingsViewController.m */; };
 		DEE83A5818907BD7005B6B23 /* ContractorSettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DEE83A5718907BD7005B6B23 /* ContractorSettingsViewController.m */; };
 		DEE83A5B189081CD005B6B23 /* Contractor.m in Sources */ = {isa = PBXBuildFile; fileRef = DEE83A5A189081CD005B6B23 /* Contractor.m */; };
@@ -169,6 +170,8 @@
 		DE809AD7188878BF009A5672 /* button-red@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "button-red@2x.png"; sourceTree = "<group>"; };
 		DE809ADB188879E3009A5672 /* AppController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppController.h; sourceTree = "<group>"; };
 		DE809ADC188879E3009A5672 /* AppController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppController.m; sourceTree = "<group>"; };
+		DED7DBF4189B0966005E8B60 /* InAppPurchase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InAppPurchase.h; sourceTree = "<group>"; };
+		DED7DBF5189B0966005E8B60 /* InAppPurchase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InAppPurchase.m; sourceTree = "<group>"; };
 		DEE83A53189075DB005B6B23 /* SettingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingsViewController.h; sourceTree = "<group>"; };
 		DEE83A54189075DB005B6B23 /* SettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingsViewController.m; sourceTree = "<group>"; };
 		DEE83A5618907BD7005B6B23 /* ContractorSettingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContractorSettingsViewController.h; sourceTree = "<group>"; };
@@ -234,6 +237,8 @@
 				DEE83A5A189081CD005B6B23 /* Contractor.m */,
 				DEF2E33618970328003F8AF7 /* Request.h */,
 				DEF2E33718970328003F8AF7 /* Request.m */,
+				DED7DBF4189B0966005E8B60 /* InAppPurchase.h */,
+				DED7DBF5189B0966005E8B60 /* InAppPurchase.m */,
 			);
 			name = ValueObjects;
 			sourceTree = "<group>";
@@ -603,6 +608,7 @@
 				DE33C06A1885D7A1005F528A /* AppDelegate.m in Sources */,
 				DE33C0C71885EE61005F528A /* Utils.m in Sources */,
 				DE418645189868C1004918C7 /* InAppPurchaseViewController.m in Sources */,
+				DED7DBF6189B0966005E8B60 /* InAppPurchase.m in Sources */,
 				DE33C0731885D7A1005F528A /* ScanViewController.m in Sources */,
 				3C95E58918876FC100C608C6 /* CustomCameraViewController.m in Sources */,
 				DE809AD1188866CF009A5672 /* TabBarViewController.m in Sources */,
