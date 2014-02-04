@@ -4,26 +4,34 @@
       xmlns:h="http://java.sun.com/jsf/html"
       xmlns:p="http://primefaces.org/ui">
     <h:head>
-        <title>Facelet Title</title>
+        <title>ServiceScans</title>
         
         
     </h:head>
     <h:body>
         
+        <div style="margin: 0;padding: 0;">
+            
         
         <h:form>
 							
 	<h:panelGrid columns="4" cellpadding="5">
-		<h:outputLabel for="name" value="Name:" style="font-weight:bold"/>
+		<h:outputLabel for="userid" value="User ID:" style="font-weight:bold"/>
 		
-		<p:inputText id="name" value="#{pprBean.firstname}" />
+		<p:inputText id="userID" value="#{userLoginBean.userID}" />
 		
-		<p:commandButton value="Submit" update="display"/>
-
-        <h:outputText value="#{pprBean.firstname}" id="display" />
+               	<h:outputLabel for="password" value="Password:" style="font-weight:bold"/>
+		
+		<p:inputText id="password" value="#{userLoginBean.password}" />
+	
+		
+                <p:commandButton action="#{userLoginBean.validateLogin}" value="Login">
+                </p:commandButton>
+                
 	</h:panelGrid>
 	
 </h:form>
+            </div>
     </h:body>
 </html>
 
