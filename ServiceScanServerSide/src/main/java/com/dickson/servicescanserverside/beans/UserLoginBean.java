@@ -6,8 +6,10 @@
 
 package com.dickson.servicescanserverside.beans;
 
+import javax.faces.application.FacesMessage;
 import javax.faces.bean.ManagedBean;
 import javax.faces.bean.SessionScoped;
+import javax.faces.context.FacesContext;
 
 /**
  *
@@ -30,7 +32,24 @@ public class UserLoginBean {
     {
         
         System.out.println("validateLogin - test");
-        
+
+        if(userID.equals("admin"))
+        {
+            if(password.equals("Password"))
+            {
+                 FacesContext.getCurrentInstance().addMessage(null, new FacesMessage("Logged in."));  
+            }
+            else
+            {
+                 FacesContext.getCurrentInstance().addMessage(null, new FacesMessage("The user id and/or password was invalid."));  
+            }
+                
+        }
+        else
+        {
+             FacesContext.getCurrentInstance().addMessage(null, new FacesMessage("The user id and/or password was invalid."));  
+        }
+       
     }
             
     /**

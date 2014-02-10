@@ -1,7 +1,11 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8"/>
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:p="http://primefaces.org/ui">
+    <h:head>
+         <meta charset="utf-8"/>
     <title>ServiceScans</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <meta name="description" content=""/>
@@ -48,25 +52,39 @@
     
     
     
+       
+    </h:head>
     
-  </head>
-
-  <body>
-
-    <div class="container">
-
-      <form class="form-signin">
+    <h:body>
+                <div class="form-signin">
+                    
+           
+            
+      <h:form>
+                
+              
+                   
         <h2 class="form-signin-heading">Please sign in</h2>
-        <input type="text" class="input-block-level" placeholder="Email address"/>
-        <input type="password" class="input-block-level" placeholder="Password"/>
-        <label class="checkbox">
-          <input type="checkbox" value="remember-me"/> Remember me
-        </label>
-        <button class="btn btn-large btn-primary" type="submit">Sign in</button>
-      </form>
-
-    </div> <!-- /container -->
-
+        <p:inputText id="name"  placeholder="User ID" value="#{userLoginBean.userID}">
+        </p:inputText>
+       
+        <p:inputText id="password"  placeholder="Password" value="#{userLoginBean.password}">
+        </p:inputText>
+       
+       
+        <p:commandButton value="Sign in " actionListener="#{userLoginBean.validateLogin}"   
+            ajax="false" />
+        
+        <p:messages />  
+             
+        
+            
+      </h:form>
+                </div>
+                
+            
+        
+        
     <!-- Le javascript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
@@ -84,5 +102,6 @@
     <script src="./assets/js/bootstrap-carousel.js"></script>
     <script src="./assets/js/bootstrap-typeahead.js"></script>
 
-  </body>
+    </h:body>
 </html>
+

@@ -17,13 +17,13 @@ import javax.servlet.http.HttpServletResponse;
 
 import java.math.BigDecimal;
 import java.util.Map;
-import net.authorize.Environment;
-import net.authorize.Merchant;
-import net.authorize.TransactionType;
-import net.authorize.aim.Result;
-import net.authorize.aim.Transaction;
-import net.authorize.data.*;
-import net.authorize.data.creditcard.*;
+//import net.authorize.Environment;
+//import net.authorize.Merchant;
+//import net.authorize.TransactionType;
+//import net.authorize.aim.Result;
+//import net.authorize.aim.Transaction;
+//import net.authorize.data.*;
+//import net.authorize.data.creditcard.*;
 import net.sf.json.JSONObject;
 /**
  *
@@ -66,9 +66,9 @@ public class PurchaseRoll extends HttpServlet {
             
            String apiLoginID = "86h3s58L5Mk";
             String transactionKey = "5Q36GuV9CwnNR46K";
-            Merchant merchant = Merchant.createMerchant(Environment.SANDBOX,
-                apiLoginID, transactionKey);
-
+     //       Merchant merchant = Merchant.createMerchant(Environment.SANDBOX,
+     //           apiLoginID, transactionKey);
+/*
             // create credit card
             CreditCard creditCard = CreditCard.createCreditCard();
             creditCard.setCreditCardNumber(cardNumber);
@@ -97,6 +97,7 @@ public class PurchaseRoll extends HttpServlet {
 
               out.println(result.getReasonResponseCode() + " : " + result.getResponseText());
             }
+  */
             
             
         } finally {
