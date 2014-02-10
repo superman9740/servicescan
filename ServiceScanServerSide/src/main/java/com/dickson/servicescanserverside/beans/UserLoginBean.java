@@ -6,6 +6,7 @@
 
 package com.dickson.servicescanserverside.beans;
 
+import java.io.Serializable;
 import javax.faces.application.FacesMessage;
 import javax.faces.bean.ManagedBean;
 import javax.faces.bean.SessionScoped;
@@ -17,7 +18,7 @@ import javax.faces.context.FacesContext;
  */
 @ManagedBean(name="userLoginBean")
 @SessionScoped
-public class UserLoginBean {
+public class UserLoginBean implements Serializable{
 
     /**
      * Creates a new instance of UserLoginBean
@@ -27,8 +28,8 @@ public class UserLoginBean {
 
     private String userID;
     private String password;
-
-    public void validateLogin()
+    private String actionText;
+    public String validateLogin()
     {
         
         System.out.println("validateLogin - test");
@@ -38,16 +39,21 @@ public class UserLoginBean {
             if(password.equals("Password"))
             {
                  FacesContext.getCurrentInstance().addMessage(null, new FacesMessage("Logged in."));  
+                 return "main";
+                 
             }
             else
             {
                  FacesContext.getCurrentInstance().addMessage(null, new FacesMessage("The user id and/or password was invalid."));  
+                 return null;
             }
                 
         }
         else
         {
              FacesContext.getCurrentInstance().addMessage(null, new FacesMessage("The user id and/or password was invalid."));  
+             return null;
+             
         }
        
     }
@@ -78,6 +84,24 @@ public class UserLoginBean {
      */
     public void setPassword(String password) {
         this.password = password;
+    }
+
+    /**
+     * @return the actionText
+     */
+    public String getActionText() {
+        
+        this.validateLogin();
+        
+        
+        return actionText;
+    }
+
+    /**
+     * @param actionText the actionText to set
+     */
+    public void setActionText(String actionText) {
+        this.actionText = actionText;
     }
     
 }

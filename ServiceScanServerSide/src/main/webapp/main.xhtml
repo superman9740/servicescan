@@ -2,7 +2,8 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml"
       xmlns:h="http://java.sun.com/jsf/html"
-      xmlns:p="http://primefaces.org/ui">
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:f="http://java.sun.com/jsf/core">
     <h:head>
         <title>ServiceScans Main Page</title>
     </h:head>
@@ -10,14 +11,64 @@
         
         <h3>Main Menu</h3>  
         <h:form>
-            <p:menu>  
+        <p:menu>  
         <p:menuitem value="Import QR Codes" actionListener="#{menuBean.delete}" update="messages" ajax="false" />  
         <p:menuitem value="Maintain Contractors" actionListener="#{menuBean.delete}" update="messages" ajax="false" />  
         <p:menuitem value="Maintain Customers" actionListener="#{menuBean.delete}" update="messages" ajax="false" />  
-          
-    </p:menu>  
-    
+        </p:menu>
         </h:form>
+      
+        
+        <h:form id="form">
+
+    <p:growl id="messages" showDetail="true"/>
+
+    <p:dataTable var="contractor" value="#{manageContractorBean.contractors}" id="contractorList" editable="true">
+
+        <f:facet name="header">
+            Contractor Maintenance
+        </f:facet>
+
+        <p:ajax event="rowEdit" listener="#{manageContractorBean.onEdit}" update=":form:messages" />
+        <p:ajax event="rowEditCancel" listener="#{manageContractorBean.onCancel}" update=":form:messages" />
+
+        <p:column headerText="First Name" style="width:30%">
+            <p:cellEditor>
+                <f:facet name="output">
+                    <h:outputText value="#{contractor.firstName}" />
+                </f:facet>
+                <f:facet name="input">
+                    <p:inputText value="#{contractor.firstName}" style="width:100%"/>
+                </f:facet>
+            </p:cellEditor>
+        </p:column>
+
+        <p:column headerText="Last Name" style="width:20%">
+            <p:cellEditor>
+                <f:facet name="output">
+                    <h:outputText value="#{contractor.lastName}" />
+                </f:facet>
+                <f:facet name="input">
+                    <p:inputText value="#{contractor.lastName}" style="width:100%" label="Year"/>
+                </f:facet>
+            </p:cellEditor>
+        </p:column>
+
+        
+        
+        <p:column style="width:6%">
+            <p:rowEditor />
+        </p:column>
+
+    </p:dataTable>
+
+
+        </h:form>
+            
+            
+        
+    
+
     </h:body>
 </html>
 

@@ -68,11 +68,11 @@
         <p:inputText id="name"  placeholder="User ID" value="#{userLoginBean.userID}">
         </p:inputText>
        
-        <p:inputText id="password"  placeholder="Password" value="#{userLoginBean.password}">
-        </p:inputText>
+        <p:password id="password"  placeholder="Password" value="#{userLoginBean.password}">
+        </p:password>
        
        
-        <p:commandButton value="Sign in " actionListener="#{userLoginBean.validateLogin}"   
+        <p:commandButton value="Sign in "  action="#{userLoginBean.validateLogin}"    
             ajax="false" />
         
         <p:messages />  
