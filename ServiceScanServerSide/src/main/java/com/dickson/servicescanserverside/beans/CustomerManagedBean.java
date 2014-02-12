@@ -6,23 +6,19 @@
 
 package com.dickson.servicescanserverside.beans;
 
-import java.io.Serializable;
 import javax.faces.bean.ManagedBean;
 import javax.faces.bean.RequestScoped;
-import javax.faces.bean.SessionScoped;
+import javax.faces.bean.ViewScoped;
 
 /**
  *
  * @author USMEM-W-003157
  */
-@ManagedBean(name="contractorManagedBean")
-@SessionScoped
-public class ContractorManagedBean implements Serializable {
+@ManagedBean
+@ViewScoped
+public class CustomerManagedBean {
 
-    /**
-     * Creates a new instance of ContractorManagedBean
-     */
-    private Long rowID;
+    private Long rowid;
     private String firstName;
     private String lastName;
     private String address;
@@ -30,9 +26,26 @@ public class ContractorManagedBean implements Serializable {
     private String state;
     private String zip;
     private String phone;
-    private String email;
     
-    public ContractorManagedBean() {
+    
+    /**
+     * Creates a new instance of CustomerManagedBean
+     */
+    public CustomerManagedBean() {
+    }
+
+    /**
+     * @return the rowid
+     */
+    public Long getRowid() {
+        return rowid;
+    }
+
+    /**
+     * @param rowid the rowid to set
+     */
+    public void setRowid(Long rowid) {
+        this.rowid = rowid;
     }
 
     /**
@@ -132,35 +145,5 @@ public class ContractorManagedBean implements Serializable {
     public void setPhone(String phone) {
         this.phone = phone;
     }
-
-    /**
-     * @return the email
-     */
-    public String getEmail() {
-        return email;
-    }
-
-    /**
-     * @param email the email to set
-     */
-    public void setEmail(String email) {
-        this.email = email;
-    }
-
-    /**
-     * @return the rowID
-     */
-    public Long getRowID() {
-        return rowID;
-    }
-
-    /**
-     * @param rowID the rowID to set
-     */
-    public void setRowID(Long rowID) {
-        this.rowID = rowID;
-    }
-
-    
     
 }

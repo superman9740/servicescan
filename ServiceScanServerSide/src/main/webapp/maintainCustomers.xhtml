@@ -1,0 +1,146 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:f="http://java.sun.com/jsf/core">
+    <h:head>
+        <title>ServiceScans Maintain Customers</title>
+          <style>
+        .page  {
+            text-align: center;
+        }    
+        </style>
+        
+    </h:head>
+    <h:body>
+          <h1 class="page">ServiceScans - Maintain Customers </h1>
+          
+          
+        <h:form>
+        <p:menu>  
+            <p:menuitem value="Maintain Contractors" action="#{menuBean.gotoMaintainContractors}" update="messages" ajax="false" />  
+            <p:menuitem value="Maintain Customers" action="#{menuBean.gotoMaintainCustomers}" update="messages" ajax="false" />  
+            <p:menuitem value="Import QR Codes" action="#{menuBean.gotoMaintainCustomers}" update="messages" ajax="false" />  
+        </p:menu>
+        </h:form>
+      
+        
+        <h:form id="form">
+
+    <p:growl id="messages" showDetail="true"/>
+
+    <p:dataTable var="customer" value="#{manageCustomerBean.customers}" id="customerList" editable="true" resizableColumns="true"
+                 paginator="true" rows="10"  
+                 paginatorTemplate="{CurrentPageReport}  {FirstPageLink} {PreviousPageLink} {PageLinks} {NextPageLink} {LastPageLink} {RowsPerPageDropdown}"  
+                 rowsPerPageTemplate="5,10,15">  
+
+        <f:facet name="header">
+            Customer Maintenance
+        </f:facet>
+
+        <p:ajax event="rowEdit" listener="#{manageCustomerBean.onEdit}" update=":form:messages" />
+        <p:ajax event="rowEditCancel" listener="#{manageCustomerBean.onCancel}" update=":form:messages" />
+
+        <p:column headerText="First Name" style="width:20%">
+            <p:cellEditor>
+                <f:facet name="output">
+                    <h:outputText value="#{customer.firstName}" />
+                </f:facet>
+                <f:facet name="input">
+                    <p:inputText value="#{customer.firstName}" style="width:100%"/>
+                </f:facet>
+            </p:cellEditor>
+        </p:column>
+
+        <p:column headerText="Last Name" style="width:20%">
+            <p:cellEditor>
+                <f:facet name="output">
+                    <h:outputText value="#{customer.lastName}" />
+                </f:facet>
+                <f:facet name="input">
+                    <p:inputText value="#{customer.lastName}" style="width:100%" label="Year"/>
+                </f:facet>
+            </p:cellEditor>
+        </p:column>
+
+        <p:column headerText="Address" style="width:20%">
+        
+        <p:cellEditor>
+                <f:facet name="output">
+                    <h:outputText value="#{customer.address}" />
+                </f:facet>
+                <f:facet name="input">
+                    <p:inputText value="#{customer.address}" style="width:100%"/>
+                </f:facet>
+            </p:cellEditor>
+        </p:column>
+        <p:column headerText="City" style="width:20%">
+        
+        <p:cellEditor>
+                <f:facet name="output">
+                    <h:outputText value="#{customer.city}" />
+                </f:facet>
+                <f:facet name="input">
+                    <p:inputText value="#{customer.city}" style="width:100%"/>
+                </f:facet>
+            </p:cellEditor>
+        </p:column>
+         
+        <p:column headerText="State" style="width:5%">
+        
+            <p:cellEditor>
+                <f:facet name="output">
+                    <h:outputText value="#{customer.state}" />
+                </f:facet>
+                <f:facet name="input">
+                    <p:inputText value="#{customer.state}" style="width:100%"/>
+                </f:facet>
+            </p:cellEditor>
+        </p:column>
+        <p:column headerText="Zip" style="width:10%">
+        
+        <p:cellEditor>
+                <f:facet name="output">
+                    <h:outputText value="#{customer.zip}" />
+                </f:facet>
+                <f:facet name="input">
+                    <p:inputText value="#{customer.zip}" style="width:100%"/>
+                </f:facet>
+            </p:cellEditor>
+        </p:column>
+        <p:column headerText="Phone" style="width:10%">
+            
+            <p:cellEditor>
+                <f:facet name="output">
+                    <h:outputText value="#{customer.phone}" />
+                </f:facet>
+                <f:facet name="input">
+                    <p:inputText value="#{customer.phone}" style="width:100%"/>
+                </f:facet>
+            </p:cellEditor>
+        </p:column>
+        <p:column style="width:6%">
+            <p:rowEditor />
+        </p:column>
+        
+          <f:facet name="footer">
+                 <p:commandButton value="Add Record"   actionListener="#{manageCustomerBean.insertRow}" update="customerList"  ajax="false">
+            </p:commandButton>    
+     
+              <p:commandButton value="Refresh"   actionListener="#{manageCustomerBean.refreshData()}" update="customerList"  ajax="false">
+            </p:commandButton>    
+     
+        </f:facet>  
+    </p:dataTable>
+
+  
+            
+            
+        </h:form>
+        
+    
+
+    </h:body>
+</html>
+

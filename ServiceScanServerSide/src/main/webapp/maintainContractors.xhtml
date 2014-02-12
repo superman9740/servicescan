@@ -1,0 +1,157 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:f="http://java.sun.com/jsf/core">
+    <h:head>
+        <title>ServiceScans Main Page</title>
+        <style>
+        .page  {
+            text-align: center;
+        }    
+        </style>
+        
+    </h:head>
+    <h:body>
+        <h1 class="page">ServiceScans - Maintain Contractors</h1>
+        
+          
+        <h:form>
+        <p:menu>  
+            <p:menuitem value="Maintain Contractors" action="#{menuBean.gotoMaintainContractors}" update="messages" ajax="false" />  
+            <p:menuitem value="Maintain Customers" action="#{menuBean.gotoMaintainCustomers}" update="messages" ajax="false" />  
+            <p:menuitem value="Import QR Codes" action="#{menuBean.gotoMaintainCustomers}" update="messages" ajax="false" />  
+        </p:menu>
+        </h:form>
+      
+        
+        <h:form id="form">
+
+    <p:growl id="messages" showDetail="true"/>
+
+    <p:dataTable var="contractor" value="#{manageContractorBean.contractors}" id="contractorList" editable="true" resizableColumns="true"
+                 paginator="true" rows="10"  
+                 paginatorTemplate="{CurrentPageReport}  {FirstPageLink} {PreviousPageLink} {PageLinks} {NextPageLink} {LastPageLink} {RowsPerPageDropdown}"  
+                 rowsPerPageTemplate="5,10,15">  
+
+        <f:facet name="header">
+            Contractor Maintenance
+        </f:facet>
+
+        <p:ajax event="rowEdit" listener="#{manageContractorBean.onEdit}" update=":form:messages" />
+        <p:ajax event="rowEditCancel" listener="#{manageContractorBean.onCancel}" update=":form:messages" />
+
+        <p:column headerText="First Name" style="width:20%">
+            <p:cellEditor>
+                <f:facet name="output">
+                    <h:outputText value="#{contractor.firstName}" />
+                </f:facet>
+                <f:facet name="input">
+                    <p:inputText value="#{contractor.firstName}" style="width:100%"/>
+                </f:facet>
+            </p:cellEditor>
+        </p:column>
+
+        <p:column headerText="Last Name" style="width:20%">
+            <p:cellEditor>
+                <f:facet name="output">
+                    <h:outputText value="#{contractor.lastName}" />
+                </f:facet>
+                <f:facet name="input">
+                    <p:inputText value="#{contractor.lastName}" style="width:100%" label="Year"/>
+                </f:facet>
+            </p:cellEditor>
+        </p:column>
+
+        <p:column headerText="Address" style="width:20%">
+        
+        <p:cellEditor>
+                <f:facet name="output">
+                    <h:outputText value="#{contractor.address}" />
+                </f:facet>
+                <f:facet name="input">
+                    <p:inputText value="#{contractor.address}" style="width:100%"/>
+                </f:facet>
+            </p:cellEditor>
+        </p:column>
+        <p:column headerText="City" style="width:20%">
+        
+        <p:cellEditor>
+                <f:facet name="output">
+                    <h:outputText value="#{contractor.city}" />
+                </f:facet>
+                <f:facet name="input">
+                    <p:inputText value="#{contractor.city}" style="width:100%"/>
+                </f:facet>
+            </p:cellEditor>
+        </p:column>
+         
+        <p:column headerText="State" style="width:5%">
+        
+            <p:cellEditor>
+                <f:facet name="output">
+                    <h:outputText value="#{contractor.state}" />
+                </f:facet>
+                <f:facet name="input">
+                    <p:inputText value="#{contractor.state}" style="width:100%"/>
+                </f:facet>
+            </p:cellEditor>
+        </p:column>
+        <p:column headerText="Zip" style="width:10%">
+        
+        <p:cellEditor>
+                <f:facet name="output">
+                    <h:outputText value="#{contractor.zip}" />
+                </f:facet>
+                <f:facet name="input">
+                    <p:inputText value="#{contractor.zip}" style="width:100%"/>
+                </f:facet>
+            </p:cellEditor>
+        </p:column>
+        <p:column headerText="Phone" style="width:10%">
+            
+            <p:cellEditor>
+                <f:facet name="output">
+                    <h:outputText value="#{contractor.phone}" />
+                </f:facet>
+                <f:facet name="input">
+                    <p:inputText value="#{contractor.phone}" style="width:100%"/>
+                </f:facet>
+            </p:cellEditor>
+        </p:column>
+        <p:column headerText="Email" style="width:15%">
+        
+        <p:cellEditor>
+                <f:facet name="output">
+                    <h:outputText value="#{contractor.email}" />
+                </f:facet>
+                <f:facet name="input">
+                    <p:inputText value="#{contractor.email}" style="width:100%"/>
+                </f:facet>
+            </p:cellEditor>
+        </p:column>
+        <p:column style="width:6%">
+            <p:rowEditor />
+        </p:column>
+        <f:facet name="footer">
+            
+            <p:commandButton value="Add Record"   actionListener="#{manageContractorBean.insertRow}" update="contractorList"  ajax="false">
+            </p:commandButton>    
+     
+            <p:commandButton value="Refresh"   actionListener="#{manageContractorBean.refreshData()}" update="contractorList"  ajax="false">
+            </p:commandButton>    
+     
+        </f:facet>
+       
+    </p:dataTable>
+
+        </h:form>
+        
+            
+        
+    
+
+    </h:body>
+</html>
+

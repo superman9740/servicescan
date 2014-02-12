@@ -39,7 +39,7 @@ public class UserLoginBean implements Serializable{
             if(password.equals("Password"))
             {
                  FacesContext.getCurrentInstance().addMessage(null, new FacesMessage("Logged in."));  
-                 return "main";
+                 return "maintainContractors";
                  
             }
             else
