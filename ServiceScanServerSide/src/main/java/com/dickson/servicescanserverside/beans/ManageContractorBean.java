@@ -21,6 +21,7 @@ import javax.persistence.Query;
 import javax.persistence.TypedQuery;
 import org.primefaces.event.CellEditEvent;
 import org.primefaces.event.RowEditEvent;
+import org.primefaces.model.SelectableDataModel;
 
 /**
  *
@@ -34,6 +35,27 @@ public class ManageContractorBean implements Serializable {
      * Creates a new instance of ManageContractorBean
      */
      private List<ContractorManagedBean> contractors;
+     private Contractor selectedContractor;
+     public void deleteRow()
+     {
+         
+           EntityManagerFactory emf = Persistence.createEntityManagerFactory("com.dickson_ServiceScanServerSide_war_1.0-SNAPSHOTPU");
+            EntityManager em = emf.createEntityManager();
+            TypedQuery<Contractor> query = em.createNamedQuery("Contractor.findByRowid", Contractor.class);
+            query.setParameter("rowid",selectedContractor.getRowid());
+
+            Contractor record = query.getSingleResult();
+            em.getTransaction().begin();
+            if(record != null)
+            {
+
+                em.remove(record);
+                em.getTransaction().commit();
+          
+            }
+
+               
+     }
     public void onEdit(RowEditEvent event)
     {
         ContractorManagedBean newValue = (ContractorManagedBean) event.getObject();  
@@ -171,6 +193,21 @@ public class ManageContractorBean implements Serializable {
     public void setContractors(List<ContractorManagedBean> contractors) {
         this.contractors = contractors;
     }
+
+    /**
+     * @return the selectedContractor
+     */
+    public Contractor getSelectedContractor() {
+        return selectedContractor;
+    }
+
+    /**
+     * @param selectedContractor the selectedContractor to set
+     */
+    public void setSelectedContractor(Contractor selectedContractor) {
+        this.selectedContractor = selectedContractor;
+    }
+
     
     
     
