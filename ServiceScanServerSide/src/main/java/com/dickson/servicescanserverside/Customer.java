@@ -7,6 +7,7 @@
 package com.dickson.servicescanserverside;
 
 import java.io.Serializable;
+import java.util.Collection;
 import java.util.Date;
 import javax.persistence.Basic;
 import javax.persistence.Column;
@@ -18,11 +19,13 @@ import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.NamedQueries;
 import javax.persistence.NamedQuery;
+import javax.persistence.OneToMany;
 import javax.persistence.Table;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 import javax.validation.constraints.Size;
 import javax.xml.bind.annotation.XmlRootElement;
+import javax.xml.bind.annotation.XmlTransient;
 
 /**
  *
@@ -43,6 +46,8 @@ import javax.xml.bind.annotation.XmlRootElement;
     @NamedQuery(name = "Customer.findByState", query = "SELECT c FROM Customer c WHERE c.state = :state"),
     @NamedQuery(name = "Customer.findByZip", query = "SELECT c FROM Customer c WHERE c.zip = :zip")})
 public class Customer implements Serializable {
+    @OneToMany(mappedBy = "customerId")
+    private Collection<Scan> scanCollection;
     private static final long serialVersionUID = 1L;
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -209,6 +214,15 @@ public class Customer implements Serializable {
      */
     public void setAddress(String address) {
         this.address = address;
+    }
+
+    @XmlTransient
+    public Collection<Scan> getScanCollection() {
+        return scanCollection;
+    }
+
+    public void setScanCollection(Collection<Scan> scanCollection) {
+        this.scanCollection = scanCollection;
     }
     
 }

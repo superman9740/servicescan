@@ -6,6 +6,9 @@
 
 package com.servicescan;
 
+import com.dickson.servicescanserverside.Contractor;
+import com.dickson.servicescanserverside.Customer;
+import com.dickson.servicescanserverside.Qrcode;
 import com.dickson.servicescanserverside.Scan;
 import java.io.IOException;
 import java.io.PrintWriter;
@@ -13,6 +16,7 @@ import java.util.List;
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.Persistence;
+import javax.persistence.Query;
 import javax.persistence.TypedQuery;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -76,44 +80,97 @@ public class SaveNewServiceScan extends HttpServlet {
             EntityManager em = emf.createEntityManager();
             em.getTransaction().begin();
             
-            //First, check to make sure this qr code has not already been used
+            //First, get the qr code row id
             
-            TypedQuery<Scan> query = em.createQuery("SELECT c FROM Scan c WHERE c.qrcode = :qrcode", Scan.class);
-             query.setParameter("qrcode", qrCode);
-             List<Scan> scans = query.getResultList();
+            Query query = em.createNamedQuery("Qrcode.findByQrCode");
+            query.setParameter("qrCode", qrCode);
+            Qrcode qrCodeObject = (Qrcode)query.getSingleResult();
             
-             if(scans.size() > 0)
+            //Next, we check to see if an appliance record exists for this qr code
+             Query queryObj = em.createNativeQuery("SELECT * FROM Scan c  WHERE c.qrCode_id = ?1 " , Scan.class);
+             queryObj.setParameter(1, qrCodeObject.getRowid());
+             Scan scanObject = null;
+            try
+            {
+             scanObject = (Scan) queryObj.getSingleResult();
+            }
+            catch(Exception ex)
+            {
+                
+            }
+            
+            
+            
+             if(scanObject != null)
              {
-                 
+                 //This qr code has already been assigned to an appliance record
                  out.println("-1");
                  return;
                  
              }
             
             
+             //Look up the contractor row id
+             queryObj = em.createNativeQuery("SELECT * FROM Contractor c  WHERE c.first_name = ?1 and c.last_name = ?2 and c.address = ?3 and c.city = ?4 and c.state = ?5 and c.zip = ?6 and c.phone = ?7 ", Contractor.class);
+             queryObj.setParameter(1, contractorFirstName);
+             queryObj.setParameter(2, contractorLastName);
+             queryObj.setParameter(3, contractorAddress);
+             queryObj.setParameter(4, contractorCity);
+             queryObj.setParameter(5, contractorState);
+             queryObj.setParameter(6, contractorZip);
+             queryObj.setParameter(7, contractorPhone);
+             Contractor contractor = (Contractor) queryObj.getSingleResult();
+             
+             
+             //Look up the customer row id
+             queryObj = em.createNativeQuery("SELECT * FROM Customer c  WHERE c.first_name = ?1 and c.last_name = ?2 and c.address = ?3 and c.city = ?4 and c.state = ?5 and c.zip = ?6 and c.phone = ?7 ", Customer.class);
+             queryObj.setParameter(1, customerFirstName);
+             queryObj.setParameter(2, customerLastName);
+             queryObj.setParameter(3, customerAddress);
+             queryObj.setParameter(4, customerCity);
+             queryObj.setParameter(5, customerState);
+             queryObj.setParameter(6, customerZip);
+             queryObj.setParameter(7, customerPhone);
+             
+             
+             Customer customer = null;
+             try
+             {
+                    customer = (Customer) queryObj.getSingleResult();
+             
+             }
+             catch(Exception ex)
+             {
+                 
+                 
+             }
+             
+             
+             if(customer == null)
+             {
+                 customer = new Customer();
+                 customer.setFirstName(customerFirstName);
+                 customer.setLastName(customerLastName);
+                 customer.setAddress(customerAddress);
+                 customer.setCity(customerCity);
+                 customer.setState(customerState);
+                 customer.setZip(customerZip);
+                 customer.setPhone(customerPhone);
+                 em.persist(customer);
+             }
+             //Now create a new appliance record
+             
+             Scan newScan = new Scan();
+             
             
-            Scan newScan = new Scan();
             
-            newScan.setContractorFirstName(contractorFirstName);
-            newScan.setContractorLastName(contractorLastName);
-            newScan.setContractorAddress(contractorAddress);
-            newScan.setContractorCity(contractorCity);
-            newScan.setContractorState(contractorState);
-            newScan.setContractorZip(contractorZip);
-            newScan.setContractorPhone(contractorPhone);
-            
-            newScan.setCustomerFirstName(customerFirstName);
-            newScan.setCustomerLastName(customerLastName);
-            newScan.setCustomerAddress(customerAddress);
-            newScan.setCustomerCity(customerCity);
-            newScan.setCustomerState(customerState);
-            newScan.setCustomerZip(customerZip);
-            newScan.setCustomerPhone(customerPhone);
             newScan.setApplianceModel(applianceModelNbr);
             newScan.setApplianceSerial(applianceSerialNbr);
             newScan.setApplianceType(applianceType);
-            newScan.setQrcode(qrCode);
             newScan.setDeviceToken(deviceToken);
+            newScan.setQrCodeid(qrCodeObject);
+            newScan.setContractorId(contractor);
+            newScan.setCustomerId(customer);
             em.persist(newScan);
             em.getTransaction().commit();
             em.close();

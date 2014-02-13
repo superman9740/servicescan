@@ -79,7 +79,7 @@ public class CreateNewRequest extends HttpServlet {
              emf.close();
             
              //Send push notification to contractor
-             String[] command = { "/opt/PushNotifications/src/Pusher", scans.get(0).getDeviceToken(), scans.get(0).getQrcode() }; 
+             String[] command = { "/opt/PushNotifications/src/Pusher", scans.get(0).getDeviceToken(), scans.get(0).getQrCodeid().getQrCode()}; 
              
              BufferedReader is = null;
              BufferedReader es = null;

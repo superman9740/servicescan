@@ -84,7 +84,7 @@ public class ManageContractorBean implements Serializable {
         else
         {
          
-             EntityManagerFactory emf = Persistence.createEntityManagerFactory("com.dickson_ServiceScanServerSide_war_1.0-SNAPSHOTPU");
+            EntityManagerFactory emf = Persistence.createEntityManagerFactory("com.dickson_ServiceScanServerSide_war_1.0-SNAPSHOTPU");
             EntityManager em = emf.createEntityManager();
             TypedQuery<Contractor> query = em.createNamedQuery("Contractor.findByRowid", Contractor.class);
             query.setParameter("rowid",newValue.getRowID());

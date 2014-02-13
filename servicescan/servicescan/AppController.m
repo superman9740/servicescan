@@ -59,7 +59,7 @@ static  AppController* sharedInstance = nil;
     
     NSString* tempStr = [[NSString alloc] initWithData:tempData encoding:NSUTF8StringEncoding];
     
-    NSString* urlString = [NSString stringWithFormat:@"http://servicescans.com:8080/ServiceScanServerSide/AddNewContractor?contractor=%@",[tempStr stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding]];
+    NSString* urlString = [NSString stringWithFormat:@"http://servicescans.com/AddNewContractor?contractor=%@",[tempStr stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding]];
     
     NSURL* url = [NSURL URLWithString:urlString];
     
@@ -106,14 +106,14 @@ static  AppController* sharedInstance = nil;
     
     NSString* tempStr = [[NSString alloc] initWithData:tempData encoding:NSUTF8StringEncoding];
     
-    NSString* urlString = [NSString stringWithFormat:@"http://servicescans.com:8080/ServiceScanServerSide/GetHistoryForContractor?contractor=%@",[tempStr stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding]];
+    NSString* urlString = [NSString stringWithFormat:@"http://servicescans.com/GetHistoryForContractor?contractor=%@",[tempStr stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding]];
     
     NSURL* url = [NSURL URLWithString:urlString];
     
     NSError* error = nil;
     NSURLResponse* response = nil;
     NSURLRequest* request = [NSURLRequest requestWithURL:url];
-    
+  
     
     NSData* jsonData = [NSURLConnection sendSynchronousRequest:request returningResponse:&response error:&error];
     if(error.code == -1004)
@@ -206,7 +206,7 @@ static  AppController* sharedInstance = nil;
     
     NSString* tempStr = [[NSString alloc] initWithData:tempData encoding:NSUTF8StringEncoding];
     
-    NSString* urlString = [NSString stringWithFormat:@"http://servicescans.com:8080/ServiceScanServerSide/PurchaseRoll?inapp_purchase=%@",[tempStr stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding]];
+    NSString* urlString = [NSString stringWithFormat:@"http://servicescans.com/PurchaseRoll?inapp_purchase=%@",[tempStr stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding]];
     
     NSURL* url = [NSURL URLWithString:urlString];
     

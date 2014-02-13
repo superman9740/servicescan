@@ -42,7 +42,7 @@
 -(IBAction)requestService:(id)sender
 {
     
-    NSString* urlString = [NSString stringWithFormat:@"http://servicescans.com:8080/ServiceScanServerSide/CreateNewRequest?qrCode=%@",[[AppController sharedInstance] qrCode]];
+    NSString* urlString = [NSString stringWithFormat:@"http://servicescans.com/CreateNewRequest?qrCode=%@",[[AppController sharedInstance] qrCode]];
     
     NSURL* url = [NSURL URLWithString:urlString];
     

@@ -37,4 +37,12 @@ public class MenuBean {
         
         
     }
+    public String gotoMaintainApplianceRecords()
+    {
+        
+        return "maintainApplianceRecords";
+        
+        
+    }
+
 }

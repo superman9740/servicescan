@@ -81,7 +81,7 @@
         {
             
             
-            NSString* urlString = [NSString stringWithFormat:@"http://servicescans.com:8080/ServiceScanServerSide/GetScanData?qrCode=%@",[[AppController sharedInstance] qrCode]];
+            NSString* urlString = [NSString stringWithFormat:@"http://servicescans.com/GetScanData?qrCode=%@",[[AppController sharedInstance] qrCode]];
             
             NSURL* url = [NSURL URLWithString:urlString];
             

@@ -94,7 +94,7 @@
     
     NSString* qrCode = [alert valueForKey:@"action-loc-key"];
     
-    NSString* urlString = [NSString stringWithFormat:@"http://servicescans.com:8080/ServiceScanServerSide/LookupScan?qrCode=%@",qrCode];
+    NSString* urlString = [NSString stringWithFormat:@"http://servicescans.com/LookupScan?qrCode=%@",qrCode];
     
     NSURL* url = [NSURL URLWithString:urlString];
     

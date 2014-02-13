@@ -86,7 +86,7 @@
     
     NSString* tempStr = [[NSString alloc] initWithData:tempData encoding:NSUTF8StringEncoding];
 
-    NSString* urlString = [NSString stringWithFormat:@"http://servicescans.com:8080/ServiceScanServerSide/SaveNewServiceScan?scan=%@",[tempStr stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding]];
+    NSString* urlString = [NSString stringWithFormat:@"http://servicescans.com/SaveNewServiceScan?scan=%@",[tempStr stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding]];
     
     NSURL* url = [NSURL URLWithString:urlString];
     

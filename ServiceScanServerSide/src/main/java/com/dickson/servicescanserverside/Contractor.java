@@ -43,6 +43,8 @@ import javax.xml.bind.annotation.XmlTransient;
     @NamedQuery(name = "Contractor.findByEmail", query = "SELECT c FROM Contractor c WHERE c.email = :email")})
 public class Contractor implements Serializable {
     @OneToMany(mappedBy = "contractorId")
+    private Collection<Scan> scanCollection;
+    @OneToMany(mappedBy = "contractorId")
     private Collection<Customer> customerCollection;
     private static final long serialVersionUID = 1L;
     @Id
@@ -213,6 +215,15 @@ public class Contractor implements Serializable {
 
     public void setCustomerCollection(Collection<Customer> customerCollection) {
         this.customerCollection = customerCollection;
+    }
+
+    @XmlTransient
+    public Collection<Scan> getScanCollection() {
+        return scanCollection;
+    }
+
+    public void setScanCollection(Collection<Scan> scanCollection) {
+        this.scanCollection = scanCollection;
     }
     
 }
