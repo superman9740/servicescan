@@ -1,0 +1,118 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:f="http://java.sun.com/jsf/core">
+    <h:head>
+        <title>ServiceScans Maintain Service Requests</title>
+        <style>
+        .page  {
+            text-align: center;
+        }    
+        </style>
+        
+    </h:head>
+    <h:body>
+        <h1 class="page">ServiceScans - Maintain Service Requests</h1>
+        
+          
+        <h:form>
+        <p:menu>  
+            <p:menuitem value="Maintain Contractors" action="#{menuBean.gotoMaintainContractors}" update="messages" ajax="false" />  
+            <p:menuitem value="Maintain Customers" action="#{menuBean.gotoMaintainCustomers}" update="messages" ajax="false" />  
+            <p:menuitem value="Maintain Appliance Records" action="#{menuBean.gotoMaintainCustomers}" update="messages" ajax="false" />  
+            <p:menuitem value="Maintain Service Requests" action="#{menuBean.gotoMaintainCustomers}" update="messages" ajax="false" />  
+            <p:menuitem value="Import QR Codes" action="#{menuBean.gotoImportQRCodes()}" update="messages" ajax="false" />  
+        
+        </p:menu>
+        </h:form>
+      
+        
+        <h:form id="form">
+
+    <p:growl id="messages" showDetail="true"/>
+
+    <p:dataTable var="scan" value="#{manageApplianceRecordBean.applianceRecords}" id="scanList" editable="true" resizableColumns="true"
+                 paginator="true" rows="10"  
+                 paginatorTemplate="{CurrentPageReport}  {FirstPageLink} {PreviousPageLink} {PageLinks} {NextPageLink} {LastPageLink} {RowsPerPageDropdown}"  
+                 rowsPerPageTemplate="5,10,15">  
+
+        <f:facet name="header">
+            Appliance Records Maintenance
+        </f:facet>
+
+        <p:ajax event="rowEdit" listener="#{manageApplianceRecordBean.onEdit}" update=":form:messages" />
+        <p:ajax event="rowEditCancel" listener="#{manageApplianceRecordBean.onCancel}" update=":form:messages" />
+
+        <p:column headerText="Model" style="width:20%">
+            <p:cellEditor>
+                <f:facet name="output">
+                    <h:outputText value="#{scan.applianceModel}" />
+                </f:facet>
+                <f:facet name="input">
+                    <p:inputText value="#{scan.applianceModel}" style="width:100%"/>
+                </f:facet>
+            </p:cellEditor>
+        </p:column>
+
+        <p:column headerText="Serial" style="width:20%">
+            <p:cellEditor>
+                <f:facet name="output">
+                    <h:outputText value="#{scan.applianceSerial}" />
+                </f:facet>
+                <f:facet name="input">
+                    <p:inputText value="#{scan.applianceSerial}" style="width:100%" label="Year"/>
+                </f:facet>
+            </p:cellEditor>
+        </p:column>
+
+        <p:column headerText="Type" style="width:20%">
+        
+        <p:cellEditor>
+                <f:facet name="output">
+                    <h:outputText value="#{scan.applianceType}" />
+                </f:facet>
+                <f:facet name="input">
+                    <p:inputText value="#{contractor.address}" style="width:100%"/>
+                </f:facet>
+            </p:cellEditor>
+        </p:column>
+        <p:column headerText="Device Token" style="width:20%">
+        
+        <p:cellEditor>
+                <f:facet name="output">
+                    <h:outputText value="#{scan.deviceToken}" />
+                </f:facet>
+                <f:facet name="input">
+                    <p:inputText value="#{scan.deviceToken}" style="width:100%"/>
+                </f:facet>
+            </p:cellEditor>
+        </p:column>
+         
+        <p:column style="width:6%">
+            <p:rowEditor />
+        </p:column>
+        <f:facet name="footer">
+            
+            <p:commandButton value="Add Record"   actionListener="#{manageApplianceRecordBean.insertRow}" update="scanList"  ajax="false">
+            </p:commandButton>    
+            <p:commandButton value="Delete Record"   actionListener="#{manageContractorBean.deleteRow}" update="contractorList"  ajax="false">
+            </p:commandButton>    
+     
+            <p:commandButton value="Refresh"   actionListener="#{manageApplianceRecordBean.refreshData()}" update="scanList"  ajax="false">
+            </p:commandButton>    
+     
+        </f:facet>
+       
+    </p:dataTable>
+
+        </h:form>
+        
+            
+        
+    
+
+    </h:body>
+</html>
+

@@ -10,4 +10,8 @@
         <managed-bean-class>com.dickson.servicescanserverside.beans.ManageContractorBean</managed-bean-class>
         <managed-bean-scope>view</managed-bean-scope>
     </managed-bean>
+    <error-page>
+    <exception-type>javax.faces.application.ViewExpiredException</exception-type>
+    <location>/faces/index.xhtml</location>
+</error-page>
 </faces-config>

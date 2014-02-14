@@ -28,89 +28,114 @@ public class ServiceRequestManagedBean {
      * Creates a new instance of ServiceRequestManagedBean
      */
     
-    private Long id;
+    private Long rowid;
     private String qrcode;
     private String contractorFirstName;
     private String contractorLastName;
-    @Basic(optional = false)
-    @NotNull
-    @Size(min = 1, max = 200)
-    @Column(name = "contractorAddress")
-    private String contractorAddress;
-    @Basic(optional = false)
-    @NotNull
-    @Size(min = 1, max = 200)
-    @Column(name = "contractorCity")
-    private String contractorCity;
-    @Basic(optional = false)
-    @NotNull
-    @Size(min = 1, max = 10)
-    @Column(name = "contractorState")
-    private String contractorState;
-    @Basic(optional = false)
-    @NotNull
-    @Size(min = 1, max = 9)
-    @Column(name = "contractorZip")
-    private String contractorZip;
-    @Basic(optional = false)
-    @NotNull
-    @Size(min = 1, max = 20)
-    @Column(name = "contractorPhone")
-    private String contractorPhone;
-    @Basic(optional = false)
-    @NotNull
-    @Size(min = 1, max = 100)
-    @Column(name = "customerFirstName")
     private String customerFirstName;
-    @Basic(optional = false)
-    @NotNull
-    @Size(min = 1, max = 100)
-    @Column(name = "customerLastName")
     private String customerLastName;
-    @Basic(optional = false)
-    @NotNull
-    @Size(min = 1, max = 200)
-    @Column(name = "customerAddress")
-    private String customerAddress;
-    @Basic(optional = false)
-    @NotNull
-    @Size(min = 1, max = 200)
-    @Column(name = "customerCity")
-    private String customerCity;
-    @Basic(optional = false)
-    @NotNull
-    @Size(min = 1, max = 10)
-    @Column(name = "customerState")
-    private String customerState;
-    @Basic(optional = false)
-    @NotNull
-    @Size(min = 1, max = 9)
-    @Column(name = "customerZip")
-    private String customerZip;
-    @Basic(optional = false)
-    @NotNull
-    @Size(min = 1, max = 20)
-    @Column(name = "customerPhone")
-    private String customerPhone;
-    @Basic(optional = false)
-    @NotNull
-    @Size(min = 1, max = 100)
-    @Column(name = "applianceSerial")
-    private String applianceSerial;
-    @Basic(optional = false)
-    @NotNull
-    @Size(min = 1, max = 100)
-    @Column(name = "applianceModel")
-    private String applianceModel;
-    @Basic(optional = false)
-    @NotNull
-    @Size(min = 1, max = 100)
-    @Column(name = "applianceType")
     private String applianceType;
-
-    @Column(name = "deviceToken")
-    private String deviceToken;
+    
+    
     public ServiceRequestManagedBean() {
+    }
+
+    /**
+     * @return the rowid
+     */
+    public Long getRowid() {
+        return rowid;
+    }
+
+    /**
+     * @param rowid the rowid to set
+     */
+    public void setRowid(Long rowid) {
+        this.rowid = rowid;
+    }
+
+    /**
+     * @return the qrcode
+     */
+    public String getQrcode() {
+        return qrcode;
+    }
+
+    /**
+     * @param qrcode the qrcode to set
+     */
+    public void setQrcode(String qrcode) {
+        this.qrcode = qrcode;
+    }
+
+    /**
+     * @return the contractorFirstName
+     */
+    public String getContractorFirstName() {
+        return contractorFirstName;
+    }
+
+    /**
+     * @param contractorFirstName the contractorFirstName to set
+     */
+    public void setContractorFirstName(String contractorFirstName) {
+        this.contractorFirstName = contractorFirstName;
+    }
+
+    /**
+     * @return the contractorLastName
+     */
+    public String getContractorLastName() {
+        return contractorLastName;
+    }
+
+    /**
+     * @param contractorLastName the contractorLastName to set
+     */
+    public void setContractorLastName(String contractorLastName) {
+        this.contractorLastName = contractorLastName;
+    }
+
+    /**
+     * @return the customerFirstName
+     */
+    public String getCustomerFirstName() {
+        return customerFirstName;
+    }
+
+    /**
+     * @param customerFirstName the customerFirstName to set
+     */
+    public void setCustomerFirstName(String customerFirstName) {
+        this.customerFirstName = customerFirstName;
+    }
+
+    /**
+     * @return the customerLastName
+     */
+    public String getCustomerLastName() {
+        return customerLastName;
+    }
+
+    /**
+     * @param customerLastName the customerLastName to set
+     */
+    public void setCustomerLastName(String customerLastName) {
+        this.customerLastName = customerLastName;
+    }
+
+    /**
+     * @return the applianceType
+     */
+    public String getApplianceType() {
+        return applianceType;
+    }
+
+    /**
+     * @param applianceType the applianceType to set
+     */
+    public void setApplianceType(String applianceType) {
+        this.applianceType = applianceType;
     }
     
 }
