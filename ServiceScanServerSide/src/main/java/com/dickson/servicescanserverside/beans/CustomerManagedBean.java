@@ -26,6 +26,7 @@ public class CustomerManagedBean {
     private String state;
     private String zip;
     private String phone;
+    private String email;
     
     
     /**
@@ -144,6 +145,20 @@ public class CustomerManagedBean {
      */
     public void setPhone(String phone) {
         this.phone = phone;
+    }
+
+    /**
+     * @return the email
+     */
+    public String getEmail() {
+        return email;
+    }
+
+    /**
+     * @param email the email to set
+     */
+    public void setEmail(String email) {
+        this.email = email;
     }
     
 }

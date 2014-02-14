@@ -53,6 +53,7 @@ public class ManageCustomerBean {
             record.setState(newValue.getState());
             record.setZip(newValue.getZip());
             record.setPhone(newValue.getPhone());
+            record.setEmail(newValue.getEmail());
             em.persist(record);
             
             em.getTransaction().commit();
@@ -78,6 +79,8 @@ public class ManageCustomerBean {
                 record.setState(newValue.getState());
                 record.setZip(newValue.getZip());
                 record.setPhone(newValue.getPhone());
+                record.setEmail(newValue.getEmail());
+                
                 em.merge(record);
                 
                 em.getTransaction().commit();
@@ -115,7 +118,7 @@ public class ManageCustomerBean {
           customer.setState(" ");
           customer.setZip(" ");
           customer.setPhone(" ");
-          //customer.setEmail(" ");
+          customer.setEmail(" ");
           this.customers.add(customer);
           
         
@@ -146,7 +149,7 @@ public class ManageCustomerBean {
                 customer.setState(tempObject.getState());
                 customer.setZip(tempObject.getZip());
                 customer.setPhone(tempObject.getPhone());
-                
+                customer.setEmail(tempObject.getEmail());
                 customers.add(customer);
                 
                 

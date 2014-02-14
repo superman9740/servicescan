@@ -122,6 +122,17 @@
                 </f:facet>
             </p:cellEditor>
         </p:column>
+        <p:column headerText="Email" style="width:10%">
+            
+            <p:cellEditor>
+                <f:facet name="output">
+                    <h:outputText value="#{customer.email}" />
+                </f:facet>
+                <f:facet name="input">
+                    <p:inputText value="#{customer.email}" style="width:100%"/>
+                </f:facet>
+            </p:cellEditor>
+        </p:column>
         <p:column style="width:6%">
             <p:rowEditor />
         </p:column>
