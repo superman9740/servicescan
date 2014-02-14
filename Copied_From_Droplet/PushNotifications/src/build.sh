@@ -1,0 +1,1 @@
+g++ MMGAPNSConnection.cpp MMGSSLConnection.cpp MMGDevice.cpp MMGTools.cpp MMGPayload.cpp  MMGIOSPayload.cpp main.cpp -I/usr/include/mysql/   -lssl -lcrypto      -std=c++0x -o Pusher `mysql_config --cflags --libs`

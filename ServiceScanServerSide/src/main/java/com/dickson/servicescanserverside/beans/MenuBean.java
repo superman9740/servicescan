@@ -45,4 +45,11 @@ public class MenuBean {
         
     }
 
+    public String gotoImportQRCodes()
+    {
+        
+        return "importQRCodes";
+        
+        
+    }
 }

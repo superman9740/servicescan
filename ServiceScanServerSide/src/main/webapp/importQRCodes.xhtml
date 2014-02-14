@@ -1,0 +1,46 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:f="http://java.sun.com/jsf/core">
+    <h:head>
+        <title>ServiceScans Import QR Codes</title>
+        <style>
+        .page  {
+            text-align: center;
+        }    
+        </style>
+        
+    </h:head>
+    <h:body>
+        <h1 class="page">ServiceScans - Import QR Codes</h1>
+        
+          
+    <h1>
+        Select CSV file
+    </h1>
+        
+    <h:form enctype="multipart/form-data">  
+         <p:growl id="messages" showDetail="false"/>
+   
+        <p:menu>  
+            <p:menuitem value="Maintain Contractors" action="#{menuBean.gotoMaintainContractors}" update="messages" ajax="false" />  
+            <p:menuitem value="Maintain Customers" action="#{menuBean.gotoMaintainCustomers}" update="messages" ajax="false" />  
+            <p:menuitem value="Maintain Appliance Records" action="#{menuBean.gotoMaintainApplianceRecords()}" update="messages" ajax="false" />  
+            <p:menuitem value="Maintain Service Requests" action="#{menuBean.gotoMaintainCustomers}" update="messages" ajax="false" />  
+            <p:menuitem value="Import QR Codes" action="#{menuBean.gotoImportQRCodes}" update="messages" ajax="false" />  
+        
+        </p:menu>
+   
+    <p:fileUpload fileUploadListener="#{qrCodeFileImporter.importFile}" mode="advanced" update="messages"  >
+    </p:fileUpload>  
+  
+</h:form>  
+            
+        
+    
+
+    </h:body>
+</html>
+
