@@ -33,7 +33,7 @@
     <p:growl id="messages" showDetail="true"/>
 
     <p:dataTable var="customer" value="#{manageCustomerBean.customers}" id="customerList" editable="true" resizableColumns="true"
-                 paginator="true" rows="10"  
+                 paginator="true" rows="10"  emptyMessage="No records were found for the given criteria." filteredValue="#{manageCustomerBean.filteredCustomers}"
                  paginatorTemplate="{CurrentPageReport}  {FirstPageLink} {PreviousPageLink} {PageLinks} {NextPageLink} {LastPageLink} {RowsPerPageDropdown}"  
                  rowsPerPageTemplate="5,10,15">  
 
@@ -44,7 +44,7 @@
         <p:ajax event="rowEdit" listener="#{manageCustomerBean.onEdit}" update=":form:messages" />
         <p:ajax event="rowEditCancel" listener="#{manageCustomerBean.onCancel}" update=":form:messages" />
 
-        <p:column headerText="First Name" style="width:20%">
+        <p:column headerText="First Name" filterBy="firstName" filterMatchMode="contains" style="width:20%">
             <p:cellEditor>
                 <f:facet name="output">
                     <h:outputText value="#{customer.firstName}" />
@@ -55,7 +55,7 @@
             </p:cellEditor>
         </p:column>
 
-        <p:column headerText="Last Name" style="width:20%">
+        <p:column headerText="Last Name" filterBy="lastName" filterMatchMode="contains" style="width:20%">
             <p:cellEditor>
                 <f:facet name="output">
                     <h:outputText value="#{customer.lastName}" />
@@ -66,7 +66,7 @@
             </p:cellEditor>
         </p:column>
 
-        <p:column headerText="Address" style="width:20%">
+        <p:column headerText="Address" filterBy="address" filterMatchMode="contains" style="width:20%">
         
         <p:cellEditor>
                 <f:facet name="output">
@@ -77,7 +77,7 @@
                 </f:facet>
             </p:cellEditor>
         </p:column>
-        <p:column headerText="City" style="width:20%">
+        <p:column headerText="City" filterBy="city" filterMatchMode="contains" style="width:20%">
         
         <p:cellEditor>
                 <f:facet name="output">
@@ -89,7 +89,7 @@
             </p:cellEditor>
         </p:column>
          
-        <p:column headerText="State" style="width:5%">
+        <p:column headerText="State" filterBy="state" filterMatchMode="contains" style="width:5%">
         
             <p:cellEditor>
                 <f:facet name="output">
@@ -100,7 +100,7 @@
                 </f:facet>
             </p:cellEditor>
         </p:column>
-        <p:column headerText="Zip" style="width:10%">
+        <p:column headerText="Zip" filterBy="zip" filterMatchMode="contains" style="width:10%">
         
         <p:cellEditor>
                 <f:facet name="output">
@@ -111,7 +111,7 @@
                 </f:facet>
             </p:cellEditor>
         </p:column>
-        <p:column headerText="Phone" style="width:10%">
+        <p:column headerText="Phone" filterBy="zip" filterMatchMode="contains" style="width:10%">
             
             <p:cellEditor>
                 <f:facet name="output">
@@ -122,7 +122,7 @@
                 </f:facet>
             </p:cellEditor>
         </p:column>
-        <p:column headerText="Email" style="width:10%">
+        <p:column headerText="Email" filterBy="email" filterMatchMode="contains" style="width:10%">
             
             <p:cellEditor>
                 <f:facet name="output">
@@ -148,6 +148,109 @@
     </p:dataTable>
 
   
+    <p:dataTable id="exportCustomer" value="#{manageCustomerBean.customers}" var="customer" rows="10" rendered="false">
+<f:facet name="header">Customers</f:facet>
+<p:column>
+    <f:facet name="header">
+        <h:outputText value="First Name">
+            
+        </h:outputText>
+        
+    </f:facet>
+    <h:outputText value="#{customer.firstName}" />
+</p:column>
+<p:column >
+    <f:facet name="header">
+        <h:outputText value="Last Name">
+            
+        </h:outputText>
+        
+    </f:facet>
+    <h:outputText value="#{customer.lastName}" />
+</p:column>
+<p:column >
+    <f:facet name="header">
+        <h:outputText value="Address">
+            
+        </h:outputText>
+        
+    </f:facet>
+    <h:outputText value="#{customer.address}" />
+</p:column>
+<p:column >
+    <f:facet name="header">
+        <h:outputText value="City">
+            
+        </h:outputText>
+        
+    </f:facet>
+    <h:outputText value="#{customer.city}" />
+</p:column><p:column >
+    <f:facet name="header">
+        <h:outputText value="State">
+            
+        </h:outputText>
+        
+    </f:facet>
+    <h:outputText value="#{customer.state}" />
+</p:column><p:column >
+    <f:facet name="header">
+        <h:outputText value="Zip">
+            
+        </h:outputText>
+        
+    </f:facet>
+    <h:outputText value="#{customer.zip}" />
+    
+</p:column>
+<p:column >
+    <f:facet name="header">
+        <h:outputText value="Phone">
+            
+        </h:outputText>
+        
+    </f:facet>
+    <h:outputText value="#{customer.phone}" />
+</p:column><p:column >
+    <f:facet name="header">
+        <h:outputText value="Email">
+            
+        </h:outputText>
+        
+    </f:facet>
+    <h:outputText value="#{customer.email}" />
+</p:column>
+</p:dataTable> 
+    
+    
+    
+    
+    
+    
+    
+<h:panelGrid columns="2">  
+    <p:panel header="Export All Data">  
+        <h:commandLink>  
+            
+            <p:graphicImage value="/assets/img/excel.png" />  
+            <p:dataExporter type="xls" target="exportCustomer" fileName="customers" />  
+        </h:commandLink>  
+  
+          
+        <h:commandLink>  
+            <p:graphicImage value="/assets/img/csv.png" />  
+            <p:dataExporter type="csv" target="exportCustomer" fileName="customers" />  
+        </h:commandLink>  
+          
+        <h:commandLink>  
+            <p:graphicImage value="/assets/img/xml.png" />  
+            <p:dataExporter type="xml" target="exportCustomer" fileName="customers" />  
+        </h:commandLink>  
+    </p:panel>  
+      
+      
+</h:panelGrid>  
+ 
             
             
         </h:form>

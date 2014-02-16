@@ -28,6 +28,8 @@ public class ManageApplianceRecordBean {
 
     
     private List<ApplianceRecordManagedBean> applianceRecords;
+    private List<ApplianceRecordManagedBean> filteredApplianceRecords;
+    
     
     
     
@@ -162,5 +164,19 @@ public class ManageApplianceRecordBean {
      */
     public void setApplianceRecords(List<ApplianceRecordManagedBean> applianceRecords) {
         this.applianceRecords = applianceRecords;
+    }
+
+    /**
+     * @return the filteredApplianceRecords
+     */
+    public List<ApplianceRecordManagedBean> getFilteredApplianceRecords() {
+        return filteredApplianceRecords;
+    }
+
+    /**
+     * @param filteredApplianceRecords the filteredApplianceRecords to set
+     */
+    public void setFilteredApplianceRecords(List<ApplianceRecordManagedBean> filteredApplianceRecords) {
+        this.filteredApplianceRecords = filteredApplianceRecords;
     }
 }

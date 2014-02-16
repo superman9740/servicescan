@@ -33,7 +33,7 @@
 
     <p:growl id="messages" showDetail="true"/>
 
-    <p:dataTable var="contractor" value="#{manageContractorBean.contractors}" id="contractorList" editable="true" resizableColumns="true"
+    <p:dataTable var="contractor" value="#{manageContractorBean.contractors}" id="contractorList" editable="true" resizableColumns="true" emptyMessage="No records were found for the given criteria." filteredValue="#{manageContractorBean.filteredContractors}"
                  paginator="true" rows="10"  
                  paginatorTemplate="{CurrentPageReport}  {FirstPageLink} {PreviousPageLink} {PageLinks} {NextPageLink} {LastPageLink} {RowsPerPageDropdown}"  
                  rowsPerPageTemplate="5,10,15">  
@@ -45,7 +45,7 @@
         <p:ajax event="rowEdit" listener="#{manageContractorBean.onEdit}" update=":form:messages" />
         <p:ajax event="rowEditCancel" listener="#{manageContractorBean.onCancel}" update=":form:messages" />
 
-        <p:column headerText="First Name" style="width:20%">
+        <p:column headerText="First Name" filterBy="firstName" filterMatchMode="contains" style="width:20%">
             <p:cellEditor>
                 <f:facet name="output">
                     <h:outputText value="#{contractor.firstName}" />
@@ -56,7 +56,7 @@
             </p:cellEditor>
         </p:column>
 
-        <p:column headerText="Last Name" style="width:20%">
+        <p:column headerText="Last Name"  filterBy="lastName" filterMatchMode="contains" style="width:20%">
             <p:cellEditor>
                 <f:facet name="output">
                     <h:outputText value="#{contractor.lastName}" />
@@ -67,7 +67,7 @@
             </p:cellEditor>
         </p:column>
 
-        <p:column headerText="Address" style="width:20%">
+        <p:column headerText="Address" filterBy="address" filterMatchMode="contains" style="width:20%">
         
         <p:cellEditor>
                 <f:facet name="output">
@@ -78,7 +78,7 @@
                 </f:facet>
             </p:cellEditor>
         </p:column>
-        <p:column headerText="City" style="width:20%">
+        <p:column headerText="City" filterBy="city" filterMatchMode="contains" style="width:20%">
         
         <p:cellEditor>
                 <f:facet name="output">
@@ -90,7 +90,7 @@
             </p:cellEditor>
         </p:column>
          
-        <p:column headerText="State" style="width:5%">
+        <p:column headerText="State" filterBy="state" filterMatchMode="contains" style="width:5%">
         
             <p:cellEditor>
                 <f:facet name="output">
@@ -101,7 +101,7 @@
                 </f:facet>
             </p:cellEditor>
         </p:column>
-        <p:column headerText="Zip" style="width:10%">
+        <p:column headerText="Zip" filterBy="zip" filterMatchMode="contains" style="width:10%">
         
         <p:cellEditor>
                 <f:facet name="output">
@@ -112,7 +112,7 @@
                 </f:facet>
             </p:cellEditor>
         </p:column>
-        <p:column headerText="Phone" style="width:10%">
+        <p:column headerText="Phone" filterBy="phone" filterMatchMode="contains" style="width:10%">
             
             <p:cellEditor>
                 <f:facet name="output">
@@ -123,7 +123,7 @@
                 </f:facet>
             </p:cellEditor>
         </p:column>
-        <p:column headerText="Email" style="width:15%">
+        <p:column headerText="Email" filterBy="email" filterMatchMode="contains" style="width:15%">
         
         <p:cellEditor>
                 <f:facet name="output">
@@ -146,11 +146,116 @@
      
             <p:commandButton value="Refresh"   actionListener="#{manageContractorBean.refreshData()}" update="contractorList"  ajax="false">
             </p:commandButton>    
-     
+              
         </f:facet>
        
     </p:dataTable>
-
+    
+    
+    <p:dataTable id="exportContractor" value="#{manageContractorBean.contractors}" var="contractor" rows="10" rendered="false">
+<f:facet name="header">Contractors</f:facet>
+<p:column>
+    <f:facet name="header">
+        <h:outputText value="First Name">
+            
+        </h:outputText>
+        
+    </f:facet>
+    <h:outputText value="#{contractor.firstName}" />
+</p:column>
+<p:column >
+    <f:facet name="header">
+        <h:outputText value="Last Name">
+            
+        </h:outputText>
+        
+    </f:facet>
+    <h:outputText value="#{contractor.lastName}" />
+</p:column>
+<p:column >
+    <f:facet name="header">
+        <h:outputText value="Address">
+            
+        </h:outputText>
+        
+    </f:facet>
+    <h:outputText value="#{contractor.address}" />
+</p:column>
+<p:column >
+    <f:facet name="header">
+        <h:outputText value="City">
+            
+        </h:outputText>
+        
+    </f:facet>
+    <h:outputText value="#{contractor.city}" />
+</p:column><p:column >
+    <f:facet name="header">
+        <h:outputText value="State">
+            
+        </h:outputText>
+        
+    </f:facet>
+    <h:outputText value="#{contractor.state}" />
+</p:column><p:column >
+    <f:facet name="header">
+        <h:outputText value="Zip">
+            
+        </h:outputText>
+        
+    </f:facet>
+    <h:outputText value="#{contractor.zip}" />
+    
+</p:column>
+<p:column >
+    <f:facet name="header">
+        <h:outputText value="Phone">
+            
+        </h:outputText>
+        
+    </f:facet>
+    <h:outputText value="#{contractor.phone}" />
+</p:column><p:column >
+    <f:facet name="header">
+        <h:outputText value="Email">
+            
+        </h:outputText>
+        
+    </f:facet>
+    <h:outputText value="#{contractor.email}" />
+</p:column>
+</p:dataTable> 
+    
+    
+    
+    
+    
+    
+    
+<h:panelGrid columns="2">  
+    <p:panel header="Export All Data">  
+        <h:commandLink>  
+            
+            <p:graphicImage value="/assets/img/excel.png" />  
+            <p:dataExporter type="xls" target="exportContractor" fileName="contractors" />  
+        </h:commandLink>  
+  
+          
+        <h:commandLink>  
+            <p:graphicImage value="/assets/img/csv.png" />  
+            <p:dataExporter type="csv" target="exportContractor" fileName="contractors" />  
+        </h:commandLink>  
+          
+        <h:commandLink>  
+            <p:graphicImage value="/assets/img/xml.png" />  
+            <p:dataExporter type="xml" target="exportContractor" fileName="contractors" />  
+        </h:commandLink>  
+    </p:panel>  
+      
+      
+</h:panelGrid>  
+    
+    
         </h:form>
         
             

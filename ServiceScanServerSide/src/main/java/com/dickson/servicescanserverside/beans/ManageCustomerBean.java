@@ -34,6 +34,8 @@ public class ManageCustomerBean {
     
     
      private List<CustomerManagedBean> customers;
+     private List<CustomerManagedBean> filteredCustomers;
+     
     public void onEdit(RowEditEvent event)
     {
         
@@ -173,5 +175,19 @@ public class ManageCustomerBean {
      */
     public void setCustomers(List<CustomerManagedBean> customers) {
         this.customers = customers;
+    }
+
+    /**
+     * @return the filteredCustomers
+     */
+    public List<CustomerManagedBean> getFilteredCustomers() {
+        return filteredCustomers;
+    }
+
+    /**
+     * @param filteredCustomers the filteredCustomers to set
+     */
+    public void setFilteredCustomers(List<CustomerManagedBean> filteredCustomers) {
+        this.filteredCustomers = filteredCustomers;
     }
 }

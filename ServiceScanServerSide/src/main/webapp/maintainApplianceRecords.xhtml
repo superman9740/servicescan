@@ -34,7 +34,7 @@
     <p:growl id="messages" showDetail="true"/>
 
     <p:dataTable var="scan" value="#{manageApplianceRecordBean.applianceRecords}" id="scanList" editable="true" resizableColumns="true"
-                 paginator="true" rows="10"  
+                 paginator="true" rows="10"  emptyMessage="No records were found for the given criteria." filteredValue="#{manageApplianceRecordBean.filteredApplianceRecords}"
                  paginatorTemplate="{CurrentPageReport}  {FirstPageLink} {PreviousPageLink} {PageLinks} {NextPageLink} {LastPageLink} {RowsPerPageDropdown}"  
                  rowsPerPageTemplate="5,10,15">  
 
@@ -45,7 +45,7 @@
         <p:ajax event="rowEdit" listener="#{manageApplianceRecordBean.onEdit}" update=":form:messages" />
         <p:ajax event="rowEditCancel" listener="#{manageApplianceRecordBean.onCancel}" update=":form:messages" />
 
-        <p:column headerText="Model" style="width:20%">
+        <p:column headerText="Model" filterBy="applianceModel" filterMatchMode="contains" style="width:20%">
             <p:cellEditor>
                 <f:facet name="output">
                     <h:outputText value="#{scan.applianceModel}" />
@@ -56,7 +56,7 @@
             </p:cellEditor>
         </p:column>
 
-        <p:column headerText="Serial" style="width:20%">
+        <p:column headerText="Serial" filterBy="applianceSerial" filterMatchMode="contains" style="width:20%">
             <p:cellEditor>
                 <f:facet name="output">
                     <h:outputText value="#{scan.applianceSerial}" />
@@ -67,7 +67,7 @@
             </p:cellEditor>
         </p:column>
 
-        <p:column headerText="Type" style="width:20%">
+        <p:column headerText="Type" filterBy="applianceType" filterMatchMode="contains" style="width:20%">
         
         <p:cellEditor>
                 <f:facet name="output">
@@ -107,6 +107,78 @@
        
     </p:dataTable>
 
+    
+    
+    <p:dataTable id="export" value="#{manageApplianceRecordBean.applianceRecords}" var="appliance" rows="10" rendered="false">
+<f:facet name="header">Appliance Records</f:facet>
+<p:column>
+    <f:facet name="header">
+        <h:outputText value="Model">
+            
+        </h:outputText>
+        
+    </f:facet>
+    <h:outputText value="#{appliance.applianceModel}" />
+</p:column>
+<p:column >
+    <f:facet name="header">
+        <h:outputText value="Serial">
+            
+        </h:outputText>
+        
+    </f:facet>
+    <h:outputText value="#{appliance.applianceSerial}" />
+</p:column>
+<p:column >
+    <f:facet name="header">
+        <h:outputText value="Type">
+            
+        </h:outputText>
+        
+    </f:facet>
+    <h:outputText value="#{appliance.applianceType}" />
+</p:column>
+<p:column >
+    <f:facet name="header">
+        <h:outputText value="Device Token">
+            
+        </h:outputText>
+        
+    </f:facet>
+    <h:outputText value="#{appliance.deviceToken}" />
+</p:column>
+
+</p:dataTable> 
+    
+    
+    
+    
+    
+    
+    
+<h:panelGrid columns="2">  
+    <p:panel header="Export All Data">  
+        <h:commandLink>  
+            
+            <p:graphicImage value="/assets/img/excel.png" />  
+            <p:dataExporter type="xls" target="export" fileName="appliances" />  
+        </h:commandLink>  
+  
+          
+        <h:commandLink>  
+            <p:graphicImage value="/assets/img/csv.png" />  
+            <p:dataExporter type="csv" target="export" fileName="appliances" />  
+        </h:commandLink>  
+          
+        <h:commandLink>  
+            <p:graphicImage value="/assets/img/xml.png" />  
+            <p:dataExporter type="xml" target="export" fileName="appliances" />  
+        </h:commandLink>  
+    </p:panel>  
+      
+      
+</h:panelGrid>  
+ 
         </h:form>
         
             

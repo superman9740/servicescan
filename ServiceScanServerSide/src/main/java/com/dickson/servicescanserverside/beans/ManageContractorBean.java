@@ -8,20 +8,30 @@ package com.dickson.servicescanserverside.beans;
 
 import com.dickson.servicescanserverside.Contractor;
 import com.dickson.servicescanserverside.Scan;
+import java.io.BufferedWriter;
+import java.io.FileWriter;
+import java.io.IOException;
+import java.io.InputStream;
 import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javax.faces.bean.ManagedBean;
 import javax.faces.bean.RequestScoped;
 import javax.faces.bean.SessionScoped;
+import javax.faces.context.FacesContext;
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.Persistence;
 import javax.persistence.Query;
 import javax.persistence.TypedQuery;
+import javax.servlet.ServletContext;
 import org.primefaces.event.CellEditEvent;
 import org.primefaces.event.RowEditEvent;
+import org.primefaces.model.DefaultStreamedContent;
 import org.primefaces.model.SelectableDataModel;
+import org.primefaces.model.StreamedContent;
 
 /**
  *
@@ -35,8 +45,13 @@ public class ManageContractorBean implements Serializable {
      * Creates a new instance of ManageContractorBean
      */
      private List<ContractorManagedBean> contractors;
+     private List<ContractorManagedBean> filteredContractors;
+   
+     
      private Contractor selectedContractor;
-     public void deleteRow()
+     private StreamedContent file;
+     
+          public void deleteRow()
      {
          
            EntityManagerFactory emf = Persistence.createEntityManagerFactory("com.dickson_ServiceScanServerSide_war_1.0-SNAPSHOTPU");
@@ -176,8 +191,7 @@ public class ManageContractorBean implements Serializable {
             }
     
     
-    
-        
+       
     
     }
     
@@ -206,6 +220,34 @@ public class ManageContractorBean implements Serializable {
      */
     public void setSelectedContractor(Contractor selectedContractor) {
         this.selectedContractor = selectedContractor;
+    }
+
+    /**
+     * @return the filteredContractors
+     */
+    public List<ContractorManagedBean> getFilteredContractors() {
+        return filteredContractors;
+    }
+
+    /**
+     * @param filteredContractors the filteredContractors to set
+     */
+    public void setFilteredContractors(List<ContractorManagedBean> filteredContractors) {
+        this.filteredContractors = filteredContractors;
+    }
+
+    /**
+     * @return the file
+     */
+    public StreamedContent getFile() {
+        return file;
+    }
+
+    /**
+     * @param file the file to set
+     */
+    public void setFile(StreamedContent file) {
+        this.file = file;
     }
 
     
