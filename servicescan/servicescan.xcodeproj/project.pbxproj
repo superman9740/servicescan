@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3C23660618B2501F00ABBEC1 /* libFlurry_4.3.2.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C23660518B2501F00ABBEC1 /* libFlurry_4.3.2.a */; };
+		3C23660818B2503700ABBEC1 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C23660718B2503700ABBEC1 /* SystemConfiguration.framework */; };
 		3C38879B18876AE200EEFDD7 /* camera.png in Resources */ = {isa = PBXBuildFile; fileRef = 3C38879A18876AE200EEFDD7 /* camera.png */; };
 		3C38879D18876CB800EEFDD7 /* text-left.png in Resources */ = {isa = PBXBuildFile; fileRef = 3C38879C18876CB800EEFDD7 /* text-left.png */; };
 		3C95E58918876FC100C608C6 /* CustomCameraViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C95E58818876FC100C608C6 /* CustomCameraViewController.m */; };
@@ -88,6 +90,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3C23660418B2501F00ABBEC1 /* Flurry.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Flurry.h; sourceTree = "<group>"; };
+		3C23660518B2501F00ABBEC1 /* libFlurry_4.3.2.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libFlurry_4.3.2.a; sourceTree = "<group>"; };
+		3C23660718B2503700ABBEC1 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		3C38879A18876AE200EEFDD7 /* camera.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = camera.png; sourceTree = "<group>"; };
 		3C38879C18876CB800EEFDD7 /* text-left.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "text-left.png"; sourceTree = "<group>"; };
 		3C95E58718876FC100C608C6 /* CustomCameraViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomCameraViewController.h; sourceTree = "<group>"; };
@@ -187,9 +192,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3C23660818B2503700ABBEC1 /* SystemConfiguration.framework in Frameworks */,
 				DE33C05C1885D7A1005F528A /* CoreGraphics.framework in Frameworks */,
 				DE33C05E1885D7A1005F528A /* UIKit.framework in Frameworks */,
 				DE33C05A1885D7A1005F528A /* Foundation.framework in Frameworks */,
+				3C23660618B2501F00ABBEC1 /* libFlurry_4.3.2.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -206,6 +213,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3C23660318B2501F00ABBEC1 /* Flurry */ = {
+			isa = PBXGroup;
+			children = (
+				3C23660418B2501F00ABBEC1 /* Flurry.h */,
+				3C23660518B2501F00ABBEC1 /* libFlurry_4.3.2.a */,
+			);
+			path = Flurry;
+			sourceTree = "<group>";
+		};
 		3C38879E18876D3F00EEFDD7 /* History */ = {
 			isa = PBXGroup;
 			children = (
@@ -264,6 +280,7 @@
 		DE33C04D1885D7A1005F528A = {
 			isa = PBXGroup;
 			children = (
+				3C23660318B2501F00ABBEC1 /* Flurry */,
 				DE33C05F1885D7A1005F528A /* servicescan */,
 				DE33C0841885D7A2005F528A /* servicescanTests */,
 				DE33C0581885D7A1005F528A /* Frameworks */,
@@ -283,6 +300,7 @@
 		DE33C0581885D7A1005F528A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				3C23660718B2503700ABBEC1 /* SystemConfiguration.framework */,
 				DE33C0591885D7A1005F528A /* Foundation.framework */,
 				DE33C05B1885D7A1005F528A /* CoreGraphics.framework */,
 				DE33C05D1885D7A1005F528A /* UIKit.framework */,
@@ -760,6 +778,10 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "servicescan/servicescan-Prefix.pch";
 				INFOPLIST_FILE = "servicescan/servicescan-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					/Users/sdickson/Code/Darren/ServiceScan/servicescan/Flurry,
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "C31B6EBE-E491-433F-A0FF-3A173EA477E4";
 				WRAPPER_EXTENSION = app;
@@ -774,6 +796,10 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "servicescan/servicescan-Prefix.pch";
 				INFOPLIST_FILE = "servicescan/servicescan-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					/Users/sdickson/Code/Darren/ServiceScan/servicescan/Flurry,
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "91F3348D-74A7-414D-9C5B-4A899203AD75";
 				WRAPPER_EXTENSION = app;

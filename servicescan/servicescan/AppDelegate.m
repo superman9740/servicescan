@@ -10,6 +10,7 @@
 #import "UIImage+iPhone5.h"
 #import "Utils.h"
 #import "AppController.h"
+#import "Flurry.h"
 
 
 @implementation AppDelegate
@@ -51,6 +52,8 @@
     
     application.applicationIconBadgeNumber = 0;
     
+    [Flurry setCrashReportingEnabled:YES];
+    [Flurry startSession:@"YDZDNJH88ZTNW44DNGBT"];
     
     return YES;
 }
