@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		3C23660618B2501F00ABBEC1 /* libFlurry_4.3.2.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C23660518B2501F00ABBEC1 /* libFlurry_4.3.2.a */; };
 		3C23660818B2503700ABBEC1 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C23660718B2503700ABBEC1 /* SystemConfiguration.framework */; };
 		3C38879B18876AE200EEFDD7 /* camera.png in Resources */ = {isa = PBXBuildFile; fileRef = 3C38879A18876AE200EEFDD7 /* camera.png */; };
 		3C38879D18876CB800EEFDD7 /* text-left.png in Resources */ = {isa = PBXBuildFile; fileRef = 3C38879C18876CB800EEFDD7 /* text-left.png */; };
@@ -72,6 +71,7 @@
 		DE809AD8188878BF009A5672 /* button-red.png in Resources */ = {isa = PBXBuildFile; fileRef = DE809AD6188878BF009A5672 /* button-red.png */; };
 		DE809AD9188878BF009A5672 /* button-red@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DE809AD7188878BF009A5672 /* button-red@2x.png */; };
 		DE809ADD188879E3009A5672 /* AppController.m in Sources */ = {isa = PBXBuildFile; fileRef = DE809ADC188879E3009A5672 /* AppController.m */; };
+		DEC042BA18B67326008CDC0E /* libFlurry_4.3.2.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DEC042B918B67326008CDC0E /* libFlurry_4.3.2.a */; };
 		DED7DBF6189B0966005E8B60 /* InAppPurchase.m in Sources */ = {isa = PBXBuildFile; fileRef = DED7DBF5189B0966005E8B60 /* InAppPurchase.m */; };
 		DEE83A55189075DB005B6B23 /* SettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DEE83A54189075DB005B6B23 /* SettingsViewController.m */; };
 		DEE83A5818907BD7005B6B23 /* ContractorSettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DEE83A5718907BD7005B6B23 /* ContractorSettingsViewController.m */; };
@@ -90,8 +90,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		3C23660418B2501F00ABBEC1 /* Flurry.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Flurry.h; sourceTree = "<group>"; };
-		3C23660518B2501F00ABBEC1 /* libFlurry_4.3.2.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libFlurry_4.3.2.a; sourceTree = "<group>"; };
 		3C23660718B2503700ABBEC1 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		3C38879A18876AE200EEFDD7 /* camera.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = camera.png; sourceTree = "<group>"; };
 		3C38879C18876CB800EEFDD7 /* text-left.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "text-left.png"; sourceTree = "<group>"; };
@@ -175,6 +173,8 @@
 		DE809AD7188878BF009A5672 /* button-red@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "button-red@2x.png"; sourceTree = "<group>"; };
 		DE809ADB188879E3009A5672 /* AppController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppController.h; sourceTree = "<group>"; };
 		DE809ADC188879E3009A5672 /* AppController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppController.m; sourceTree = "<group>"; };
+		DEC042B818B67326008CDC0E /* Flurry.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Flurry.h; sourceTree = "<group>"; };
+		DEC042B918B67326008CDC0E /* libFlurry_4.3.2.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libFlurry_4.3.2.a; sourceTree = "<group>"; };
 		DED7DBF4189B0966005E8B60 /* InAppPurchase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InAppPurchase.h; sourceTree = "<group>"; };
 		DED7DBF5189B0966005E8B60 /* InAppPurchase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InAppPurchase.m; sourceTree = "<group>"; };
 		DEE83A53189075DB005B6B23 /* SettingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingsViewController.h; sourceTree = "<group>"; };
@@ -193,10 +193,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				3C23660818B2503700ABBEC1 /* SystemConfiguration.framework in Frameworks */,
+				DEC042BA18B67326008CDC0E /* libFlurry_4.3.2.a in Frameworks */,
 				DE33C05C1885D7A1005F528A /* CoreGraphics.framework in Frameworks */,
 				DE33C05E1885D7A1005F528A /* UIKit.framework in Frameworks */,
 				DE33C05A1885D7A1005F528A /* Foundation.framework in Frameworks */,
-				3C23660618B2501F00ABBEC1 /* libFlurry_4.3.2.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -213,15 +213,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		3C23660318B2501F00ABBEC1 /* Flurry */ = {
-			isa = PBXGroup;
-			children = (
-				3C23660418B2501F00ABBEC1 /* Flurry.h */,
-				3C23660518B2501F00ABBEC1 /* libFlurry_4.3.2.a */,
-			);
-			path = Flurry;
-			sourceTree = "<group>";
-		};
 		3C38879E18876D3F00EEFDD7 /* History */ = {
 			isa = PBXGroup;
 			children = (
@@ -280,7 +271,7 @@
 		DE33C04D1885D7A1005F528A = {
 			isa = PBXGroup;
 			children = (
-				3C23660318B2501F00ABBEC1 /* Flurry */,
+				DEC042B718B67326008CDC0E /* Flurry */,
 				DE33C05F1885D7A1005F528A /* servicescan */,
 				DE33C0841885D7A2005F528A /* servicescanTests */,
 				DE33C0581885D7A1005F528A /* Frameworks */,
@@ -469,6 +460,15 @@
 				DE809ADC188879E3009A5672 /* AppController.m */,
 			);
 			name = AppController;
+			sourceTree = "<group>";
+		};
+		DEC042B718B67326008CDC0E /* Flurry */ = {
+			isa = PBXGroup;
+			children = (
+				DEC042B818B67326008CDC0E /* Flurry.h */,
+				DEC042B918B67326008CDC0E /* libFlurry_4.3.2.a */,
+			);
+			path = Flurry;
 			sourceTree = "<group>";
 		};
 		DEE83A52189075C2005B6B23 /* Settings */ = {
@@ -781,6 +781,7 @@
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					/Users/sdickson/Code/Darren/ServiceScan/servicescan/Flurry,
+					"/Users/USMEM-W-003157/Documents/Code/ServiceScan/servicescan/Flurry",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "C31B6EBE-E491-433F-A0FF-3A173EA477E4";
@@ -799,6 +800,7 @@
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					/Users/sdickson/Code/Darren/ServiceScan/servicescan/Flurry,
+					"/Users/USMEM-W-003157/Documents/Code/ServiceScan/servicescan/Flurry",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "91F3348D-74A7-414D-9C5B-4A899203AD75";

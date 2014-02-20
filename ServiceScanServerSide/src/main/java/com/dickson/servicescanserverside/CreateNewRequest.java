@@ -22,6 +22,7 @@ import net.sf.json.JSONObject;
 import com.dickson.servicescanserverside.Request;
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
+import javax.persistence.Query;
 
 /**
  *
@@ -61,10 +62,14 @@ public class CreateNewRequest extends HttpServlet {
             em.persist(newRequest);
             em.getTransaction().commit();
             
+            Query qrCodeQuery = em.createNamedQuery("Qrcode.findByQrCode");
+            qrCodeQuery.setParameter("qrCode", qrCode);
+            Qrcode qrCodeObject = (Qrcode)qrCodeQuery.getSingleResult();
+          
             
-            
-             TypedQuery<Scan> query = em.createQuery("SELECT c FROM Scan c WHERE c.qrcode = :qrcode", Scan.class);
-             query.setParameter("qrcode", qrCode);
+             TypedQuery<Scan> query = em.createQuery("SELECT c FROM Scan c WHERE c.qrCodeid = :qrcode", Scan.class);
+             
+             query.setParameter("qrcode", qrCodeObject);
              List<Scan> scans = query.getResultList();
             
              if(scans.isEmpty())
