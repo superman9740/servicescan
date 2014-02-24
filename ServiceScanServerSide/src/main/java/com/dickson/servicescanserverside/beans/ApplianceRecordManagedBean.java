@@ -7,6 +7,7 @@
 package com.dickson.servicescanserverside.beans;
 
 import javax.faces.bean.ManagedBean;
+import javax.faces.bean.RequestScoped;
 import javax.faces.bean.ViewScoped;
 
 /**
@@ -14,7 +15,7 @@ import javax.faces.bean.ViewScoped;
  * @author USMEM-W-003157
  */
 @ManagedBean
-@ViewScoped
+@RequestScoped
 public class ApplianceRecordManagedBean {
 
     private Long rowid;

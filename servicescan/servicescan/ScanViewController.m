@@ -126,8 +126,64 @@
         }
         case 2:
         {
+            
+            NSString* urlString = [NSString stringWithFormat:@"http://servicescans.com/GetScanData?qrCode=%@",[[AppController sharedInstance] qrCode]];
+            
+            NSURL* url = [NSURL URLWithString:urlString];
+            
+            NSError* error = nil;
+            NSURLResponse* response = nil;
+            NSURLRequest* request = [NSURLRequest requestWithURL:url];
+            
+            NSData* jsonData = [NSURLConnection sendSynchronousRequest:request returningResponse:&response error:&error];
+            if(error.code == -1004)
+            {
+                
+                
+                UIAlertView* alertView = [[UIAlertView alloc] initWithTitle:@"Service Error" message:@"There was an error connecting to the server.  Please try again." delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil];
+                [alertView show];
+                return;
+                
+            }
+            
+            NSString* jsonString = [[NSString alloc] initWithData:jsonData encoding:NSUTF8StringEncoding];
+            
+            if([jsonString isEqualToString:@"-1\n"])
+            {
+              
+                [self performSegueWithIdentifier:@"showContractorScanCompleted" sender:self];
+                
+                return;
+                
+            }
+            NSDictionary* dict = [NSJSONSerialization JSONObjectWithData:jsonData options:0 error:&error];
+            
+            
+            NSString* applianceModel = [dict valueForKey:@"applianceModel"];
+            ServiceScan* serviceScan = [[AppController sharedInstance] serviceScan];
+            serviceScan.applianceModel = applianceModel;
+            serviceScan.applianceSerial = [dict valueForKey:@"applianceSerial"];
+            serviceScan.applianceType = [dict valueForKey:@"applianceType"];
+            
+            
+            //Customer
+            NSDictionary* customer = [dict valueForKey:@"customer"];
+            NSString* custFirstName = [customer valueForKey:@"firstName"];
+            serviceScan.customerFirstName = [customer valueForKey:@"firstName"];
+            serviceScan.customerLastName = [customer valueForKey:@"lastName"];
+            serviceScan.customerAddress = [customer valueForKey:@"address"];
+            serviceScan.customerCity = [customer valueForKey:@"city"];
+            serviceScan.customerState = [customer valueForKey:@"state"];
+            serviceScan.customerZip = [customer valueForKey:@"zip"];
+            serviceScan.customerPhone = [customer valueForKey:@"phone"];
+            
+            
             [self performSegueWithIdentifier:@"showContractorScanCompleted" sender:self];
+            
             break;
+
+            
+            
             
         }
             

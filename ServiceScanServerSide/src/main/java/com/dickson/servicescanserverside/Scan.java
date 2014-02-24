@@ -7,6 +7,7 @@
 package com.dickson.servicescanserverside;
 
 import java.io.Serializable;
+import java.util.Collection;
 import javax.persistence.Basic;
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -17,9 +18,11 @@ import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.NamedQueries;
 import javax.persistence.NamedQuery;
+import javax.persistence.OneToMany;
 import javax.persistence.Table;
 import javax.validation.constraints.Size;
 import javax.xml.bind.annotation.XmlRootElement;
+import javax.xml.bind.annotation.XmlTransient;
 
 /**
  *
@@ -36,6 +39,8 @@ import javax.xml.bind.annotation.XmlRootElement;
     @NamedQuery(name = "Scan.findByApplianceType", query = "SELECT s FROM Scan s WHERE s.applianceType = :applianceType"),
     @NamedQuery(name = "Scan.findByDeviceToken", query = "SELECT s FROM Scan s WHERE s.deviceToken = :deviceToken")})
 public class Scan implements Serializable {
+    @OneToMany(mappedBy = "qrCodeID")
+    private Collection<ServiceCall> serviceCallCollection;
     private static final long serialVersionUID = 1L;
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -158,6 +163,15 @@ public class Scan implements Serializable {
     @Override
     public String toString() {
         return "com.dickson.servicescanserverside.Scan[ rowid=" + rowid + " ]";
+    }
+
+    @XmlTransient
+    public Collection<ServiceCall> getServiceCallCollection() {
+        return serviceCallCollection;
+    }
+
+    public void setServiceCallCollection(Collection<ServiceCall> serviceCallCollection) {
+        this.serviceCallCollection = serviceCallCollection;
     }
     
 }

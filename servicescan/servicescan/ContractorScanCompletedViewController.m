@@ -41,16 +41,34 @@
                                                  name:UIKeyboardWillHideNotification
                                                object:nil];
   
+    self.scrollView.scrollEnabled = YES;
+    self.scrollView.contentSize = CGSizeMake(self.view.frame.size.width,800 );
     
+    
+    ServiceScan* scan = [[AppController sharedInstance] serviceScan];
+    if(!scan)
+        return;
+    
+    _customerFirstName.text = [NSString stringWithFormat:@"%@ %@", scan.customerFirstName, scan.customerLastName];
+    
+    _customerAddress.text = scan.customerAddress;
+    _customerCity.text = scan.customerCity;
+    _customerState.text = scan.customerState;
+    _customerZip.text = scan.customerZip;
+    _customerPhone.text = scan.customerPhone;
+    _applianceSerial.text = scan.applianceSerial;
+    _applianceModel.text = scan.applianceModel;
+    _applianceType.text = scan.applianceType;
+    scan.qrCode = [[AppController sharedInstance] qrCode];
+    scan.deviceToken = [[AppController sharedInstance] deviceToken];
+    
+ 
     
 
 }
 -(void)viewDidAppear:(BOOL)animated
 {
        
-    self.scrollView.scrollEnabled = YES;
-    self.scrollView.contentSize = CGSizeMake(self.view.frame.size.width,800 );
-    
     
     
 }

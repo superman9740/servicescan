@@ -27,6 +27,7 @@
 		DE26ECED1889B74300F52113 /* text-input.png in Resources */ = {isa = PBXBuildFile; fileRef = DE26ECEB1889B74300F52113 /* text-input.png */; };
 		DE26ECEE1889B74300F52113 /* text-input@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DE26ECEC1889B74300F52113 /* text-input@2x.png */; };
 		DE26ECF21889BB9600F52113 /* ContractorScanCompletedViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DE26ECF11889BB9600F52113 /* ContractorScanCompletedViewController.m */; };
+		DE28231518BBFE1B003A0AEF /* NewServiceCallViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DE28231418BBFE1B003A0AEF /* NewServiceCallViewController.m */; };
 		DE33C05A1885D7A1005F528A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE33C0591885D7A1005F528A /* Foundation.framework */; };
 		DE33C05C1885D7A1005F528A /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE33C05B1885D7A1005F528A /* CoreGraphics.framework */; };
 		DE33C05E1885D7A1005F528A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE33C05D1885D7A1005F528A /* UIKit.framework */; };
@@ -116,6 +117,8 @@
 		DE26ECEC1889B74300F52113 /* text-input@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "text-input@2x.png"; sourceTree = "<group>"; };
 		DE26ECF01889BB9600F52113 /* ContractorScanCompletedViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContractorScanCompletedViewController.h; sourceTree = "<group>"; };
 		DE26ECF11889BB9600F52113 /* ContractorScanCompletedViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContractorScanCompletedViewController.m; sourceTree = "<group>"; };
+		DE28231318BBFE1B003A0AEF /* NewServiceCallViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewServiceCallViewController.h; sourceTree = "<group>"; };
+		DE28231418BBFE1B003A0AEF /* NewServiceCallViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewServiceCallViewController.m; sourceTree = "<group>"; };
 		DE33C0561885D7A1005F528A /* servicescan.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = servicescan.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DE33C0591885D7A1005F528A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		DE33C05B1885D7A1005F528A /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -268,6 +271,15 @@
 			name = ContractorScanCompleted;
 			sourceTree = "<group>";
 		};
+		DE28231218BBFDEE003A0AEF /* NewServiceCall */ = {
+			isa = PBXGroup;
+			children = (
+				DE28231318BBFE1B003A0AEF /* NewServiceCallViewController.h */,
+				DE28231418BBFE1B003A0AEF /* NewServiceCallViewController.m */,
+			);
+			name = NewServiceCall;
+			sourceTree = "<group>";
+		};
 		DE33C04D1885D7A1005F528A = {
 			isa = PBXGroup;
 			children = (
@@ -303,6 +315,7 @@
 		DE33C05F1885D7A1005F528A /* servicescan */ = {
 			isa = PBXGroup;
 			children = (
+				DE28231218BBFDEE003A0AEF /* NewServiceCall */,
 				DE4186411898689A004918C7 /* InAppPurchase */,
 				DEE83A52189075C2005B6B23 /* Settings */,
 				3C95E5A2188C4ED700C608C6 /* ValueObjects */,
@@ -629,6 +642,7 @@
 				DED7DBF6189B0966005E8B60 /* InAppPurchase.m in Sources */,
 				DE33C0731885D7A1005F528A /* ScanViewController.m in Sources */,
 				3C95E58918876FC100C608C6 /* CustomCameraViewController.m in Sources */,
+				DE28231518BBFE1B003A0AEF /* NewServiceCallViewController.m in Sources */,
 				DE809AD1188866CF009A5672 /* TabBarViewController.m in Sources */,
 				DEE83A55189075DB005B6B23 /* SettingsViewController.m in Sources */,
 				DE5448751888600A007B14BD /* CustomCameraRectangle.m in Sources */,

@@ -99,27 +99,25 @@ public class SaveNewServiceScan extends HttpServlet {
                 
             }
             
-            
+            TypedQuery<Contractor> query3 = em.createQuery("SELECT c FROM Contractor c WHERE c.rowid = :rowid", Contractor.class);
+            query3.setParameter("rowid", scanObject.getContractorId().getRowid());
+            Contractor contractor = (Contractor)query3.getSingleResult();
+           
             
              if(scanObject != null)
              {
-                 //This qr code has already been assigned to an appliance record
-                 out.println("-1");
-                 return;
+                 
+                if(!contractorPhone.equals(contractor.getPhone()))
+                {
+                    //This qr code has already been assigned to an appliance record
+                    out.println("-1");
+                    return;
+                }
+                
                  
              }
             
             
-             //Look up the contractor row id
-             queryObj = em.createNativeQuery("SELECT * FROM Contractor c  WHERE c.first_name = ?1 and c.last_name = ?2 and c.address = ?3 and c.city = ?4 and c.state = ?5 and c.zip = ?6 and c.phone = ?7 ", Contractor.class);
-             queryObj.setParameter(1, contractorFirstName);
-             queryObj.setParameter(2, contractorLastName);
-             queryObj.setParameter(3, contractorAddress);
-             queryObj.setParameter(4, contractorCity);
-             queryObj.setParameter(5, contractorState);
-             queryObj.setParameter(6, contractorZip);
-             queryObj.setParameter(7, contractorPhone);
-             Contractor contractor = (Contractor) queryObj.getSingleResult();
              
              
              //Look up the customer row id
@@ -158,20 +156,52 @@ public class SaveNewServiceScan extends HttpServlet {
                  customer.setPhone(customerPhone);
                  em.persist(customer);
              }
+             else
+             {
+                 
+                 customer.setFirstName(customerFirstName);
+                 customer.setLastName(customerLastName);
+                 customer.setAddress(customerAddress);
+                 customer.setCity(customerCity);
+                 customer.setState(customerState);
+                 customer.setZip(customerZip);
+                 customer.setPhone(customerPhone);
+                 em.merge(customer);
+                 em.flush();
+             }
+                 
              //Now create a new appliance record
+             if(scanObject == null)
+             {
              
-             Scan newScan = new Scan();
+                Scan newScan = new Scan();
+
+                newScan.setApplianceModel(applianceModelNbr);
+                newScan.setApplianceSerial(applianceSerialNbr);
+                newScan.setApplianceType(applianceType);
+                newScan.setDeviceToken(deviceToken);
+                newScan.setQrCodeid(qrCodeObject);
+                newScan.setContractorId(contractor);
+                newScan.setCustomerId(customer);
+                em.persist(newScan);
+                em.flush();
+
+             }
+             else
+             {
+                scanObject.setApplianceModel(applianceModelNbr);
+                scanObject.setApplianceSerial(applianceSerialNbr);
+                scanObject.setApplianceType(applianceType);
+                scanObject.setDeviceToken(deviceToken);
+                scanObject.setQrCodeid(qrCodeObject);
+                scanObject.setContractorId(contractor);
+                scanObject.setCustomerId(customer);
+                em.merge(scanObject);
+                em.flush();
+                 
+             }
+                 
              
-            
-            
-            newScan.setApplianceModel(applianceModelNbr);
-            newScan.setApplianceSerial(applianceSerialNbr);
-            newScan.setApplianceType(applianceType);
-            newScan.setDeviceToken(deviceToken);
-            newScan.setQrCodeid(qrCodeObject);
-            newScan.setContractorId(contractor);
-            newScan.setCustomerId(customer);
-            em.persist(newScan);
             em.getTransaction().commit();
             em.close();
             emf.close();
