@@ -50,8 +50,11 @@ public class CreateNewRequest extends HttpServlet {
             
             
             String qrCode = request.getParameter("qrCode");
+            String deviceToken = request.getParameter("deviceToken");
+            
             com.dickson.servicescanserverside.Request newRequest = new com.dickson.servicescanserverside.Request();
             newRequest.setQrCode(qrCode);
+            newRequest.setDeviceToken(deviceToken);
             //JPA
             
             EntityManagerFactory emf = Persistence.createEntityManagerFactory("com.dickson_ServiceScanServerSide_war_1.0-SNAPSHOTPU");

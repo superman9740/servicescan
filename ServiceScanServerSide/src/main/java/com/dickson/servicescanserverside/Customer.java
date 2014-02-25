@@ -86,6 +86,7 @@ public class Customer implements Serializable {
     private String address;
     
     
+    
     @JoinColumn(name = "contractor_id", referencedColumnName = "rowid")
     @ManyToOne
     private Contractor contractorId;
@@ -224,5 +225,7 @@ public class Customer implements Serializable {
     public void setScanCollection(Collection<Scan> scanCollection) {
         this.scanCollection = scanCollection;
     }
+
+    
     
 }

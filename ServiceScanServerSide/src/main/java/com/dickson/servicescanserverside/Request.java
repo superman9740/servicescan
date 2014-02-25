@@ -48,6 +48,11 @@ public class Request implements Serializable {
     @Temporal(TemporalType.TIMESTAMP)
     private Date timestamp;
 
+    @Size(max = 255)
+    @Column(name = "deviceToken")
+    private String deviceToken;
+
+    
     public Request() {
     }
 
@@ -102,6 +107,20 @@ public class Request implements Serializable {
     @Override
     public String toString() {
         return "com.dickson.servicescanserverside.Request[ recid=" + recid + " ]";
+    }
+
+    /**
+     * @return the deviceToken
+     */
+    public String getDeviceToken() {
+        return deviceToken;
+    }
+
+    /**
+     * @param deviceToken the deviceToken to set
+     */
+    public void setDeviceToken(String deviceToken) {
+        this.deviceToken = deviceToken;
     }
     
 }

@@ -44,7 +44,13 @@ public class MenuBean {
         
         
     }
-
+    public String gotoMaintainServiceCalls()
+    {
+        
+        return "maintainServiceCalls";
+        
+        
+    }
     public String gotoImportQRCodes()
     {
         
