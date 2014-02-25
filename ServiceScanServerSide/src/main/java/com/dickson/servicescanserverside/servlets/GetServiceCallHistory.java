@@ -6,17 +6,17 @@
 
 package com.dickson.servicescanserverside.servlets;
 
+import com.dickson.servicescanserverside.Contractor;
+import com.dickson.servicescanserverside.Customer;
 import com.dickson.servicescanserverside.Qrcode;
 import com.dickson.servicescanserverside.Request;
 import com.dickson.servicescanserverside.Scan;
 import com.dickson.servicescanserverside.ServiceCall;
-import java.io.BufferedReader;
 import java.io.IOException;
-import java.io.InputStreamReader;
 import java.io.PrintWriter;
+import java.util.HashMap;
 import java.util.List;
-import java.util.logging.Level;
-import java.util.logging.Logger;
+import java.util.Map;
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.Persistence;
@@ -27,13 +27,17 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import net.sf.json.JSONArray;
+import net.sf.json.JSONObject;
+import net.sf.json.JsonConfig;
+import net.sf.json.util.CycleDetectionStrategy;
 
 /**
  *
  * @author USMEM-W-003157
  */
-@WebServlet(name = "SaveServiceCall", urlPatterns = {"/SaveServiceCall"})
-public class SaveServiceCall extends HttpServlet {
+@WebServlet(name = "GetServiceCallHistory", urlPatterns = {"/GetServiceCallHistory"})
+public class GetServiceCallHistory extends HttpServlet {
 
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
@@ -49,68 +53,40 @@ public class SaveServiceCall extends HttpServlet {
         response.setContentType("text/html;charset=UTF-8");
         PrintWriter out = response.getWriter();
         try {
-           
+            
             String qrCode = request.getParameter("qrCode");
-            String notes = request.getParameter("notes");
             EntityManagerFactory emf = Persistence.createEntityManagerFactory("com.dickson_ServiceScanServerSide_war_1.0-SNAPSHOTPU");
             EntityManager em = emf.createEntityManager();
-            em.getTransaction().begin();
             
             Query query = em.createNamedQuery("Qrcode.findByQrCode");
             query.setParameter("qrCode", qrCode);
             Qrcode qrCodeObject = (Qrcode)query.getSingleResult();
-        
-            
-            Query query2 = em.createNamedQuery("Request.findByQrCode");
-            query2.setParameter("qrCode", qrCode);
-            List<Request> requests = query2.getResultList();
-            
-        
-            TypedQuery<Scan> query3 = em.createQuery("SELECT c FROM Scan c WHERE c.qrCodeid = :qrcode", Scan.class);
-            query3.setParameter("qrcode", qrCodeObject);
-            Scan scan = query3.getSingleResult();
-            
-            ServiceCall serviceCall = new ServiceCall();
-            serviceCall.setNotes(notes);
-            serviceCall.setQrCodeID(scan);
-            em.persist(serviceCall);
-            em.getTransaction().commit();
-            em.close();
-            emf.close();
-            
-              //Send push notification to contractor
-             String[] command = { "/opt/PushNotifications/src/Pusher", requests.get(0).getDeviceToken(), "-1"}; 
+         
+             Query queryObj = em.createNativeQuery("SELECT * FROM ServiceCall c  WHERE c.qrCodeID = ?1" , ServiceCall.class);
+             queryObj.setParameter(1, qrCodeObject.getRowid());
              
-             BufferedReader is = null;
-             BufferedReader es = null;
-             Process process;
-            process = Runtime.getRuntime().exec(command);
-            String line;
-            is = new BufferedReader(new InputStreamReader(process.getInputStream()));
-            while((line = is.readLine()) != null)
-                System.out.println(line);
-                es = new BufferedReader(new InputStreamReader(process.getErrorStream()));
+             List<ServiceCall> serviceCalls = queryObj.getResultList();
+             if(serviceCalls.isEmpty())
+             {
+                 
+                 out.println("-1");
+                 return;
+                 
+             }
             
-            while((line = es.readLine()) != null)
-            System.err.println(line);
-
-    int exitCode = process.waitFor();
-    if (exitCode == 0)
-        System.out.println("It worked");
-    else
-        System.out.println("Something bad happend. Exit code: " + exitCode);
+             
+             JsonConfig jsonConfig = new JsonConfig();
+            // jsonConfig.setExcludes(new String[]{"files", "createdBy", "lastUpdatedBy"});
+             jsonConfig.setIgnoreDefaultExcludes(false);
+             jsonConfig.setCycleDetectionStrategy(CycleDetectionStrategy.LENIENT);  
+             JSONArray jsonArray = JSONArray.fromObject(serviceCalls,jsonConfig);
              
              
              
-             
-            
-            out.println("Request sent.");
-            
+             System.out.println( jsonArray );  
+             out.println(jsonArray);
             
             
-            
-        } catch (InterruptedException ex) {
-            Logger.getLogger(SaveServiceCall.class.getName()).log(Level.SEVERE, null, ex);
         } finally {
             out.close();
         }

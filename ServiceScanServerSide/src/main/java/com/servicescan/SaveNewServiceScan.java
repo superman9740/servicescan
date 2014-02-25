@@ -99,10 +99,18 @@ public class SaveNewServiceScan extends HttpServlet {
                 
             }
             
-            TypedQuery<Contractor> query3 = em.createQuery("SELECT c FROM Contractor c WHERE c.rowid = :rowid", Contractor.class);
-            query3.setParameter("rowid", scanObject.getContractorId().getRowid());
-            Contractor contractor = (Contractor)query3.getSingleResult();
-           
+             Query queryObj2 = em.createNativeQuery("SELECT * FROM Contractor c  WHERE c.first_name = ?1 and c.last_name = ?2 and c.address = ?3 and c.city = ?4 and c.state = ?5 and c.zip = ?6" , Contractor.class);
+             queryObj2.setParameter(1, contractorFirstName);
+             queryObj2.setParameter(2, contractorLastName);
+             queryObj2.setParameter(3, contractorAddress);
+             queryObj2.setParameter(4, contractorCity);
+             queryObj2.setParameter(5, contractorState);
+             queryObj2.setParameter(6, contractorZip);
+         
+             Contractor contractor = (Contractor)queryObj2.getSingleResult();
+             
+                     
+         
             
              if(scanObject != null)
              {

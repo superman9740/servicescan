@@ -34,6 +34,7 @@ static  AppController* sharedInstance = nil;
         _userType = [defaults integerForKey:@"userType"];
         _serviceScan = [[ServiceScan alloc] init];
         _contractorHistory = [[NSMutableArray alloc] initWithCapacity:10];
+        _serviceCallHistory = [[NSMutableArray alloc] initWithCapacity:10];
         
         [self loadContractorInfo];
         [self loadContractorHistory];
@@ -96,7 +97,99 @@ static  AppController* sharedInstance = nil;
     self.contractor = contractor;
     
 }
-
+-(void)loadServiceCallHistory
+{
+    [self.serviceCallHistory removeAllObjects];
+    
+    
+    NSString* urlString = [NSString stringWithFormat:@"http://servicescans.com/GetServiceCallHistory?qrCode=%@",[[AppController sharedInstance] qrCode]];
+    
+    NSURL* url = [NSURL URLWithString:urlString];
+    
+    NSError* error = nil;
+    NSURLResponse* response = nil;
+    NSURLRequest* request = [NSURLRequest requestWithURL:url];
+    
+    
+    NSData* jsonData = [NSURLConnection sendSynchronousRequest:request returningResponse:&response error:&error];
+    if(error.code == -1004)
+    {
+        
+        /*
+         UIAlertView* alertView = [[UIAlertView alloc] initWithTitle:@"Service Error" message:@"There was an error connecting to the server.  Please try again." delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil];
+         [alertView show];
+         return;
+         */
+    }
+    NSString* returnString = [[NSString alloc] initWithData:jsonData encoding:NSUTF8StringEncoding];
+    if([returnString isEqualToString:@"-1\n"])
+    {
+        return;
+        
+    }
+    NSArray* dictArray =  [NSJSONSerialization JSONObjectWithData: jsonData  options: NSJSONReadingAllowFragments   error: &error];
+    
+    
+    for (NSDictionary* dict in dictArray)
+    {
+     
+        NSDictionary* timeDict = [dict objectForKey:@"createdTimestamp"];
+        NSString* timeVal = [timeDict valueForKey:@"time"];
+        if([timeVal class] == [NSNull class])
+        {
+            continue;
+            
+        }
+        NSTimeInterval intervaldep=timeVal.doubleValue/1000;
+        
+        NSDate* dateObj = [NSDate dateWithTimeIntervalSince1970:intervaldep];
+        NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
+        [formatter setDateFormat:@"MM-dd-yyyy hh:mm:ss"];
+        
+        //Optionally for time zone converstions
+        //[formatter setTimeZone:[NSTimeZone timeZoneWithName:@"..."]];
+        
+        NSString *stringFromDate = [formatter stringFromDate:dateObj];
+        
+        
+        
+        NSString* notes = [dict valueForKey:@"notes"];
+        ServiceCallHistory* serviceCallHistoryObject = [[ServiceCallHistory alloc] init];
+        serviceCallHistoryObject.date = stringFromDate;
+        serviceCallHistoryObject.notes = notes;
+        [[[AppController sharedInstance] serviceCallHistory] addObject:serviceCallHistoryObject];
+        
+        
+    }
+    
+    
+    
+    
+    
+    /*
+     if([dict n])
+     {
+     UIAlertView* alertView = [[UIAlertView alloc] initWithTitle:@"Service Error" message:@"That QR code has already been associated with a service contractor.  Please try again." delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil];
+     [alertView show];
+     return;
+     
+     
+     }
+     else
+     {
+     
+     
+     }
+     */
+    
+    
+    
+    
+    
+    
+    
+    
+}
 -(void)loadContractorHistory
 {
     
@@ -131,22 +224,19 @@ static  AppController* sharedInstance = nil;
         return;
         
     }
-    NSArray* dictArray =  [NSJSONSerialization JSONObjectWithData: jsonData  options: NSJSONReadingAllowFragments   error: &error];
-    
-    for (NSDictionary* dict in dictArray)
-    {
-        Request* request = [[Request alloc] init];
+    NSDictionary* dict =  [NSJSONSerialization JSONObjectWithData: jsonData  options: NSJSONReadingAllowFragments   error: &error];
+   
+    Request* requestObj = [[Request alloc] init];
         
-        request.userFirstName = dict[@"customerFirstName"];
-        request.userLastName = dict[@"customerLastName"];
-        request.city = dict[@"customerCity"];
-        request.state = dict[@"customerState"];
-        request.zip = dict[@"customerZip"];
-        request.phone = dict[@"customerPhone"];
-        [_contractorHistory addObject:request];
+    requestObj.userFirstName = dict[@"customerFirstName"];
+    requestObj.userLastName = dict[@"customerLastName"];
+    requestObj.city = dict[@"customerCity"];
+    requestObj.state = dict[@"customerState"];
+    requestObj.zip = dict[@"customerZip"];
+    requestObj.phone = dict[@"customerPhone"];
+    [_contractorHistory addObject:requestObj];
         
         
-    }
     
     /*
     if([dict n])

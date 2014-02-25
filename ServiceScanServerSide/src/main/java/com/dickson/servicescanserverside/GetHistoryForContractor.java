@@ -8,7 +8,9 @@ package com.dickson.servicescanserverside;
 
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.Persistence;
@@ -22,6 +24,8 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import net.sf.json.JSONArray;
 import net.sf.json.JSONObject;
+import net.sf.json.JsonConfig;
+import net.sf.json.util.CycleDetectionStrategy;
 
 /**
  *
@@ -67,22 +71,21 @@ public class GetHistoryForContractor extends HttpServlet {
             EntityManager em = emf.createEntityManager();
             em.getTransaction().begin();
             
-            //First, check to make sure this qr code has not already been used
+            Query queryObj = em.createNativeQuery("SELECT * FROM Contractor c  WHERE c.first_name = ?1 and c.last_name = ?2 and c.address = ?3 and c.city = ?4 and c.state = ?5 and c.zip = ?6" , Contractor.class);
+            queryObj.setParameter(1, contractorFirstName);
+            queryObj.setParameter(2, contractorLastName);
+            queryObj.setParameter(3, contractorAddress);
+            queryObj.setParameter(4, contractorCity);
+            queryObj.setParameter(5, contractorState);
+            queryObj.setParameter(6, contractorZip);
+         
+            List<Contractor> contractors = queryObj.getResultList();
+             
+             
+             
+             
             
-             Query queryObj = em.createNativeQuery("SELECT * FROM Scan c, Request r  WHERE c.contractorFirstName = ?1 and c.contractorLastName = ?2 and c.contractorAddress = ?3 and c.contractorCity = ?4 and c.contractorState = ?5 and c.contractorZip = ?6 and c.contractorPhone = ?7 and r.qrCode = c.qrCode", Scan.class);
-             queryObj.setParameter(1, contractorFirstName);
-             queryObj.setParameter(2, contractorLastName);
-             queryObj.setParameter(3, contractorAddress);
-             queryObj.setParameter(4, contractorCity);
-             queryObj.setParameter(5, contractorState);
-             queryObj.setParameter(6, contractorZip);
-             queryObj.setParameter(7, contractorPhone);
-            List<Scan> scans = queryObj.getResultList();
-             
-             
-             
-            
-             if(scans.isEmpty())
+             if(contractors.isEmpty())
              {
                  
                  out.println("-1");
@@ -90,10 +93,52 @@ public class GetHistoryForContractor extends HttpServlet {
                  
              }
             
-            JSONArray jsonArray = JSONArray.fromObject( scans );  
+             
+             
+             
+             
+             //Grab all appliance records for this contractor
+            Query queryObj2 = em.createNativeQuery("SELECT * FROM Scan c  WHERE c.contractor_id = ?1" , Scan.class);
+            queryObj2.setParameter(1, contractors.get(0).getRowid());
+            List<Scan> scans = queryObj2.getResultList();
+             Map map = new HashMap();
+             
+            for(Scan tempScan : scans)
+            {
+                  Query queryObj3 = em.createNativeQuery("SELECT * FROM Request c  WHERE c.qrCode = ?1" , Request.class);
+                  queryObj3.setParameter(1, tempScan.getQrCodeid().getQrCode());
+                  List<Request> requests = queryObj3.getResultList();
+             
+                  TypedQuery<Customer> query4 = em.createQuery("SELECT c FROM Customer c WHERE c.rowid = :rowid", Customer.class);
+                  query4.setParameter("rowid", tempScan.getCustomerId().getRowid());
+                  Customer customer = (Customer)query4.getSingleResult();
+             
+                  for(Request tempRequest : requests)
+                  {
+                      
+                      
+                      map.put("request", tempRequest);
+                      map.put("customerFirstName", customer.getFirstName());
+                      map.put("customerLastName", customer.getLastName());
+                      map.put("customerCity", customer.getCity());
+                      map.put("customerState", customer.getState());
+                      map.put("customerZip", customer.getZip());
+                      map.put("customerPhone", customer.getPhone());
+                      
+                      
+                  }
+               
+            }
             
-            out.println(jsonArray);
-              
+            
+            JsonConfig jsonConfig = new JsonConfig();
+            // jsonConfig.setExcludes(new String[]{"files", "createdBy", "lastUpdatedBy"});
+             jsonConfig.setIgnoreDefaultExcludes(false);
+             jsonConfig.setCycleDetectionStrategy(CycleDetectionStrategy.LENIENT);  
+             JSONObject jsonObject2 = JSONObject.fromObject(map,jsonConfig);
+             System.out.println( jsonObject2 );  
+             out.println(jsonObject2);
+                 
     
             
         } 

@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "AppController.h"
 
-@interface NewServiceCallViewController : UIViewController
+@interface NewServiceCallViewController : UIViewController<UITextFieldDelegate>
 {
     
     

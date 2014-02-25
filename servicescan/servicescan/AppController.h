@@ -11,6 +11,7 @@
 #import "Contractor.h"
 #import "Request.h"
 #import "InAppPurchase.h"
+#import "ServiceCallHistory.h"
 
 @interface AppController : NSObject
 {
@@ -24,6 +25,9 @@
 @property (strong, nonatomic) NSString* deviceToken;
 @property (strong, nonatomic) Contractor* contractor;
 @property (strong, nonatomic) NSMutableArray* contractorHistory;
+@property (strong, nonatomic) NSMutableArray* serviceCallHistory;
+
+
 
 + (id)sharedInstance;
 
@@ -31,6 +35,7 @@
 -(void)loginAsContractor;
 -(void)updateContractorInfo:(Contractor*)contractor;
 -(void)loadContractorHistory;
+-(void)loadServiceCallHistory;
 -(void)purchaseRoll:(InAppPurchase*)inappPurchase;
 
 @end

@@ -96,58 +96,71 @@
     
     
     NSString* qrCode = [alert valueForKey:@"action-loc-key"];
-    
-    NSString* urlString = [NSString stringWithFormat:@"http://servicescans.com/LookupScan?qrCode=%@",qrCode];
-    
-    NSURL* url = [NSURL URLWithString:urlString];
-    
-    NSError* error = nil;
-    NSURLResponse* response = nil;
-    NSURLRequest* request = [NSURLRequest requestWithURL:url];
-    
-    NSData* jsonData = [NSURLConnection sendSynchronousRequest:request returningResponse:&response error:&error];
-    if(error.code == -1004)
+    if([qrCode isEqualToString:@"-1"])
     {
-        
-        
-       // UIAlertView* alertView = [[UIAlertView alloc] initWithTitle:@"Service Error" message:@"There was an error connecting to the server.  Please try again." delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil];
-      //  [alertView show];
-        return;
-        
-    }
     
-    NSString* jsonString = [[NSString alloc] initWithData:jsonData encoding:NSUTF8StringEncoding];
-    
-    if([jsonString isEqualToString:@"-1\n"])
-    {
-      //  UIAlertView* alertView = [[UIAlertView alloc] initWithTitle:@"Service Error" message:@"That QR code doesn't seem to be associated with a service contractor.  Please try again." delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil];
-       // [alertView show];
-        return;
+        UIAlertView* alertView = [[UIAlertView alloc] initWithTitle:@"Service Request" message:@"Your request for service has been completed." delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil];
+        [alertView show];
         
         
     }
-    NSDictionary* dict = [NSJSONSerialization JSONObjectWithData:jsonData options:0 error:&error];
+    else
+    {
     
-    
-    NSString* applianceModel = [dict valueForKey:@"applianceModel"];
-    ServiceScan* serviceScan = [[AppController sharedInstance] serviceScan];
-    serviceScan.applianceModel = applianceModel;
-    serviceScan.customerFirstName = [dict valueForKey:@"customerFirstName"];
-    serviceScan.customerLastName = [dict valueForKey:@"customerLastName"];
-    serviceScan.customerAddress = [dict valueForKey:@"customerAddress"];
-    serviceScan.customerCity = [dict valueForKey:@"customerCity"];
-    serviceScan.customerState = [dict valueForKey:@"customerState"];
-    serviceScan.customerZip = [dict valueForKey:@"customerZip"];
-    serviceScan.customerPhone = [dict valueForKey:@"customerPhone"];
-    
-    NSString* customerRequest = [NSString stringWithFormat:@"Customer %@ %@ has sent you a request for service.  Their address is %@ %@ %@ %@.  They can be reached at %@",
-                                 serviceScan.customerFirstName, serviceScan.customerLastName, serviceScan.customerAddress, serviceScan.customerCity,serviceScan.customerState,
-                                 serviceScan.customerZip, serviceScan.customerPhone];
-    
-    UIAlertView* alertView = [[UIAlertView alloc] initWithTitle:@"Incoming Request" message:customerRequest delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil];
-    [alertView show];
-    
-    [[AppController sharedInstance] loadContractorHistory];
+        NSString* urlString = [NSString stringWithFormat:@"http://servicescans.com/GetScanData?qrCode=%@",[[AppController sharedInstance] qrCode]];
+        
+        NSURL* url = [NSURL URLWithString:urlString];
+        
+        NSError* error = nil;
+        NSURLResponse* response = nil;
+        NSURLRequest* request = [NSURLRequest requestWithURL:url];
+        
+        NSData* jsonData = [NSURLConnection sendSynchronousRequest:request returningResponse:&response error:&error];
+        if(error.code == -1004)
+        {
+            
+            
+            UIAlertView* alertView = [[UIAlertView alloc] initWithTitle:@"Service Error" message:@"There was an error connecting to the server.  Please try again." delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil];
+            [alertView show];
+            return;
+            
+        }
+        
+        NSString* jsonString = [[NSString alloc] initWithData:jsonData encoding:NSUTF8StringEncoding];
+        
+        NSDictionary* dict = [NSJSONSerialization JSONObjectWithData:jsonData options:0 error:&error];
+        
+        
+        NSString* applianceModel = [dict valueForKey:@"applianceModel"];
+        ServiceScan* serviceScan = [[AppController sharedInstance] serviceScan];
+        serviceScan.applianceModel = applianceModel;
+        serviceScan.applianceSerial = [dict valueForKey:@"applianceSerial"];
+        serviceScan.applianceType = [dict valueForKey:@"applianceType"];
+        
+        
+        //Customer
+        NSDictionary* customer = [dict valueForKey:@"customer"];
+        NSString* custFirstName = [customer valueForKey:@"firstName"];
+        serviceScan.customerFirstName = [customer valueForKey:@"firstName"];
+        serviceScan.customerLastName = [customer valueForKey:@"lastName"];
+        serviceScan.customerAddress = [customer valueForKey:@"address"];
+        serviceScan.customerCity = [customer valueForKey:@"city"];
+        serviceScan.customerState = [customer valueForKey:@"state"];
+        serviceScan.customerZip = [customer valueForKey:@"zip"];
+        serviceScan.customerPhone = [customer valueForKey:@"phone"];
+        
+ 
+        NSString* customerRequest = [NSString stringWithFormat:@"Customer %@ %@ has sent you a request for service.  Their address is %@ %@ %@ %@.  They can be reached at %@",
+                                     serviceScan.customerFirstName, serviceScan.customerLastName, serviceScan.customerAddress, serviceScan.customerCity,serviceScan.customerState,
+                                     serviceScan.customerZip, serviceScan.customerPhone];
+        
+        UIAlertView* alertView = [[UIAlertView alloc] initWithTitle:@"Incoming Request" message:customerRequest delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil];
+        [alertView show];
+        
+        [[AppController sharedInstance] loadContractorHistory];
+        
+        
+    }
     
     
 }

@@ -28,6 +28,8 @@
 		DE26ECEE1889B74300F52113 /* text-input@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DE26ECEC1889B74300F52113 /* text-input@2x.png */; };
 		DE26ECF21889BB9600F52113 /* ContractorScanCompletedViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DE26ECF11889BB9600F52113 /* ContractorScanCompletedViewController.m */; };
 		DE28231518BBFE1B003A0AEF /* NewServiceCallViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DE28231418BBFE1B003A0AEF /* NewServiceCallViewController.m */; };
+		DE28231918BD3F70003A0AEF /* ServiceCallHistoryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DE28231818BD3F70003A0AEF /* ServiceCallHistoryViewController.m */; };
+		DE28231C18BD40C8003A0AEF /* ServiceCallHistory.m in Sources */ = {isa = PBXBuildFile; fileRef = DE28231B18BD40C8003A0AEF /* ServiceCallHistory.m */; };
 		DE33C05A1885D7A1005F528A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE33C0591885D7A1005F528A /* Foundation.framework */; };
 		DE33C05C1885D7A1005F528A /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE33C05B1885D7A1005F528A /* CoreGraphics.framework */; };
 		DE33C05E1885D7A1005F528A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE33C05D1885D7A1005F528A /* UIKit.framework */; };
@@ -119,6 +121,10 @@
 		DE26ECF11889BB9600F52113 /* ContractorScanCompletedViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContractorScanCompletedViewController.m; sourceTree = "<group>"; };
 		DE28231318BBFE1B003A0AEF /* NewServiceCallViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewServiceCallViewController.h; sourceTree = "<group>"; };
 		DE28231418BBFE1B003A0AEF /* NewServiceCallViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewServiceCallViewController.m; sourceTree = "<group>"; };
+		DE28231718BD3F70003A0AEF /* ServiceCallHistoryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ServiceCallHistoryViewController.h; sourceTree = "<group>"; };
+		DE28231818BD3F70003A0AEF /* ServiceCallHistoryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ServiceCallHistoryViewController.m; sourceTree = "<group>"; };
+		DE28231A18BD40C8003A0AEF /* ServiceCallHistory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ServiceCallHistory.h; sourceTree = "<group>"; };
+		DE28231B18BD40C8003A0AEF /* ServiceCallHistory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ServiceCallHistory.m; sourceTree = "<group>"; };
 		DE33C0561885D7A1005F528A /* servicescan.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = servicescan.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DE33C0591885D7A1005F528A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		DE33C05B1885D7A1005F528A /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -249,6 +255,8 @@
 				DEF2E33718970328003F8AF7 /* Request.m */,
 				DED7DBF4189B0966005E8B60 /* InAppPurchase.h */,
 				DED7DBF5189B0966005E8B60 /* InAppPurchase.m */,
+				DE28231A18BD40C8003A0AEF /* ServiceCallHistory.h */,
+				DE28231B18BD40C8003A0AEF /* ServiceCallHistory.m */,
 			);
 			name = ValueObjects;
 			sourceTree = "<group>";
@@ -278,6 +286,15 @@
 				DE28231418BBFE1B003A0AEF /* NewServiceCallViewController.m */,
 			);
 			name = NewServiceCall;
+			sourceTree = "<group>";
+		};
+		DE28231618BD3F50003A0AEF /* ServiceCallHistory */ = {
+			isa = PBXGroup;
+			children = (
+				DE28231718BD3F70003A0AEF /* ServiceCallHistoryViewController.h */,
+				DE28231818BD3F70003A0AEF /* ServiceCallHistoryViewController.m */,
+			);
+			name = ServiceCallHistory;
 			sourceTree = "<group>";
 		};
 		DE33C04D1885D7A1005F528A = {
@@ -315,6 +332,7 @@
 		DE33C05F1885D7A1005F528A /* servicescan */ = {
 			isa = PBXGroup;
 			children = (
+				DE28231618BD3F50003A0AEF /* ServiceCallHistory */,
 				DE28231218BBFDEE003A0AEF /* NewServiceCall */,
 				DE4186411898689A004918C7 /* InAppPurchase */,
 				DEE83A52189075C2005B6B23 /* Settings */,
@@ -637,6 +655,7 @@
 				DE809ADD188879E3009A5672 /* AppController.m in Sources */,
 				DE33C0B31885ED71005F528A /* UIImage+iPhone5.m in Sources */,
 				DE33C06A1885D7A1005F528A /* AppDelegate.m in Sources */,
+				DE28231918BD3F70003A0AEF /* ServiceCallHistoryViewController.m in Sources */,
 				DE33C0C71885EE61005F528A /* Utils.m in Sources */,
 				DE418645189868C1004918C7 /* InAppPurchaseViewController.m in Sources */,
 				DED7DBF6189B0966005E8B60 /* InAppPurchase.m in Sources */,
@@ -651,6 +670,7 @@
 				3C95E58C18876FF700C608C6 /* Highlighter.m in Sources */,
 				DE26ECF21889BB9600F52113 /* ContractorScanCompletedViewController.m in Sources */,
 				DE26ECEA1889B68B00F52113 /* UserScanCompletedViewController.m in Sources */,
+				DE28231C18BD40C8003A0AEF /* ServiceCallHistory.m in Sources */,
 				3C95E5A5188C4EF900C608C6 /* ServiceScan.m in Sources */,
 				DE809AD5188867D1009A5672 /* UserTypeViewController.m in Sources */,
 			);
