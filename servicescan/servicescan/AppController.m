@@ -7,6 +7,7 @@
 //
 
 #import "AppController.h"
+#import "Flurry.h"
 
 static  AppController* sharedInstance = nil;
 
@@ -38,6 +39,10 @@ static  AppController* sharedInstance = nil;
         
         [self loadContractorInfo];
         [self loadContractorHistory];
+        _locManager = [[CLLocationManager alloc] init];
+        _locManager.delegate = self;
+        _locManager.desiredAccuracy = kCLLocationAccuracyBestForNavigation;
+        [_locManager startUpdatingLocation];
         
         
     }
@@ -286,6 +291,23 @@ static  AppController* sharedInstance = nil;
 
     
 }
+#pragma mark core location
+- (void)locationManager:(CLLocationManager *)manager didUpdateLocations:(NSArray *)locations
+{
+    _location = [locations objectAtIndex:0];
+    
+   
+    
+    
+    [Flurry setLatitude:_location.coordinate.latitude    longitude:_location.coordinate.longitude     horizontalAccuracy:_location.horizontalAccuracy verticalAccuracy:_location.verticalAccuracy];
+    
+    NSLog(@"Location has been updated:  lat - %+.6f lon - %+.6f",_location.coordinate.latitude, _location.coordinate.longitude);
+    
+    
+    
+    
+}
+
 
 #pragma mark credit card
 -(void)purchaseRoll:(InAppPurchase*)inappPurchase;

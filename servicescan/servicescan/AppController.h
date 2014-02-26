@@ -12,9 +12,13 @@
 #import "Request.h"
 #import "InAppPurchase.h"
 #import "ServiceCallHistory.h"
+@import CoreLocation;
 
-@interface AppController : NSObject
+@interface AppController : NSObject<CLLocationManagerDelegate>
+
 {
+    
+     BOOL haveSavedLocation;
     
     
 }
@@ -27,6 +31,13 @@
 @property (strong, nonatomic) NSMutableArray* contractorHistory;
 @property (strong, nonatomic) NSMutableArray* serviceCallHistory;
 
+
+
+@property (strong, nonatomic) CLLocation* location;
+
+@property (strong, nonatomic) CLLocation* savedLocation;
+
+@property (strong, nonatomic) CLLocationManager* locManager;
 
 
 + (id)sharedInstance;
