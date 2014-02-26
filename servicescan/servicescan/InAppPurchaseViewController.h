@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "InAppPurchase.h"
 
 @interface InAppPurchaseViewController : UIViewController<UIPickerViewDataSource, UIPickerViewDelegate>
 {
@@ -39,5 +40,6 @@
 @property (weak, nonatomic) UITextField* activeTextField;
 @property (nonatomic) BOOL viewWasMoved;
 
+-(IBAction)purchaseRoll:(id)sender;
 
 @end

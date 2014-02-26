@@ -20,7 +20,7 @@
     
     
     
-    NSMutableDictionary* dict = [NSMutableDictionary dictionaryWithObjectsAndKeys:nameOnCard, @"nameOnCard", self.cardNumber, @"cardNumber", self.cardAddress, @"cardAddress", self.cardAddress, @"cardAddress", self.cardCity, @"cardCity",self.cardState, @"cardState", self.cardZip, @"cardZip", self.cardExpMonth, @"cardExpMonth", self.cardExpYear, @"cardExpYear", self.cardCVV, @"cardCVV", self.email, @"email", nil];
+    NSMutableDictionary* dict = [NSMutableDictionary dictionaryWithObjectsAndKeys:nameOnCard, @"nameOnCard", self.cardNumber, @"cardNumber", self.cardAddress, @"cardAddress", self.cardAddress, @"cardAddress", self.cardCity, @"cardCity",self.cardState, @"cardState", self.cardZip, @"cardZip", self.cardExpMonth, @"cardExpMonth", self.cardExpYear, @"cardExpYear", self.cardCVV, @"cardCVV", self.email, @"email", self.quantity, @"quantity", nil];
     
     NSError* error = nil;
     NSData *jsonData = [NSJSONSerialization dataWithJSONObject:dict

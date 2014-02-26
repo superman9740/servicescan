@@ -293,10 +293,12 @@ static  AppController* sharedInstance = nil;
     
     
     NSData* tempData = [inappPurchase getJson];
+    NSData* contractorData = [[[AppController sharedInstance] contractor] getJson];
     
     NSString* tempStr = [[NSString alloc] initWithData:tempData encoding:NSUTF8StringEncoding];
+    NSString* tempStr2 = [[NSString alloc] initWithData:contractorData encoding:NSUTF8StringEncoding];
     
-    NSString* urlString = [NSString stringWithFormat:@"http://servicescans.com/PurchaseRoll?inapp_purchase=%@",[tempStr stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding]];
+    NSString* urlString = [NSString stringWithFormat:@"http://servicescans.com/PurchaseRoll?inapp_purchase=%@&contractor=%@",[tempStr stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding], [tempStr2 stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding]];
     
     NSURL* url = [NSURL URLWithString:urlString];
     

@@ -91,6 +91,15 @@
 
 }
 
+-(IBAction)purchaseRoll:(id)sender
+{
+    
+    InAppPurchase* inappPurchaseObj = [[InAppPurchase alloc] init];
+    
+    
+    
+    
+}
 -(void)keyboardDidShow:(NSNotification*)notification
 {
     NSDictionary* info = [notification userInfo];

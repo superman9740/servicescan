@@ -47,7 +47,8 @@
     [[UITabBar appearance] setSelectionIndicatorImage:[UIImage tallImageNamed:@"tabbar-active.png"]];
     [[UITextField appearance] setBackground:[UIImage imageNamed:@"text-input.png"]];
     
-
+    [[UILabel appearance] setFont:[UIFont systemFontOfSize:15]];
+    
     [[UIApplication sharedApplication] registerForRemoteNotificationTypes:(UIRemoteNotificationTypeBadge | UIRemoteNotificationTypeSound|UIRemoteNotificationTypeAlert)];
     
     application.applicationIconBadgeNumber = 0;

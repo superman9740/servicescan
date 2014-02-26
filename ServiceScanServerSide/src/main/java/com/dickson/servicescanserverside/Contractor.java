@@ -9,6 +9,7 @@ package com.dickson.servicescanserverside;
 import java.io.Serializable;
 import java.util.Collection;
 import javax.persistence.Basic;
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -42,6 +43,8 @@ import javax.xml.bind.annotation.XmlTransient;
     @NamedQuery(name = "Contractor.findByPhone", query = "SELECT c FROM Contractor c WHERE c.phone = :phone"),
     @NamedQuery(name = "Contractor.findByEmail", query = "SELECT c FROM Contractor c WHERE c.email = :email")})
 public class Contractor implements Serializable {
+    @OneToMany(cascade = CascadeType.ALL, mappedBy = "contractorId")
+    private Collection<LabelOrder> labelOrderCollection;
     @OneToMany(mappedBy = "contractorId")
     private Collection<Scan> scanCollection;
     @OneToMany(mappedBy = "contractorId")
@@ -224,6 +227,15 @@ public class Contractor implements Serializable {
 
     public void setScanCollection(Collection<Scan> scanCollection) {
         this.scanCollection = scanCollection;
+    }
+
+    @XmlTransient
+    public Collection<LabelOrder> getLabelOrderCollection() {
+        return labelOrderCollection;
+    }
+
+    public void setLabelOrderCollection(Collection<LabelOrder> labelOrderCollection) {
+        this.labelOrderCollection = labelOrderCollection;
     }
     
 }

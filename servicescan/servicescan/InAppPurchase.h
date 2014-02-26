@@ -24,6 +24,7 @@
 @property (nonatomic, strong) NSString* cardExpYear;
 @property (nonatomic, strong) NSString* cardCVV;
 @property (nonatomic, strong) NSString* email;
+@property (nonatomic, strong) NSString* quantity;
 
 
 
