@@ -10,10 +10,6 @@
         <load-on-startup>1</load-on-startup>
     </servlet>
     <servlet>
-        <servlet-name>Resource Servlet</servlet-name>
-        <servlet-class>org.primefaces.resource.ResourceServlet</servlet-class>
-    </servlet>
-    <servlet>
         <servlet-name>AddNewContractor</servlet-name>
         <servlet-class>com.dickson.servicescanserverside.servlets.AddNewContractor</servlet-class>
     </servlet>

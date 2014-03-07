@@ -21,7 +21,13 @@
             <version>SNAPSHOT</version>
             <scope>provided</scope>
         </dependency>
-        
+         <dependency>
+        <groupId>org.eclipse.persistence</groupId>
+        <artifactId>eclipselink</artifactId>
+        <version>2.5.1</version>
+        <scope>provided</scope>
+    </dependency>
+    
        <dependency>
             <groupId>com.notnoop.apns</groupId>
             <artifactId>apns</artifactId>
